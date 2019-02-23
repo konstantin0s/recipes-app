@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/recipes', (req, res, next) => {
+app.get('/recipes', (req, res) => {
   Recipes.find({}, (err, recipes) => {
     if (err) {
       console.log(err);
@@ -41,19 +41,6 @@ app.get('/recipes', (req, res, next) => {
     
   });
 });
-
-
-// app.get('/recipes', (req, res) => {
-//   Recipes.find({}, (err, recipes) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.render('recipes',
-//       {recipes: recipes});
-//     }
-    
-//   });
-// });
 
 
   app.listen(3000, () => {

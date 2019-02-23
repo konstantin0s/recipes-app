@@ -19,9 +19,8 @@ mongoose
 
   const index = require('./routes/index');
   app.use('/', index);
-  // const recipes = require('./routes/recipes');
-  // app.use('/', recipes);
-  let Recipes = require('./models/recipes');
+  const recipes = require('./routes/recipes');
+  app.use('/', recipes);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -30,30 +29,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/recipes', (req, res, next) => {
-  Recipes.find({}, (err, recipes) => {
+app.get('/recipes', (req, res) => {
+  Recipes.find({}, (err, foodie) => {
     if (err) {
       console.log(err);
     } else {
       res.render('recipes',
-      {recipes: recipes});
+      {foodie: foodie});
     }
     
   });
 });
-
-
-// app.get('/recipes', (req, res) => {
-//   Recipes.find({}, (err, recipes) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       res.render('recipes',
-//       {recipes: recipes});
-//     }
-    
-//   });
-// });
 
 
   app.listen(3000, () => {

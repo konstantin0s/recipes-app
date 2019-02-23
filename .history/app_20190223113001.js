@@ -30,16 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/recipes', (req, res, next) => {
-  Recipes.find({}, (err, recipes) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.render('recipes',
-      {recipes: recipes});
-    }
-    
-  });
+app.get('/', (req, res, next) => {
+  res.render('recipes');
 });
 
 

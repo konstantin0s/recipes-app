@@ -34,7 +34,7 @@ let recipeSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  date: {
+  created: {
     type: Date,
     required: true
   }

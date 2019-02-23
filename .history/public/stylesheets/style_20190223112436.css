@@ -10,10 +10,10 @@ a {
     top: 100px;
     padding-bottom: 100px;
   }
-.nav-link {
-  color: white;
-  position: relative;
-
-}
+  
+  a:hover {
+    position: relative;
+    top: 10px;
+  }
 
 /*# sourceMappingURL=style.css.map */

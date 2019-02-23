@@ -1,19 +1,14 @@
 body {
-  padding: 5px;
+  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
-a {
-  color: #00B7FF; }
+/* a {
+  color: #00B7FF; } */
 
   h1 {
     position: relative;
     top: 100px;
     padding-bottom: 100px;
   }
-.nav-link {
-  color: white;
-  position: relative;
-
-}
 
 /*# sourceMappingURL=style.css.map */

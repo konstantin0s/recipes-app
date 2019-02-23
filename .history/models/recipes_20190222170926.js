@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 //Movie schema
-let recipeSchema = mongoose.Schema({
+let recipesSchema = mongoose.Schema({
   title: {
     type: String,
     required: true
@@ -27,17 +27,17 @@ let recipeSchema = mongoose.Schema({
     required: true
   },
   duration: {
-    type: String,
+    type: Number,
     required: true
   },
   creator: {
     type: String,
     required: true
   },
-  date: {
+  created: {
     type: Date,
     required: true
   }
 });
 
-let Recipes = module.exports = mongoose.model('Recipes', recipeSchema);
+let Recipes = module.exports = mongoose.model('Recipes', recipesSchema);

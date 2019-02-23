@@ -13,7 +13,7 @@ a {
 .nav-link {
   color: white;
   position: relative;
-
+  top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
