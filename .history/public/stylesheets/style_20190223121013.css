@@ -9,7 +9,6 @@ a {
     position: relative;
     top: 100px;
     padding-bottom: 100px;
-    left: 30%;
   }
 .nav-link {
   color: white;
@@ -21,7 +20,9 @@ a {
   position: relative;
   top: 100px;
   width: 40%;
-  left: 30%;
+  left: 0;
+  right: 0;
+  align-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
