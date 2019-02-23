@@ -16,15 +16,12 @@ mongoose
   });
 
   app.locals.title = 'Recipes';
-  let Recipes = require('./models/recipes');
 
   const index = require('./routes/index');
   app.use('/', index);
-  const recipes = require('./routes/recipes');
-  app.use('/', recipes);
-  const recipe = require('./routes/recipe');
-  app.use('/', recipe);
-
+  // const recipes = require('./routes/recipes');
+  // app.use('/', recipes);
+  let Recipes = require('./models/recipes');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

@@ -22,8 +22,6 @@ mongoose
   app.use('/', index);
   const recipes = require('./routes/recipes');
   app.use('/', recipes);
-  const recipe = require('./routes/recipe');
-  app.use('/', recipe);
 
 
 app.set('views', path.join(__dirname, 'views'));
