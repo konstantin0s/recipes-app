@@ -1,12 +1,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const path         = require('path');
-const bodyParser   = require('body-parser');
 let Recipes = require('../models/recipes');
-
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
 
 router.get('/recipes/add', function(req, res) {
   res.render('add_recipes');
@@ -16,7 +11,7 @@ router.get('/recipes/add', function(req, res) {
    router.post('/recipes/add', function(req, res) {
 
     let newRecipe = new Recipes();
-    newRecipe.title = req.body.title;
+    newRecipe.name = req.body.name;
     newRecipe.level = req.body.level;
     newRecipe.ingredients = req.body.ingredients;
     newRecipe.cuisine = req.body.cuisine;

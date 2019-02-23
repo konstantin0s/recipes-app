@@ -45,8 +45,8 @@ app.use(function(req, res, next) {
   app.use('/', recipe);
   const addRecipe = require('./routes/addRecipe');
   app.use('/', addRecipe);
-  const edit = require('./routes/edit');
-  app.use('/', edit);
+  // const edit = require('./routes/edit');
+  // app.use('/', edit);
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -55,6 +55,35 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// app.get('/recipes/add', function(req, res) {
+//   res.render('add_recipes');
+//   });
+
+//    //add submit POST route
+//    app.post('/recipes/add', function(req, res) {
+
+//     let newRecipe = new Recipes();
+//     newRecipe.title = req.body.title;
+//     newRecipe.level = req.body.level;
+//     newRecipe.ingredients = req.body.ingredients;
+//     newRecipe.cuisine = req.body.cuisine;
+//     newRecipe.dishType = req.body.dishType;
+//     newRecipe.image = req.body.image;
+//     newRecipe.duration = req.body.duration;
+//     newRecipe.creator = req.body.creator;
+//     newRecipe.date = req.body.date;
+ 
+//     newRecipe.save(function(err) {
+//          if (err) {
+//            console.log(err);
+//            return;
+//          } else {
+//            res.redirect('/recipes');
+//          }
+//     });
+//    });
+
 
 
   app.listen(3000, () => {

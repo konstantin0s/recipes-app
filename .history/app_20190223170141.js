@@ -45,8 +45,8 @@ app.use(function(req, res, next) {
   app.use('/', recipe);
   const addRecipe = require('./routes/addRecipe');
   app.use('/', addRecipe);
-  const edit = require('./routes/edit');
-  app.use('/', edit);
+  // const edit = require('./routes/edit');
+  // app.use('/', edit);
 
 
 app.set('views', path.join(__dirname, 'views'));
@@ -56,6 +56,49 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
+ //load edit form
+ app.get('/recipe/edit/:id', function(req, res) {
+  Recipes.findOne({_id: req.params.id}, function(err, recip) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('edit_recipe',
+      {recip: recip});
+    }
+  });
+});
+
+//update submit
+app.get('/recipes/add', function(req, res) {
+  res.render('add_recipes');
+  });
+
+   //add submit POST route
+   app.post('/recipes/edit/:id', function(req, res) {
+
+    let recips = {};
+    recips.title = req.body.title;
+    recips.level = req.body.level;
+    recips.ingredients = req.body.ingredients;
+    recips.cuisine = req.body.cuisine;
+    recips.dishType = req.body.dishType;
+    recips.image = req.body.image;
+    recips.duration = req.body.duration;
+    recips.creator = req.body.creator;
+    recips.date = req.body.date;
+
+    let query = {_id: req.params.id}
+ 
+    Recipes.update(query, recips, function(err) {
+         if (err) {
+           console.log(err);
+           return;
+         } else {
+           res.redirect('/recipes');
+         }
+    });
+   });
 
   app.listen(3000, () => {
     console.log('Server started on port 3000');

@@ -24,26 +24,26 @@ router.use(bodyParser.json());
 
   //update submit
   router.get('/recipes/add', function(req, res) {
-    res.render('add_recipes');
+    res.render('edit_recipe');
     });
   
      //add submit POST route
      router.post('/recipes/edit/:id', function(req, res) {
   
-      let recips = {};
-      recips.title = req.body.title;
-      recips.level = req.body.level;
-      recips.ingredients = req.body.ingredients;
-      recips.cuisine = req.body.cuisine;
-      recips.dishType = req.body.dishType;
-      recips.image = req.body.image;
-      recips.duration = req.body.duration;
-      recips.creator = req.body.creator;
-      recips.date = req.body.date;
+      let recip = {};
+      recip.title = req.body.title;
+      recip.level = req.body.level;
+      recip.ingredients = req.body.ingredients;
+      recip.cuisine = req.body.cuisine;
+      recip.dishType = req.body.dishType;
+      recip.image = req.body.image;
+      recip.duration = req.body.duration;
+      recip.creator = req.body.creator;
+      recip.date = req.body.date;
 
-      let query = {_id: req.params.id}
+      let query = { _id:req.params.id}
    
-      Recipes.updateMany(query, recips, function(err) {
+      Recipes.update(query, recip, function(err) {
            if (err) {
              console.log(err);
              return;

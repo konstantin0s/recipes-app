@@ -7,7 +7,7 @@ const cors = require('cors');
 
 const app = express();
 
-mongoose
+const mongoURI= mongoose
   .connect('mongodb://localhost/recipes', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
@@ -15,7 +15,10 @@ mongoose
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
+// conn.once('open', () => {
 
+// })
+//   mongoURI;
 
   //enables cors
 app.use(cors({
@@ -45,8 +48,8 @@ app.use(function(req, res, next) {
   app.use('/', recipe);
   const addRecipe = require('./routes/addRecipe');
   app.use('/', addRecipe);
-  const edit = require('./routes/edit');
-  app.use('/', edit);
+  // const edit = require('./routes/edit');
+  // app.use('/', edit);
 
 
 app.set('views', path.join(__dirname, 'views'));

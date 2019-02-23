@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 //Movie schema
 let recipeSchema = mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true
   },
@@ -11,7 +11,7 @@ let recipeSchema = mongoose.Schema({
     required: true
   },
   ingredients: {
-    type: String,
+    type: Array,
     required: true
   },
   cuisine: {

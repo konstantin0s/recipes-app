@@ -16,7 +16,6 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-
   //enables cors
 app.use(cors({
   'allowedHeaders': ['sessionId', 'Content-Type'],
@@ -25,13 +24,6 @@ app.use(cors({
   'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
   'preflightContinue': false
 }));
-
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
 
 
   app.locals.title = 'Recipes';
@@ -45,8 +37,8 @@ app.use(function(req, res, next) {
   app.use('/', recipe);
   const addRecipe = require('./routes/addRecipe');
   app.use('/', addRecipe);
-  const edit = require('./routes/edit');
-  app.use('/', edit);
+  // const edit = require('./routes/edit');
+  // app.use('/', edit);
 
 
 app.set('views', path.join(__dirname, 'views'));

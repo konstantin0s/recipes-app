@@ -1,12 +1,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const path         = require('path');
-const bodyParser   = require('body-parser');
 let Recipes = require('../models/recipes');
-
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
 
 router.get('/recipes/add', function(req, res) {
   res.render('add_recipes');

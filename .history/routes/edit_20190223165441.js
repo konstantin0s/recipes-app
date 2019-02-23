@@ -43,7 +43,7 @@ router.use(bodyParser.json());
 
       let query = {_id: req.params.id}
    
-      Recipes.updateMany(query, recips, function(err) {
+      Recipes.update(query, recips, function(err) {
            if (err) {
              console.log(err);
              return;

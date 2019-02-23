@@ -11,7 +11,7 @@
 </head>
 <body>
   <h1>Add a new Recipe</h1>
-<form method="POST" action="/recipes/add" class="form">
+<form method="POST" action="/recipes/add" class="form" enctype="multipart/form-data">
 <div id="form-group">
   <label for="level">Name:</label>
   <input type="text" name="title" class="form-control">
@@ -33,7 +33,7 @@
 </div>
 <div id="form-group">
   <label for="level">Image:</label>
-     <input type='text' name='image' placeholder="Image url"/>
+     <input type='file' name='image' />
 </div>
 <div id="form-group">
   <label for="level">Duration:</label>
