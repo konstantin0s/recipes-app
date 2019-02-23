@@ -47,8 +47,8 @@ app.use(function(req, res, next) {
   app.use('/', addRecipe);
   const edit = require('./routes/edit');
   app.use('/', edit);
-  const deleteRecipe = require('./routes/delete');
-  app.use('/', deleteRecipe);
+  const delete = require('./routes/delete');
+  app.use('/', delete);
 
 
 
