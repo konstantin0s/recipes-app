@@ -50,7 +50,7 @@ app.use(function(req, res, next) {
   const deleteRecipe = require('./routes/delete');
   app.use('/', deleteRecipe);
   const authRouter = require('./routes/auth');
-  app.use('/', authRouter);
+  app.use('/auth', authRouter);
 
 
 
