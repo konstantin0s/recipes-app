@@ -45,13 +45,6 @@ app.use(session({
   })
 }));
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
 
 
   app.locals.title = 'Recipes';
@@ -60,9 +53,6 @@ app.use(bodyParser.json());
   const index = require('./routes/index');
   app.use('/', index);
 
-  const authRouter = require('./routes/auth');
-  app.use('/', authRouter);
-
   app.use((req, res, next) => {
     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
       next(); // ==> go to the next route ---
@@ -70,7 +60,6 @@ app.use(bodyParser.json());
       res.redirect("/login");         //    |
     }                                 //    |
   }); 
-
   const recipes = require('./routes/recipes');
   app.use('/', recipes);
   const recipe = require('./routes/recipe');
@@ -81,6 +70,20 @@ app.use(bodyParser.json());
   app.use('/', edit);
   const deleteRecipe = require('./routes/delete');
   app.use('/', deleteRecipe);
+  const authRouter = require('./routes/auth');
+  app.use('/', authRouter);
+
+
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
+
 
   app.listen(3000, () => {
     console.log('Server started on port 3000');

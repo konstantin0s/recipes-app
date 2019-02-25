@@ -14,6 +14,11 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
+router.get("/login", (req, res, next) => {
+  res.render("auth/login");
+});
+
+
 // BCrypt to encrypt passwords
 const bcrypt         = require("bcrypt");
 const bcryptSalt     = 10;
@@ -76,9 +81,6 @@ router.post('//signup', function(req, res) {
   });
 });
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login");
-});
 
 router.post("/login", (req, res, next) => {
   const theUsername = req.body.username;
