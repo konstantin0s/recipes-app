@@ -19,8 +19,12 @@ router.get("/signup", (req, res, next) => {
 const bcrypt         = require("bcrypt");
 const bcryptSalt     = 10;
 
+// router.post('/signup', (req, res) => {
+//   console.log(req.body)
+//   res.send('routerpost works')
+// })
 router.post("/signup", (req, res, next) => {
-
+  // console.log("reqbody", req.body)
   const username = req.body.username;
   const password = req.body.password;
 
@@ -81,25 +85,5 @@ router.post("/signup", (req, res, next) => {
     next(error);
   })
 });
-
-router.post('//signup', function(req, res) {
-  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
-  {
-    return res.json({"responseError" : "Please select captcha first"});
-  }
-  const secretKey = "6LeR0ZMUAAAAANDnXcoQiTvxYDIghn9DZrrf7wFQ";
-
-  const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-
-  request(verificationURL,function(error,response,body) {
-    body = JSON.parse(body);
-
-    if(body.success !== undefined && !body.success) {
-      return res.json({"responseError" : "Failed captcha verification"});
-    }
-    res.json({"responseSuccess" : "Sucess"});
-  });
-});
-
 
 module.exports = router;

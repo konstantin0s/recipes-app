@@ -8,6 +8,9 @@ const request = require('request');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
 mongoose
   .connect('mongodb://localhost/recipes', {useNewUrlParser: true})
   .then(x => {
