@@ -10,19 +10,14 @@ router.get("/signup", (req, res, next) => {
   res.render("auth/signup");
 });
 
+const bcrypt = require('bcrypt');
+const bcryptSalt = 10;
 
-// BCrypt to encrypt passwords
-const bcrypt         = require("bcrypt");
-const bcryptSalt     = 10;
-
-// router.post('/signup', (req, res) => {
-//   console.log(req.body)
-//   res.send('routerpost works')
-// })
 router.post("/signup", (req, res, next) => {
-  // console.log("reqbody", req.body)
   const username = req.body.username;
   const password = req.body.password;
+  const salt = bcrypt.genSaltSync(bcryptSalt);
+  const hashPass = bcrypt.hashSync(password, salt);
 
   if (username == "" || password == "") {
     res.render("auth/signup", {
@@ -31,9 +26,9 @@ router.post("/signup", (req, res, next) => {
     return;
   }
 
-  User.findOne({"username": username})
-  .then(user => {
-    if (user !== null) {
+  User.findOne({ "username": username })
+.then(user => {
+  if (user !== null) {
       res.render("auth/signup", {
         errorMessage: "The username already exists!"
       });
@@ -41,8 +36,6 @@ router.post("/signup", (req, res, next) => {
     }
 
 
-  const salt     = bcrypt.genSaltSync(bcryptSalt);
-  const hashPass = bcrypt.hashSync(password, salt);
 
   User.create({
     username,
@@ -51,10 +44,9 @@ router.post("/signup", (req, res, next) => {
   .then(() => {
     res.redirect("/");
   })
-})
   .catch(error => {
-    next(error);
+    console.log(error);
   })
-});
+})
 
 module.exports = router;
