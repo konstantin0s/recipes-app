@@ -35,16 +35,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-//add session
-app.use(session({
-  secret: "basic-auth-secret",
-  cookie: { maxAge: 60000 },
-  store: new MongoStore({
-    mongooseConnection: mongoose.connection,
-    ttl: 24 * 60 * 60 // 1 day
-  })
-}));
-
 
 
   app.locals.title = 'Recipes';
