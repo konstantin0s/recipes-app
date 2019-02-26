@@ -7,11 +7,8 @@ const cors = require('cors');
 const request = require('request');
 const session    = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-const cookieParser = require('cookie-parser');
-
 
 const app = express();
-app.use(cookieParser());
 
 mongoose
   .connect('mongodb://localhost/recipes', {useNewUrlParser: true})
@@ -21,6 +18,7 @@ mongoose
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
+
 
   //enables cors
 app.use(cors({
@@ -36,23 +34,6 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
-app.get('/', function(req, res){
-  res.cookie('name', 'recipes'); //Sets name = express
-  res.render('index');
-});
-
-
-  //add session
-  app.use(session({
-    secret: "basic-auth-secret",
-    cookie: { maxAge: 60000 },
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection,
-      ttl: 24 * 60 * 60 // 1 day
-    })
-  }));
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -91,22 +72,9 @@ app.use(bodyParser.json());
   const deleteRecipe = require('./routes/delete');
   app.use('/', deleteRecipe);
 
-
-  // app.get("/logout", function(req, res){
-  //   var cookie = req.cookies;
-  //   for (var prop in cookie) {
-  //       if (!cookie.hasOwnProperty(prop)) {
-  //           continue;
-  //       }    
-  //       res.cookie(prop, '', {expires: new Date(0)});
-  //   }
-  //   res.redirect('/');
-  // });
-
   app.listen(3000, () => {
     console.log('Server started on port 3000');
   });
-
 
   //close mongodb
   process.on('SIGINT', function() {

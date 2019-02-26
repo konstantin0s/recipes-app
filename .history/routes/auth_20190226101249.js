@@ -2,12 +2,9 @@ const express = require('express');
 const router  = express.Router();
 const request = require('request');
 const bodyParser   = require('body-parser');
-const cookieParser = require('cookie-parser');
-router.use(cookieParser());
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
-
 
 const User = require("../models/user");
 
@@ -115,14 +112,6 @@ router.post("/login", (req, res, next) => {
   .catch(error => {
     next(error);
   })
-});
-
-router.get("/logout", (req, res, next) => {
-  res.clearCookie("name");
-  req.session.destroy((err) => {
-    // cannot access session here
-    res.redirect("/login");
-  });
 });
 
 module.exports = router;

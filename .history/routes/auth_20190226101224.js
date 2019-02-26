@@ -2,12 +2,9 @@ const express = require('express');
 const router  = express.Router();
 const request = require('request');
 const bodyParser   = require('body-parser');
-const cookieParser = require('cookie-parser');
-router.use(cookieParser());
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
-
 
 const User = require("../models/user");
 
@@ -79,6 +76,17 @@ router.post('//signup', function(req, res) {
   });
 });
 
+
+  //add session
+  router.use(session({
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+    })
+  }));
+
 router.get("/login", (req, res, next) => {
   res.render("auth/login");
 });
@@ -115,14 +123,6 @@ router.post("/login", (req, res, next) => {
   .catch(error => {
     next(error);
   })
-});
-
-router.get("/logout", (req, res, next) => {
-  res.clearCookie("name");
-  req.session.destroy((err) => {
-    // cannot access session here
-    res.redirect("/login");
-  });
 });
 
 module.exports = router;

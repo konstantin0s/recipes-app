@@ -3,11 +3,9 @@ const router  = express.Router();
 const request = require('request');
 const bodyParser   = require('body-parser');
 const cookieParser = require('cookie-parser');
-router.use(cookieParser());
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
-
 
 const User = require("../models/user");
 
@@ -83,6 +81,11 @@ router.get("/login", (req, res, next) => {
   res.render("auth/login");
 });
 
+router.get('/', function(req, res){
+  res.cookie('name', 'recipes'); //Sets name = express
+  res.render('index');
+});
+
 router.post("/login", (req, res, next) => {
   const theUsername = req.body.username;
   const thePassword = req.body.password;
@@ -118,11 +121,15 @@ router.post("/login", (req, res, next) => {
 });
 
 router.get("/logout", (req, res, next) => {
-  res.clearCookie("name");
   req.session.destroy((err) => {
     // cannot access session here
     res.redirect("/login");
   });
+});
+
+router.get("/logout", function(req, res){
+  res.clearCookie("name", "recipes");
+  res.render("index");
 });
 
 module.exports = router;

@@ -91,18 +91,6 @@ app.use(bodyParser.json());
   const deleteRecipe = require('./routes/delete');
   app.use('/', deleteRecipe);
 
-
-  // app.get("/logout", function(req, res){
-  //   var cookie = req.cookies;
-  //   for (var prop in cookie) {
-  //       if (!cookie.hasOwnProperty(prop)) {
-  //           continue;
-  //       }    
-  //       res.cookie(prop, '', {expires: new Date(0)});
-  //   }
-  //   res.redirect('/');
-  // });
-
   app.listen(3000, () => {
     console.log('Server started on port 3000');
   });

@@ -7,7 +7,7 @@ const cors = require('cors');
 const request = require('request');
 const session    = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-const cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser');
 
 
 const app = express();
@@ -22,6 +22,13 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
+  app.get('/', function(req, res){
+    res.cookie('name', 'recipes'); //Sets name = express
+    res.render('index');
+ });
+ 
+
+
   //enables cors
 app.use(cors({
   'allowedHeaders': ['sessionId', 'Content-Type'],
@@ -35,11 +42,6 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});
-
-app.get('/', function(req, res){
-  res.cookie('name', 'recipes'); //Sets name = express
-  res.render('index');
 });
 
 
@@ -90,18 +92,6 @@ app.use(bodyParser.json());
   app.use('/', edit);
   const deleteRecipe = require('./routes/delete');
   app.use('/', deleteRecipe);
-
-
-  // app.get("/logout", function(req, res){
-  //   var cookie = req.cookies;
-  //   for (var prop in cookie) {
-  //       if (!cookie.hasOwnProperty(prop)) {
-  //           continue;
-  //       }    
-  //       res.cookie(prop, '', {expires: new Date(0)});
-  //   }
-  //   res.redirect('/');
-  // });
 
   app.listen(3000, () => {
     console.log('Server started on port 3000');

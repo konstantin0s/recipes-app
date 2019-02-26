@@ -119,6 +119,7 @@ router.post("/login", (req, res, next) => {
 
 router.get("/logout", (req, res, next) => {
   res.clearCookie("name");
+  res.send("Cookie 'deleted");
   req.session.destroy((err) => {
     // cannot access session here
     res.redirect("/login");

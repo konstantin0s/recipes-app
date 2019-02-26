@@ -81,6 +81,16 @@ router.post('//signup', function(req, res) {
 
 router.get("/login", (req, res, next) => {
   res.render("auth/login");
+
+  router.use(session({
+    secret: "basic-auth-secret",
+    cookie: { maxAge: 60000 },
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection,
+      ttl: 24 * 60 * 60 // 1 day
+    })
+  }));
+
 });
 
 router.post("/login", (req, res, next) => {
@@ -117,12 +127,5 @@ router.post("/login", (req, res, next) => {
   })
 });
 
-router.get("/logout", (req, res, next) => {
-  res.clearCookie("name");
-  req.session.destroy((err) => {
-    // cannot access session here
-    res.redirect("/login");
-  });
-});
 
 module.exports = router;
