@@ -1,22 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Recipes</title>
 </head>
-<body>
-  <h1>Recipes</h1>
-<button type="button" class="btn btn-primary check" name="addRecipe"> <a class="nav-link" href="/recipes/add">Add recipe</a></button>
-<div class="cards">
-     {{#each recipes}}
-    <div class="card">
-    <li class="list-group-item"><a href="/recipe/{{this._id}}">{{this.title}}</a></li>
-    </div>
-     {{/each}}
-</div>
-</body>
-</html>
 
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item"><a class="nav-link" href="/logout">Logout<a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>Recipes</h1>
+  <button type="button" class="btn btn-primary check" name="addRecipe"> <a class="nav-link" href="/recipes/add">Add
+      recipe</a></button>
+  <div class="cards">
+    {{#each recipes}}
+    <div class="card">
+      <li class="list-group-item"><a href="/recipe/{{this._id}}">{{this.title}}</a></li>
+    </div>
+    {{/each}}
+  </div>
+</body>
+
+</html>
