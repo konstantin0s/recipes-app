@@ -15,22 +15,31 @@ body {
 
 .nav-item a {
     position: relative;
-    left: 300px;
+    left: 840px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0px 100px;
+    margin: 0px 30px;
+    cursor: pointer;
 }
 
-.nav-item .home {
-    position: relative;
-    left: 80px;
+.nav-item .signin:hover, .signup:hover {
+        color: yellow;
 }
 
-.nav-item .logout {
+.nav-item .signin {
     position: relative;
-    left: 600px;
+    right: 130px;
 }
+
+.nav-item .signup {
+    position: relative;
+    right: 100px;
+}
+
+/* .signin:hover, .signup:hover {
+    color: yellow;
+} */
 
 .nav-item {
     display: flex;
@@ -41,8 +50,40 @@ body {
 .title {
     position: absolute;
     top: 15px;
-    left: 400px;
+    left: 40px;
     font-size: 15px;
     color: #fff;
+    padding: 3px;
     z-index: 100;
+    border: 1px solid #fff;
+}
+
+.check a {
+    position: relative;
+    top: 100px;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.check a:hover {
+color: #000;
+background: yellow;
+opacity: 0.8;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: darkolivegreen;
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: aquamarine;
 }

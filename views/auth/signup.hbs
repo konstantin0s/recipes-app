@@ -13,6 +13,24 @@
 </head>
 
 <body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+       <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/signin">Sign In</a></li>
+  </ul>
+    </div>
+  </nav>
+
+
   <h2>Sign Up</h2>
 
 
@@ -28,8 +46,11 @@
     </div>
 
     <button type="submit">Create account</button>
+      <p class="account-message">
+    Having an account? <a href="/signin">Sign in</a>
+  </p>
   </form>
-
+    
 
   {{#if errorMessage}}
   <div class="error-message">{{ errorMessage }}</div>
@@ -37,9 +58,6 @@
 
 
 
-  <footer class="footer">
-    <p>Copyright &copy; 2020</p>
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">

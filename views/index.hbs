@@ -19,25 +19,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          {{!-- <li class="nav-item active">
             <a class="nav-link home" href="/">Home <span class="sr-only">(current)
-            </span></a> </li>
-            <li class="nav-item">
-       <p class="title">Welcome to {{title}}</p>
+            </span></a> </li> --}}
+            <li class="nav-item" >
+       <p class="title">{{title}}</p>
             </li>
-          <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
+                  <li class="nav-item"><a class="nav-link signin" href="/login">Login</a></li>
+      <li class="nav-item"><a class="nav-link signup" href="/signup">Sign up</a></li>
         </ul>
       </div>
     </nav>
 
     <h1>{{title}}</h1>
-    <p class="title">Welcome to {{title}}</p>
 
     <img id="index-img"
     src="https://images.pexels.com/photos/35661/pasta-cheese-egg-food.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
     <button class="btn btn-primary check" type="button"><a class="nav-link" href="/recipes">Check the Recipes!</a>
     </button>
 
+    {{body}}
+
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="/recipes"> CuiSZone </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
 
   </body>
 
