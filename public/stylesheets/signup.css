@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    z-index: 100;
+    border: 1px solid #fff;
+}
+
+.active .title:hover {
+    background: yellow;
+    color: #000 !important;
+}
+
+.signin {
+    right: -500px;
+}
+
+.signin:hover {
+    color: yellow !important;
+    text-decoration: none;
+}
+
+.father-container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.form-container {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2em;
+    margin-left: 30em;
+}
+
+#form h2 {
+    margin-bottom: 2em;
+}
+
+.image {
+    background-image: url('https://images.pexels.com/photos/3575143/pexels-photo-3575143.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 80%;
+    z-index: 10;
+    left: 5em;
+    top: 11em;
+    /* transform: rotate(15deg) translateY(180px); */
+}
+
+
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: darkolivegreen;
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: aquamarine;
+}
