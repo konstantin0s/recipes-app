@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+.title {
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    z-index: 100;
+    border: 1px solid #fff;
+}
+
+.active .title:hover {
+    background: yellow;
+    color: #000 !important;
+}
+
+.logout {
+    position: relative;
+    left: 1100px;
+}
+
+.logout:hover {
+    color: yellow !important;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+}
+
+.container h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    left: 10px;
+}
+
+.container button {
+    width: 15%;
+}
+
+.container button a:hover {
+    color: yellow;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 4.5em 0em;
+    width: 100%;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4em;
+    margin-bottom: 3em;
+    cursor: pointer;
+}
+
+.next-recipe {
+    font-size: 15px;
+    color: #000;
+    padding: 3px;
+    z-index: 100;
+    border: 1px solid #333;
+    text-decoration: none;
+}
+
+.next-recipe:hover {
+    background: yellow;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background: darkolivegreen;
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: aquamarine;
+}
