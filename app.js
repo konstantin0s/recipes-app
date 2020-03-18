@@ -14,8 +14,8 @@ const app = express();
 app.use(cookieParser());
 
 
-//database on constantintofan85@gmail.com account - mongo db atlas
 
+//database on constantintofan85@gmail.com account - mongo db atlas
 mongoose
   .connect('mongodb+srv://konstantin0s:tehnician@cluster0-duzhh.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true
