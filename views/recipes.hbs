@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-      <a class="nav-link title" href="/">{{title}} <span class="sr-only">(current)</span></a>
+      <a class="nav-link title" href="#">{{title}} <span class="sr-only">(current)</span></a>
         <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
       </ul>
     </div>
@@ -32,11 +32,13 @@
       recipe</a></button>
   <div class="cards">
     {{#each recipes}}
-    <div class="card">
+    <div class="cardz">
       <li class="list-group-item">
       <img src={{this.image}} />
-        <a class="next-recipe" href="/recipe/{{this._id}}"
-        >{{this.title}}</a></li>
+        <a class="next-recipe" alt="See recipee" href="/recipe/{{this._id}}"
+        >{{this.title}}</a>
+        <h6>Chef: {{this.creator}}</h6>
+        </li>
     </div>
     {{/each}}
   </div>

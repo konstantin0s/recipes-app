@@ -21,10 +21,12 @@ body {
     justify-content: space-between;
     margin: 0px 30px;
     cursor: pointer;
+    border-bottom: 2.5px solid #fff;
 }
 
-.nav-item .signin:hover, .signup:hover {
-        color: yellow;
+.nav-item a:hover {
+        color: yellow !important;
+        border-bottom: 2.5px solid yellow;
 }
 
 .nav-item .signin {
@@ -56,6 +58,7 @@ body {
     padding: 3px;
     z-index: 100;
     border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
 }
 
 .check a {
@@ -65,6 +68,7 @@ body {
     padding: 5px;
     font-size: 1.4em;
     color: #fff;
+    border-bottom: 2.5px solid #fff;
 }
 
 .check a:hover {
@@ -79,6 +83,7 @@ opacity: 0.8;
     padding: 5px;
     position: fixed;
     bottom: 0;
+    padding-bottom: 1em;
     width: 100vw;
     background: darkolivegreen;
 }

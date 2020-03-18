@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+.title {
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    z-index: 100;
+    border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
+}
+
+.active .title:hover {
+    background: yellow;
+    color: #000 !important;
+}
+
+.logout {
+    position: relative;
+    left: 1100px;
+    border-bottom: 2.5px solid #fff;
+}
+
+.logout:hover {
+    color: yellow !important;
+    text-decoration: none;
+    border-bottom: 2.5px solid yellow;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+/* .container h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    left: 10px;
+} */
+
+/* .container button {
+    width: 15%;
+}
+
+.container .check {
+    align-self: center;
+}
+
+.container button a:hover {
+    color: yellow;
+} */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 4.5em 0em;
+    margin-bottom: 7em;
+    width: 100%;
+    border: 2px solid #333;
+    padding: 4em 3em;
+    background: aliceblue;
+} 
+
+
+.cardz {
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-self: center;
+margin-bottom: 2em;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+}
+
+.cardz button, .delete-recipe {
+    width: 40%;
+    margin-top: 0.5em;
+    margin-right: 1em;
+}
+
+.page-footer {
+    width: 100vw;
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    position: absolute;
+    margin-top: 2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: -5px !important;
+    width: 100vw;
+    background: darkolivegreen;
+
+}
+
+.footer-copyright a {
+    text-decoration: none;
+    color: aquamarine;
+}

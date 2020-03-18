@@ -15,6 +15,7 @@ body {
     padding: 3px;
     z-index: 100;
     border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
 }
 
 .active .title:hover {
@@ -24,11 +25,13 @@ body {
 
 .signup {
     right: -500px;
+    border-bottom: 2.5px solid #fff;
 }
 
 .signup:hover {
     color: yellow !important;
     text-decoration: none;
+    border-bottom: 2.5px solid yellow;
 }
 
 .father-container {
@@ -75,6 +78,7 @@ body {
     padding: 5px;
     position: fixed;
     bottom: 0;
+    left: 0px;
     width: 100vw;
     background: darkolivegreen;
 }
