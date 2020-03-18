@@ -9,7 +9,10 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 router.get('/recipes/add', function(req, res) {
-  res.render('add_recipes');
+  let sess = req.session;
+  if(sess.currentUser) {
+     res.render('add_recipes', {user: sess.currentUser});
+  }
   });
 
    //add submit POST route

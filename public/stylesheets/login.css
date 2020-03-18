@@ -24,6 +24,7 @@ body {
 }
 
 .signup {
+    top: -4px;
     right: -500px;
     border-bottom: 2.5px solid #fff;
 }
@@ -69,7 +70,6 @@ body {
     top: 11em;
     /* transform: rotate(15deg) translateY(180px); */
 }
-
 
 
 .footer-copyright {

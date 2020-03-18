@@ -84,6 +84,8 @@ app.use('/', authRouter);
 app.use((req, res, next) => {
   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
     next(); // ==> go to the next route ---
+    let user = req.session.currentUser;
+    
   } else { //    |
     res.redirect("/login"); //    |
   } //    |

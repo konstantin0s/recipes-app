@@ -19,7 +19,9 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link title" href="/recipes">{{title}} <span class="sr-only">(current)</span></a></li>
+          <a class="nav-link title" href="/recipes">{{title}} <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><h3 id="username">Welcome, {{user.username}}</h3></li>
         <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
       </ul>
     </div>
@@ -40,7 +42,7 @@
         <p>Level: {{recipe.level}}</p>
         <div class="buttons-container">
           <button class="btn btn-default">
-            <a href="/recipe/edit/{{recipe.id}}">Edit</a>
+            <a class=" btn btn-default edit-recipe" href="/recipe/edit/{{recipe.id}}">Edit</a>
           </button>
           <a href="#" class="btn btn-danger delete-recipe" data-id="{{recipe.id}}">Delete</a>
         </div>

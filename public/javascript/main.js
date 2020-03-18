@@ -1,3 +1,12 @@
+//prevent default 
+let form = document.getElementById('form');
+let errorMessage = document.getElementsByClassName('error-message');
+
+
+
+
+
+//delete recipe 
 $(document).ready(function() {
   $('.delete-recipe').on('click', function(e) {
    $target = $(e.target);

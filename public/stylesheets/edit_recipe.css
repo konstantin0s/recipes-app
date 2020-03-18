@@ -12,6 +12,19 @@ body {
   background-size: cover;
 }
 
+#username {
+    text-transform: capitalize; 
+    position: absolute;
+    top: 12px;
+    left: 840px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    z-index: 100;
+    border-bottom: 2.5px solid #fff;
+}
+
+
 
 .title {
     position: absolute;
@@ -33,6 +46,9 @@ body {
 .logout {
     position: relative;
     left: 1100px;
+    top: -4px;
+    font-size: 1em;
+    padding-bottom: 0;
     border-bottom: 2.5px solid #fff;
 }
 

@@ -12,12 +12,17 @@ router.use(bodyParser.json());
 
    //load edit form
    router.get('/recipe/edit/:id', function(req, res) {
+
+    let sess = req.session;
+
     Recipes.findOne({_id: req.params.id}, function(err, recip) {
       if (err) {
         console.log(err);
       } else {
-        res.render('edit_recipe',
-        {recip: recip});
+        if(sess.currentUser) {
+          res.render('edit_recipe',
+          {recip: recip, user: sess.currentUser});
+        }
       }
     });
   });

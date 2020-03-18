@@ -27,9 +27,9 @@ router.post("/signup", (req, res, next) => {
   const password = req.body.password;
 
 
-  if (username == "" || password == "") {
+  if (username === "" || password === "" || username.length <  3 || password.length < 3) {
     res.render("auth/signup", {
-      errorMessage: "Indicate a username and a password to sign up"
+      errorMessage: "The length must be at least 4 characters"
     });
     return;
   }
@@ -105,10 +105,13 @@ router.post("/login", (req, res, next) => {
       if (bcrypt.compareSync(thePassword, user.password)) {
         // Save the login in the session!
         req.session.currentUser = user;
+
+        // console.log(user);
+        // console.log(req.session.currentUser);
         res.redirect("/recipes");
       } else {
         res.render("auth/login", {
-          errorMessage: "Incorrect password"
+          errorMessage: "Incorrect credentials"
         });
       }
   })
