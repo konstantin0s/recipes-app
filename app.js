@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 //database on constantintofan85@gmail.com account - mongo db atlas
 mongoose
-  .connect('mongodb+srv://konstantin0s:tehnician@cluster0-duzhh.mongodb.net/test?retryWrites=true&w=majority', {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   })
   .then(x => {
