@@ -17,7 +17,7 @@ app.use(cookieParser());
 
 //database on constantintofan85@gmail.com account - mongo db atlas
 mongoose
-  .connect(process.env.MONGODB_URI, {
+  .connect('mongodb+srv://konstantin0s:tehnician@cluster0-duzhh.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true
   })
   .then(x => {
@@ -85,7 +85,7 @@ app.use((req, res, next) => {
   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
     next(); // ==> go to the next route ---
     let user = req.session.currentUser;
-    
+
   } else { //    |
     res.redirect("/login"); //    |
   } //    |
