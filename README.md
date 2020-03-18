@@ -9,5 +9,4 @@ Create a recipe App with Nodejs, Express &amp; MongoDb
 6. Run < nodemon app > in your terminal, in root folder.
 7. Open the app in your browser ( ie. http://localhost:5000 )
 
-
 (deploy with codeship).
