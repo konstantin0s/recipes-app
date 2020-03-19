@@ -6,11 +6,6 @@ body {
     overflow: hidden;
 }
 
-.fixed-top  {
-    display: block;
-    height: 10vh;
-}
-
 .logos img {
     height: 50px;
     width: 80px;
@@ -193,7 +188,18 @@ body {
         margin-left: 1em;
     }
 
-    .collapse.show {
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 300px;
+        height: 300px;
+        left: 0;
+    }
+
+    .collapse.show  {
         display: block;
         height: 100vh;
     }
