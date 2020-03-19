@@ -54,13 +54,14 @@ img {
 }
 
 #form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
+  background: #f1b126;
+  border: 1px solid  #f1b126;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
+  font-weight: bold;
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -70,7 +71,7 @@ img {
 
 #form button:hover {
   background: #fff;
-  color: #43a3e6;
+  color: #f1b126;
   transition: .3s ease background;
 }
 

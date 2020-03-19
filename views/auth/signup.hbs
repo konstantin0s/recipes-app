@@ -16,54 +16,61 @@
 <body>
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-             <a class="nav-link title" href="/">{{title}} <span class="sr-only">(current)</span></a>
+          <a class="nav-link title" href="/">{{title}} <span class="sr-only">(current)</span></a>
         </li>
       </ul>
-       <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item"><a class="nav-link signin" href="/signin">Sign In</a></li>
-  </ul>
+      </ul>
     </div>
   </nav>
 
 
-<div class="father-container">
   <div class="image">
-<!--inject image with csss -->
+    <!--inject image with csss -->
   </div>
-
-<div class="form-container">
-  <h2>Sign Up</h2>
+  <div class="father-container">
 
 
-  <form id="form" action="/signup" method="POST">
-    <label for="username">Username</label><br>
-    <input type="text" name="username" placeholder="Your username">
+    <!--vertical bar line -->
+    <ul class="bar-left">
+      <li></li>
+      <li></li>
+    </ul>
+    <ul class="bar-right">
+      <li></li>
+      <li></li>
+    </ul>
 
-    <label for="password">Password</label><br>
-    <input type="password" name="password" placeholder="********">
+    <div class="form-container">
 
-    <div class="form-group col-md-4">
-      <div class="g-recaptcha" data-sitekey="6LeR0ZMUAAAAAHe19OLvaksuM7cB-k8XHCCmE96b"></div>
+      <form id="form" action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+
+        <div class="form-group col-md-4">
+          <div class="g-recaptcha" data-sitekey="6LeR0ZMUAAAAAHe19OLvaksuM7cB-k8XHCCmE96b"></div>
+        </div>
+
+        <button type="submit">Create account</button>
+        <p class="account-message">
+          Having an account? <a class="signin" href="/signin">Sign in</a>
+        </p>
+      </form>
+
+
+      {{#if errorMessage}}
+      <div class="error-message">{{ errorMessage }}</div>
+      {{/if}}
+
     </div>
-
-    <button type="submit">Create account</button>
-      <p class="account-message">
-    Having an account? <a class="signin" href="/signin">Sign in</a>
-  </p>
-  </form>
-    
-
-  {{#if errorMessage}}
-  <div class="error-message">{{ errorMessage }}</div>
-  {{/if}}
-
-  </div>
   </div>
 
 

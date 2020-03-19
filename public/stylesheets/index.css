@@ -112,7 +112,11 @@ opacity: 0.8;
     }
 
     .title {
-        left: 80%;
+        left: 76%;
+        top: 15px;
+        width: 20%;
+        text-align: center;
+        padding: 7px 10px;
     }
     
     .fixed-top {
@@ -128,11 +132,11 @@ opacity: 0.8;
 
     .nav-item a {
         position: absolute;
-        top: 120px;
-        font-size: 1.4em;
+        top: 20px;
+        font-size: 2.4em;
         left: 0%;
         margin-bottom: 10px;
-        margin-top: 5em;
+        margin-top: 3em;
         display: flex;
         width: 100%;
         flex-direction: row;

@@ -37,6 +37,7 @@ body {
 
 .father-container {
     width: 100%;
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -58,7 +59,7 @@ body {
     margin-bottom: 2em;
 }
 
-.image {
+/* .image {
     background-image: url('https://images.pexels.com/photos/3700245/pexels-photo-3700245.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     position: absolute;
     background-repeat: no-repeat;
@@ -68,8 +69,7 @@ body {
     z-index: 10;
     left: 5em;
     top: 11em;
-    /* transform: rotate(15deg) translateY(180px); */
-}
+    /* transform: rotate(15deg) translateY(180px); */ 
 
 
 .footer-copyright {
@@ -86,4 +86,184 @@ body {
 .footer-copyright a {
     text-decoration: none;
     color: aquamarine;
+}
+
+@media (max-width: 689px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        left: 77%;
+        top: 15px;
+        width: 15%;
+        text-align: center;
+        padding: 7px 10px;
+    }
+    
+    .fixed-top {
+        padding: 2em;
+    }
+
+
+    .nav-item .signup {
+        position: absolute;
+        top: 301px;
+        font-size: 2.4em;
+        left: 25%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 5em;
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .father-container {
+        top: 10px;
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        left: 1px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    }
+
+    .image {
+        background-image: url('https://images.pexels.com/photos/574282/pexels-photo-574282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 406px;
+        opacity: 0.5;
+        z-index: 10;
+        top: -13em;
+        border-bottom-left-radius: 70px 58px;
+        border-bottom-right-radius: 70px 58px;
+    }
+
+    #form {
+        margin: 0;
+        background: rgb(221, 217, 217);
+        padding: 2.5em 2em 2em;
+        border-radius: 10px;
+    }
+
+    
+    .form-container {
+        position: relative;
+        top: -18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1em 4em;
+        margin-left: 1em;
+    }
+
+    .collapse.show {
+        display: block;
+        height: 100vh;
+    }
+
+    /*vertical bar line */
+
+    ul li {
+        list-style: none;
+    }
+
+    .bar-left {
+        list-style: none;
+    height: 100vh;
+    position: absolute;
+    top: 182px;
+    left: 29px;
+    z-index: 100;
+      }
+
+      .bar-left >li {
+        position: relative;
+        top: -79px;
+        height: 24%;
+      }
+
+      .bar-left>li:before {
+        content: '\25CF';
+        margin-right: 10px;
+        font-size: 50px;
+      }
+
+      .bar-left>li:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        border-left: 4px solid black;
+        margin-left: 12px;
+        height: 64%;
+      }
+
+      .bar-left >li:first-of-type:after {
+        top: 16%;
+      }
+
+      .bar-left >li:last-of-type:after {
+        top: -50%;
+      }
+
+      .bar-right {
+        list-style: none;
+    height: 100vh;
+    position: absolute;
+    top: 182px;
+    left: 379px;
+    z-index: 100;
+      }
+
+      .bar-right >li {
+        position: relative;
+        top: -79px;
+        height: 24%;
+      }
+
+      .bar-right>li:before {
+        content: '\25CF';
+        margin-right: 10px;
+        font-size: 50px;
+      }
+
+      .bar-right>li:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        border-left: 4px solid black;
+        margin-left: 12px;
+        height: 64%;
+      }
+
+      .bar-right >li:first-of-type:after {
+        top: 16%;
+      }
+
+      .bar-right >li:last-of-type:after {
+        top: -50%;
+      }
+
+
+    .page-footer {
+        position: absolute;
+        bottom: 0;
+    }
 }
