@@ -209,7 +209,7 @@ body {
       .bar-left>li:before {
         content: '\25CF';
         margin-right: 10px;
-        font-size: 50px;
+        font-size: 35px;
       }
 
       .bar-left>li:after {
@@ -248,7 +248,7 @@ body {
       .bar-right>li:before {
         content: '\25CF';
         margin-right: 10px;
-        font-size: 50px;
+        font-size: 35px;
       }
 
       .bar-right>li:after {
