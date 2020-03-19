@@ -97,9 +97,9 @@ body {
     }
 
     .title {
-        left: 77%;
-        top: 15px;
-        width: 15%;
+        left: 74%;
+        top: 33px;
+        width: 20%;
         text-align: center;
         padding: 7px 10px;
     }
@@ -147,10 +147,18 @@ body {
         width: 100%;
         height: 406px;
         opacity: 0.5;
+        left: 0;
         z-index: 10;
         top: -13em;
         border-bottom-left-radius: 70px 58px;
         border-bottom-right-radius: 70px 58px;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
     }
 
     #form {
@@ -158,12 +166,12 @@ body {
         background: rgb(221, 217, 217);
         padding: 2.5em 2em 2em;
         border-radius: 10px;
+        width: 100%;
     }
-
     
     .form-container {
         position: relative;
-        top: -18px;
+        top: 47px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -227,7 +235,7 @@ body {
     height: 100vh;
     position: absolute;
     top: 182px;
-    left: 379px;
+    left: 284px;
     z-index: 100;
       }
 

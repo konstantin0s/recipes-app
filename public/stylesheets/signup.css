@@ -100,9 +100,9 @@ body {
     }
 
     .title {
-        left: 77%;
-        top: 15px;
-        width: 15%;
+        left: 74%;
+        top: 33px;
+        width: 20%;
         text-align: center;
         padding: 7px 10px;
     }
@@ -157,18 +157,38 @@ body {
         border-bottom-right-radius: 70px 58px;
     }
 
+    .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
     #form {
         margin: 0;
         background: rgb(221, 217, 217);
         padding: 2.5em 2em 2em;
         border-radius: 10px;
+        width: 100%;
+    }
 
+    .g-recaptcha {
+        width: 100%;
+    }
+
+    .g-recaptcha iframe {
+        width: 100;
+        width: 231px;
+        left: -14px;
+        float: left;
+        margin: 0;
+        position: relative;
     }
 
     
     .form-container {
         position: relative;
-        top: 32px;
+        top: 92px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -232,7 +252,7 @@ body {
     height: 100vh;
     position: absolute;
     top: 182px;
-    left: 379px;
+    left: 284px;
     z-index: 100;
       }
 

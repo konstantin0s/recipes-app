@@ -96,6 +96,7 @@ opacity: 0.8;
     padding-bottom: 1em;
     width: 100vw;
     background: darkolivegreen;
+    left: 0;
 }
 
 .footer-copyright a {
@@ -112,8 +113,8 @@ opacity: 0.8;
     }
 
     .title {
-        left: 76%;
-        top: 15px;
+        left: 74%;
+        top: 33px;
         width: 20%;
         text-align: center;
         padding: 7px 10px;
@@ -135,12 +136,13 @@ opacity: 0.8;
         top: 20px;
         font-size: 2.4em;
         left: 0%;
-        margin-bottom: 10px;
-        margin-top: 3em;
+        margin-bottom: -5px;
+        margin-top: 2em;
         display: flex;
         width: 100%;
         flex-direction: row;
         justify-content: space-evenly;
+
     }
     
     .nav-item .signin {
