@@ -203,7 +203,7 @@ body {
       .bar-left >li {
         position: relative;
         top: -79px;
-        height: 24%;
+        height: 19%;
       }
 
       .bar-left>li:before {
@@ -242,7 +242,7 @@ body {
       .bar-right >li {
         position: relative;
         top: -79px;
-        height: 24%;
+        height: 19%;
       }
 
       .bar-right>li:before {
