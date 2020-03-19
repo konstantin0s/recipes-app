@@ -6,6 +6,32 @@ body {
     overflow-x: hidden;
 }
 
+.fixed-top  {
+    display: block;
+    height: 10vh;
+}
+
+.logos img {
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    left: 30px;
+}
+
+.title {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    opacity: 0;
+    z-index: 100;
+    border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
+}
+
+
 .index-img {
     background: url('https://images.pexels.com/photos/35661/pasta-cheese-egg-food.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
     background-size: cover;
@@ -33,6 +59,7 @@ body {
         border-bottom: 2.5px solid yellow;
 }
 
+
 .nav-item .signin {
     position: relative;
     right: 130px;
@@ -43,28 +70,12 @@ body {
     right: 100px;
 }
 
-/* .signin:hover, .signup:hover {
-    color: yellow;
-} */
 
 .nav-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
-.title {
-    position: absolute;
-    top: 15px;
-    left: 40px;
-    font-size: 15px;
-    color: #fff;
-    padding: 3px;
-    z-index: 100;
-    border: 1px solid #fff;
-    border-bottom: 2.5px solid #fff;
-}
-
 
 .check  {
     position: relative;

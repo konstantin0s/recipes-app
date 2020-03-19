@@ -6,13 +6,26 @@ body {
     overflow: hidden;
 }
 
+.fixed-top  {
+    display: block;
+    height: 10vh;
+}
+
+.logos img {
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    left: 30px;
+}
+
 .title {
     position: absolute;
-    top: 12px;
+    top: 15px;
     left: 40px;
     font-size: 15px;
     color: #fff;
     padding: 3px;
+    opacity: 0;
     z-index: 100;
     border: 1px solid #fff;
     border-bottom: 2.5px solid #fff;
