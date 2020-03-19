@@ -6,11 +6,6 @@ body {
     overflow-x: hidden;
 }
 
-.fixed-top  {
-    display: block;
-    height: 10vh;
-}
-
 .logos img {
     height: 50px;
     width: 80px;
@@ -140,6 +135,18 @@ opacity: 0.8;
         flex-direction: column;
         justify-content: center;
         align-self: center;
+    }
+
+
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 300px;
+        height: 300px;
+        left: 0;
     }
 
 
