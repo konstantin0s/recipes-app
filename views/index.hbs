@@ -10,7 +10,7 @@
     <title>{{title}}</title>
   </head>
 
-  <body>
+  <body class="index-img">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -19,9 +19,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          {{!-- <li class="nav-item active">
-            <a class="nav-link home" href="/">Home <span class="sr-only">(current)
-            </span></a> </li> --}}
             <li class="nav-item" >
        <p class="title">{{title}}</p>
             </li>
@@ -31,12 +28,8 @@
       </div>
     </nav>
 
-    <h1>{{title}}</h1>
-
-    <img id="index-img"
-    src="https://images.pexels.com/photos/35661/pasta-cheese-egg-food.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-    <button class="btn btn-primary check" type="button"><a class="nav-link" href="/recipes">Check the Recipes!</a>
-    </button>
+    <a class="nav-link check" href="/recipes">Check the Recipes!</a>
+  
 
     {{body}}
 
@@ -50,14 +43,11 @@
 
 </footer>
 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-</body>
-
-</html>
-
   </body>
 
   </html>
