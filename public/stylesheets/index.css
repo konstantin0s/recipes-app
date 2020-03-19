@@ -114,13 +114,22 @@ opacity: 0.8;
     .title {
         left: 80%;
     }
+    
+    .fixed-top {
+        padding: 2em;
+    }
 
     .nav-item a {
-        position: relative;
-        top: -20px;
+        position: absolute;
+        top: 420px;
         font-size: 1.4em;
-        left: 35%;
+        left: 0%;
         margin-bottom: 10px;
+        margin-top: 5em;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
     
     .nav-item .signin {
@@ -136,9 +145,18 @@ opacity: 0.8;
     .check {
         top: 200px;
         width: 50%;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -ms-transform-origin: 20% 40%; /* IE 9 */
+        transform: rotate(45deg);
+        transform-origin: 20% 40%;
     }
 
     #index-img {
         top: 136px;
+    }
+
+    .collapse.show {
+        display: block;
+        height: 100vh;
     }
 }
