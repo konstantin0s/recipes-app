@@ -203,17 +203,13 @@ body {
         width: 100%;
     }
 
-    .col-md-12 .g-recaptcha {
+    .col-md-4 .g-recaptcha {
         width: 100%;
 
     }
 
-    .g-recaptcha>div {
-        width: 255px;
-    }
-
     .g-recaptcha div>iframe {
-        width: 251px;
+        width: 80% !important;
         left: -14px;
         float: left;
         margin: 0;
