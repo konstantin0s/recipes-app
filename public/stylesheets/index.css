@@ -188,16 +188,25 @@ opacity: 0.8;
     .nav-item .signin {
         position: relative;
         right: 130;
+        color: #fff;
+        border-bottom: 2.5px solid #fff;
     }
     
     .nav-item .signup {
         position: relative;
         right: 100px;
+        color: #fff;
+        border-bottom: 2.5px solid #fff;
+    }
+
+    .nav-item .signin:hover, .nav-item .signup:hover {
+        border-bottom: 2.5px solid yellow;
     }
     
     .check {
         top: 200px;
         width: 50%;
+        background: rgb(238, 240, 157);
         -ms-transform: rotate(45deg); /* IE 9 */
         -ms-transform-origin: 20% 40%; /* IE 9 */
         transform: rotate(45deg);
