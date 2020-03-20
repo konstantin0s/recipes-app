@@ -230,6 +230,8 @@ body {
         padding: 1em 4em;
         margin-left: 0em;
         margin-bottom: 7em;
+        margin-top: 7em;
+        z-index: 12;
     }
 
     .collapse.show {
@@ -325,5 +327,6 @@ body {
     .page-footer {
         position: absolute;
         bottom: 0;
+        z-index: 1;
     }
 }
