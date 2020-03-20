@@ -192,15 +192,15 @@ ul li {
 
     .form-container {
         position: relative;
-        top: 50px;
-        z-index: 100;
-        left: 0;
+        top: 52px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        left: 0;
         padding: 1em 4em;
-        margin-left: 1em;
+        margin-left: 0em;
+        margin-bottom: 7em;
     }
 
     .logos img {
