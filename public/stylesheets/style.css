@@ -17,6 +17,10 @@ a {
 
 }
 
+ul li {
+  list-style: none;
+}
+
 .form {
   position: relative;
   top: 100px;
@@ -54,8 +58,8 @@ img {
 }
 
 #form button {
-  background: #f1b126;
-  border: 1px solid  #f1b126;
+  background:  rgb(25, 41, 70);
+  border: 1px solid  rgb(25, 41, 70);
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
@@ -70,8 +74,8 @@ img {
 }
 
 #form button:hover {
-  background: #fff;
-  color: #f1b126;
+  background: rgb(107, 56, 248);
+  color: #fff;
   transition: .3s ease background;
 }
 

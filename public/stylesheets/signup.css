@@ -31,21 +31,23 @@ body {
 }
 
 
-
 .signin {
-    right: -500px;
+    color: rgb(25, 41, 70)  !important;
     top: -4px;
-    border-bottom: 2.5px solid #fff;
+    right: -500px;
+    border-bottom: 2.5px solid rgb(25, 41, 70);
 }
 
 .signin:hover {
-    color: yellow !important;
+    color: rgb(224, 124, 9) !important;
     text-decoration: none;
-    border-bottom: 2.5px solid yellow;
+    border-bottom: 2.5px solid rgb(224, 124, 9);
 }
 
 .father-container {
-    width: 100%;
+    width: 65%;
+    right: 0;
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -53,14 +55,22 @@ body {
 }
 
 .form-container {
-    position: relative;
+    /* position: relative;
     top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 2em;
-    margin-left: 30em;
+    margin-left: 30em; */
+    position: absolute;
+    top: 183px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2em
 }
 
 #form h2 {
@@ -68,34 +78,29 @@ body {
 }
 
 .image {
-    background-image: url('https://images.pexels.com/photos/3575143/pexels-photo-3575143.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 40%;
-    height: 80%;
-    z-index: 10;
-    left: 5em;
-    top: 11em;
-    /* transform: rotate(15deg) translateY(180px); */
+        width: 35%;
+        background: rgb(25, 41, 70);
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
 }
 
 
 
 .footer-copyright {
-    color: #fff;
+    color:  rgb(25, 41, 70);
     font-size: 1.2em;
     padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100vw;
     left: 0px;
-    background: darkolivegreen;
 }
 
 .footer-copyright a {
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(54, 85, 143) ;
 }
 
 @media (max-width: 689px) {
@@ -171,6 +176,10 @@ body {
         align-self: center;
     }
 
+    ul li {
+        list-style: none;
+    }
+
     .logos img {
         display: flex;
         flex-direction: column;
@@ -191,13 +200,17 @@ body {
         width: 100%;
     }
 
-    .g-recaptcha {
+    .col-md-12 .g-recaptcha {
         width: 100%;
+
     }
 
-    .g-recaptcha iframe {
-        width: 100;
-        width: 231px;
+    .g-recaptcha > div{
+        width: 255px;
+    }
+
+    .g-recaptcha div > iframe {
+        width: 251px;
         left: -14px;
         float: left;
         margin: 0;

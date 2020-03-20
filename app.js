@@ -16,6 +16,7 @@ app.use(cookieParser());
 
 
 //database on constantintofan85@gmail.com account - mongo db atlas
+//ADD YOUR ENV VAR TO HEROKU CONFIG VARS
 mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
@@ -115,7 +116,7 @@ app.get("/logout", function(req, res){
 });
 
 app.listen(process.env.PORT || 5000, function() {
-  console.log("Server started.......");
+  console.log("Server started on port 5000 :)");
 });
 
 //close mongodb
