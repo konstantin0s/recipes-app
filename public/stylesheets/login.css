@@ -45,6 +45,9 @@ body {
 }
 
 .father-container {
+    background: url('https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 65%;
     right: 0;
     height: 100%;
@@ -157,7 +160,7 @@ ul li {
         left: 1px;
         background-repeat: no-repeat;
         background-size: cover;
-        background-image: url('https://images.pexels.com/photos/1431822/pexels-photo-1431822.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        background: url('https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     }
 
     .image {
