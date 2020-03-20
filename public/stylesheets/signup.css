@@ -209,11 +209,13 @@ body {
     }
 
     .g-recaptcha div>iframe {
-        width: 80% !important;
-        left: -14px;
+        width: 100% !important;
+        left: 0px;
         float: left;
+        box-sizing: border-box;
+        overflow: hidden;
         margin: 0;
-        position: relative;
+        position: absolute
     }
 
 
