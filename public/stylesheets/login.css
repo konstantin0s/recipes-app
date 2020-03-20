@@ -50,6 +50,7 @@ body {
     background-size: cover;
     width: 65%;
     right: 0;
+    top: 0;
     height: 100%;
     position: absolute;
     display: flex;
