@@ -323,6 +323,12 @@ body {
         top: -50%;
     } */
 
+    .error-message {
+        top: -5em;
+        left: 63px;
+        width: 66%
+    }
+
 
     .page-footer {
         position: absolute;

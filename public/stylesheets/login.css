@@ -221,6 +221,13 @@ ul li {
         height: 100vh;
     }
 
+    .error-message {
+        top: -5em;
+        left: 63px;
+        width: 66%
+    }
+
+
     /*vertical bar line */
 /* 
     ul li {
