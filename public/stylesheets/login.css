@@ -220,7 +220,7 @@ ul li {
     }
 
     /*vertical bar line */
-
+/* 
     ul li {
         list-style: none;
     }
@@ -301,7 +301,7 @@ ul li {
 
     .bar-right>li:last-of-type:after {
         top: -50%;
-    }
+    } */
 
 
     .page-footer {

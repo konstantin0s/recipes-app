@@ -240,7 +240,7 @@ body {
 
     /*vertical bar line */
 
-    ul li {
+    /* ul li {
         list-style: none;
     }
 
@@ -320,7 +320,7 @@ body {
 
     .bar-right>li:last-of-type:after {
         top: -50%;
-    }
+    } */
 
 
     .page-footer {
