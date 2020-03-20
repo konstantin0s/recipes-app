@@ -165,7 +165,7 @@ body {
         height: 406px;
         opacity: 0.5;
         left: 0px;
-        z-index: 10;
+        z-index: 0;
         top: -13em;
         border-bottom-left-radius: 70px 58px;
         border-bottom-right-radius: 70px 58px;
@@ -249,7 +249,7 @@ body {
     position: absolute;
     top: 182px;
     left: 40px;
-    z-index: 100;
+    z-index: 110;
       }
 
       .bar-left >li {
@@ -261,7 +261,7 @@ body {
       .bar-left>li:before {
         content: '\25CF';
         margin-right: 10px;
-       font-size: 35px;
+       font-size: 30px;
       }
 
       .bar-left>li:after {
@@ -288,7 +288,7 @@ body {
     position: absolute;
     top: 182px;
     left: 284px;
-    z-index: 100;
+    z-index: 110;
       }
 
       .bar-right >li {
@@ -300,7 +300,7 @@ body {
       .bar-right>li:before {
         content: '\25CF';
         margin-right: 10px;
-        font-size: 35px;
+        font-size: 30px;
       }
 
       .bar-right>li:after {
