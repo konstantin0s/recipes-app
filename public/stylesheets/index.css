@@ -165,15 +165,15 @@ opacity: 0.8;
         position: relative;
         justify-content: center;
         align-self: center;
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         left: 0;
     }
 
 
     .nav-item a {
         position: absolute;
-        top: 20px;
+        top: -10px;
         font-size: 2.4em;
         left: 0%;
         margin-bottom: -5px;
