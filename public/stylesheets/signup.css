@@ -55,14 +55,6 @@ body {
 }
 
 .form-container {
-    /* position: relative;
-    top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2em;
-    margin-left: 30em; */
     position: absolute;
     top: 183px;
     left: 60px;
@@ -123,6 +115,16 @@ body {
         padding: 2em;
     }
 
+    .signin {
+        color:orange !important;
+        border-bottom: 2.5px solid #fff;
+    }
+    
+    .signin:hover {
+        color: rgb(224, 124, 9) !important;
+        text-decoration: none;
+        border-bottom: 2.5px solid rgb(224, 124, 9);
+    }
 
     .nav-item .signin {
         position: absolute;
@@ -220,11 +222,12 @@ body {
     
     .form-container {
         position: relative;
-        top: 92px;
+        top: 52px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        left: 0;
         padding: 1em 4em;
         margin-left: 1em;
     }
@@ -245,7 +248,7 @@ body {
     height: 100vh;
     position: absolute;
     top: 182px;
-    left: 29px;
+    left: 40px;
     z-index: 100;
       }
 
@@ -267,7 +270,7 @@ body {
         top: 0;
         content: '';
         border-left: 4px solid black;
-        margin-left: 12px;
+        margin-left: 8px;
         height: 64%;
       }
 
@@ -306,7 +309,7 @@ body {
         top: 0;
         content: '';
         border-left: 4px solid black;
-        margin-left: 12px;
+        margin-left: 8px;
         height: 64%;
       }
 
