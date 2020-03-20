@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -25,6 +25,7 @@ body {
     border: 1px solid #fff;
     border-bottom: 2.5px solid #fff;
 }
+
 .active .title:hover {
     background: yellow;
     color: #000 !important;
@@ -32,7 +33,7 @@ body {
 
 
 .signin {
-    color: rgb(25, 41, 70)  !important;
+    color: rgb(25, 41, 70) !important;
     top: -4px;
     right: -500px;
     border-bottom: 2.5px solid rgb(25, 41, 70);
@@ -70,18 +71,18 @@ body {
 }
 
 .image {
-        width: 35%;
-        background: rgb(25, 41, 70);
-        position: absolute;
-        height: 100%;
-        left: 0;
-        top: 0;
+    width: 35%;
+    background: rgb(25, 41, 70);
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 
 
 .footer-copyright {
-    color:  rgb(25, 41, 70);
+    color: rgb(25, 41, 70);
     font-size: 1.2em;
     padding: 5px;
     position: fixed;
@@ -92,7 +93,7 @@ body {
 
 .footer-copyright a {
     text-decoration: none;
-    color: rgb(54, 85, 143) ;
+    color: rgb(54, 85, 143);
 }
 
 @media (max-width: 689px) {
@@ -110,16 +111,16 @@ body {
         text-align: center;
         padding: 7px 10px;
     }
-    
+
     .fixed-top {
         padding: 2em;
     }
 
     .signin {
-        color:orange !important;
+        color: orange !important;
         border-bottom: 2.5px solid #fff;
     }
-    
+
     .signin:hover {
         color: rgb(224, 124, 9) !important;
         text-decoration: none;
@@ -128,7 +129,7 @@ body {
 
     .nav-item .signin {
         position: absolute;
-        top: 301px;
+        top: 250px;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
@@ -188,8 +189,8 @@ body {
         position: relative;
         justify-content: center;
         align-self: center;
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
         left: 0;
     }
 
@@ -207,11 +208,11 @@ body {
 
     }
 
-    .g-recaptcha > div{
+    .g-recaptcha>div {
         width: 255px;
     }
 
-    .g-recaptcha div > iframe {
+    .g-recaptcha div>iframe {
         width: 251px;
         left: -14px;
         float: left;
@@ -219,7 +220,7 @@ body {
         position: relative;
     }
 
-    
+
     .form-container {
         position: relative;
         top: 52px;
@@ -245,65 +246,26 @@ body {
 
     .bar-left {
         list-style: none;
-    height: 100vh;
-    position: absolute;
-    top: 182px;
-    left: 40px;
-    z-index: 110;
-      }
+        height: 100vh;
+        position: absolute;
+        top: 159px;
+        left: 36px;
+        z-index: 110;
+    }
 
-      .bar-left >li {
+    .bar-left>li {
         position: relative;
         top: -79px;
         height: 19%
-      }
+    }
 
-      .bar-left>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-       font-size: 30px;
-      }
-
-      .bar-left>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-      }
-
-      .bar-left >li:first-of-type:after {
-        top: 16%;
-      }
-
-      .bar-left >li:last-of-type:after {
-        top: -50%;
-      }
-
-      .bar-right {
-        list-style: none;
-    height: 100vh;
-    position: absolute;
-    top: 182px;
-    left: 284px;
-    z-index: 110;
-      }
-
-      .bar-right >li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-      }
-
-      .bar-right>li:before {
+    .bar-left>li:before {
         content: '\25CF';
         margin-right: 10px;
         font-size: 30px;
-      }
+    }
 
-      .bar-right>li:after {
+    .bar-left>li:after {
         position: absolute;
         left: 0;
         top: 0;
@@ -311,15 +273,54 @@ body {
         border-left: 4px solid black;
         margin-left: 8px;
         height: 64%;
-      }
+    }
 
-      .bar-right >li:first-of-type:after {
+    .bar-left>li:first-of-type:after {
         top: 16%;
-      }
+    }
 
-      .bar-right >li:last-of-type:after {
+    .bar-left>li:last-of-type:after {
         top: -50%;
-      }
+    }
+
+    .bar-right {
+        list-style: none;
+        height: 100vh;
+        position: absolute;
+        top: 159px;
+        left: 257px;
+        z-index: 110;
+    }
+
+    .bar-right>li {
+        position: relative;
+        top: -79px;
+        height: 19%;
+    }
+
+    .bar-right>li:before {
+        content: '\25CF';
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
+    .bar-right>li:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        border-left: 4px solid black;
+        margin-left: 8px;
+        height: 64%;
+    }
+
+    .bar-right>li:first-of-type:after {
+        top: 16%;
+    }
+
+    .bar-right>li:last-of-type:after {
+        top: -50%;
+    }
 
 
     .page-footer {
