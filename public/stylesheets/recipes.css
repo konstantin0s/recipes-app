@@ -7,6 +7,14 @@ body {
     height: 100%;
 }
 
+.logos img {
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    top: 0px;
+    left: 50px;
+}
+
 #username {
     text-transform: capitalize;
     position: absolute;
