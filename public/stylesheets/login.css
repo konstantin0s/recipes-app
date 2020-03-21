@@ -73,6 +73,33 @@ body {
     justify-content: center;
     text-align: center;
     padding: 2em;
+    width: 55%;
+}
+
+#form {
+    margin: 0;
+    position: relative;
+    top: -5em;
+    left: -1.5em;
+    background: rgb(221, 217, 217);
+    padding: 2.5em 2em 2em;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.col-md-4 .g-recaptcha {
+    width: 100%;
+
+}
+
+.g-recaptcha div>iframe {
+    left: 0px;
+    width: 34vw;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
 }
 
 #form h2 {
@@ -142,17 +169,36 @@ ul li {
 
     .nav-item .signup {
         position: absolute;
-        top: 190px;
+        top: 310px;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
         margin-bottom: 10px;
-        margin-top: 5em;
         display: flex;
         width: 50%;
         flex-direction: column;
         justify-content: center;
     }
+
+    .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 250px;
+        height: 250px;
+        top: -2em;
+        left: 0;
+    }
+
 
     .father-container {
         top: 10px;
@@ -185,13 +231,6 @@ ul li {
         border-bottom-right-radius: 70px 58px;
     }
 
-    .logos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
-    }
-
     #form {
         margin: 0;
         background: rgb(221, 217, 217);
@@ -213,17 +252,6 @@ ul li {
         margin-bottom: 7em;
         margin-top: 7em;
         z-index: 12;
-    }
-
-    .logos img {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        align-self: center;
-        width: 250px;
-        height: 250px;
-        left: 0;
     }
 
     .collapse.show {
@@ -370,9 +398,9 @@ ul li {
 
     .mr-auto .nav-item .nav-link {
         color: orange !important;
-        border-bottom: 2.5px solid #fff;
+        border-bottom: 2.5px solid orange;
         margin-top: 1em;
-        left: 270px;
+        left: 285px;
         color: #fff !important;
         align-self: center;
         width: 20%;
@@ -380,6 +408,6 @@ ul li {
     }
 
     .mr-auto .nav-item .nav-link:hover {
-        color: yellow;
+        color: yellow !important;
     }
 }

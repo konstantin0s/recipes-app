@@ -73,11 +73,32 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2em
+    padding: 2em;
+    width: 55%;
+}
+
+#form {
+    margin: 0;
+    position: relative;
+    top: 0em;
+    left: -1.5em;
+    background: rgb(221, 217, 217);
+    padding: 2.5em 2em 2em;
+    border-radius: 10px;
+    width: 100%;
 }
 
 #form h2 {
     margin-bottom: 2em;
+}
+
+.col-md-4 .g-recaptcha {
+    width: 100%;
+
+}
+
+.g-recaptcha > div {
+    width: 27vw !important;
 }
 
 .image {
@@ -139,12 +160,11 @@ body {
 
     .nav-item .signin {
         position: absolute;
-        top: 250px;
+        top: 310px;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
         margin-bottom: 10px;
-        margin-top: 5em;
         display: flex;
         width: 50%;
         flex-direction: column;
@@ -182,6 +202,18 @@ body {
         border-bottom-right-radius: 70px 58px;
     }
 
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 250px;
+        height: 250px;
+        top: -2em;
+        left: 0;
+    }
+
     .logos {
         display: flex;
         flex-direction: column;
@@ -193,17 +225,6 @@ body {
         list-style: none;
     }
 
-    .logos img {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        align-self: center;
-        width: 250px;
-        height: 250px;
-        left: 0;
-    }
-
 
     #form {
         margin: 0;
@@ -213,21 +234,11 @@ body {
         width: 100%;
     }
 
-    .col-md-4 .g-recaptcha {
-        width: 100%;
-
-    }
-
-    .g-recaptcha div>iframe {
-        width: 100% !important;
-        left: 0px;
-        float: left;
-        box-sizing: border-box;
-        overflow: hidden;
-        margin: 0;
-        position: absolute
-    }
-
+ iframe {
+    width: 27vw !important;
+    position: relative;
+    left: -20px;
+ }
 
     .form-container {
         position: relative;
@@ -345,4 +356,116 @@ body {
         bottom: 0;
         z-index: 1;
     }
+}
+
+@media (min-width: 1201px) {
+    .form-container {
+        top: 5em;
+    }
+}
+
+@media (min-width: 690px) and (max-width: 1199px) {
+    iframe {
+        width: 23vw !important;
+        position: relative;
+        left: -33px;
+     }
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+
+
+     iframe{
+        width: 27vw !important;
+        position: relative;
+        left: -20px;
+    }
+    
+
+    
+
+    .form-container {
+        top: 4em;
+    }
+
+    .signin {
+        left: 370px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+
+    .form-container {
+        top: 4em;
+    }
+    .signin {
+        left: 270px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 767px) {
+
+    .form-container {
+        top: 4em;
+    }
+    
+    .collapse.show {
+        display: block;
+        height: 100vh;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    #form {
+        width: 300px;
+    }
+
+    .logos img {
+        left: 20px;
+        top: 2px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .mr-auto .nav-item .nav-link {
+        color: orange !important;
+        border-bottom: 2.5px solid orange;
+        margin-top: 1em;
+        left: 285px;
+        color: #fff !important;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 20%;
+        text-align: center;
+    }
+
+    .mr-auto .nav-item .nav-link:hover {
+        color: yellow !important;
+    }
+}
+
+@media (max-width: 607px) {
+
+.g-recaptcha div>iframe {
+    left: 0px;
+    width: 34vw;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    position: absolute;
+}
+
+.rc-anchor-normal .rc-anchor-pt {
+    margin: 2px 13px 0 0;
+    padding-right: 2px;
+    position: relative !important;
+}
 }
