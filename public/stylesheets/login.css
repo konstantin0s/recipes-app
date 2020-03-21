@@ -32,7 +32,7 @@ body {
 }
 
 .signup {
-    color: rgb(25, 41, 70)  !important;
+    color: rgb(25, 41, 70) !important;
     top: -4px;
     font-size: 1.8em;
     right: -500px;
@@ -81,8 +81,8 @@ body {
 
 ul li {
     list-style: none;
-  }
-  
+}
+
 
 .image {
     width: 35%;
@@ -94,7 +94,7 @@ ul li {
 }
 
 .footer-copyright {
-    color:  rgb(25, 41, 70);
+    color: rgb(25, 41, 70);
     font-size: 1.2em;
     padding: 5px;
     position: fixed;
@@ -105,7 +105,7 @@ ul li {
 
 .footer-copyright a {
     text-decoration: none;
-    color: rgb(54, 85, 143) ;
+    color: rgb(54, 85, 143);
 }
 
 @media (max-width: 689px) {
@@ -129,20 +129,20 @@ ul li {
     }
 
     .signup {
-        color:orange !important;
+        color: orange !important;
         border-bottom: 2.5px solid #fff;
     }
-    
+
     .signup:hover {
         color: rgb(224, 124, 9) !important;
         text-decoration: none;
         border-bottom: 2.5px solid rgb(224, 124, 9);
     }
-    
+
 
     .nav-item .signup {
         position: absolute;
-        top: 250px;
+        top: 190px;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
@@ -239,7 +239,7 @@ ul li {
 
 
     /*vertical bar line */
-/* 
+    /* 
     ul li {
         list-style: none;
     }
@@ -327,5 +327,59 @@ ul li {
         position: absolute;
         bottom: 0;
         z-index: 1;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+
+    .signup {
+        left: 370px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+    .signup {
+        left: 270px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 767px) {
+    
+    .collapse.show {
+        display: block;
+        height: 100vh;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    #form {
+        width: 300px;
+    }
+
+    .logos img {
+        left: 20px;
+        top: 2px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .mr-auto .nav-item .nav-link {
+        color: orange !important;
+        border-bottom: 2.5px solid #fff;
+        margin-top: 1em;
+        left: 270px;
+        color: #fff !important;
+        align-self: center;
+        width: 20%;
+        text-align: center;
+    }
+
+    .mr-auto .nav-item .nav-link:hover {
+        color: yellow;
     }
 }

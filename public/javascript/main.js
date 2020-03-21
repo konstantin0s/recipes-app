@@ -6,7 +6,7 @@ let errorMessage = document.getElementsByClassName('error-message');
 //add background to nav on mobile
 function mobileBackground() {
   let docWidth = document.body.clientWidth;
-  let mobileWidth = 700;
+  let mobileWidth = 767;
   if (docWidth < mobileWidth) {
     nav.classList.add('bg-dark');
   } else {

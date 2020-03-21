@@ -180,6 +180,10 @@ body {
         position: relative;
     }
 
+    .container button {
+        width: 150px;
+    }
+
     #username {
         left: 700px;
     }
@@ -201,6 +205,10 @@ body {
         width: 100%;
         top: 7em;
         position: relative;
+    }
+
+    .container button {
+        width: 150px;
     }
 
     .cards img {
@@ -236,6 +244,10 @@ body {
         position: relative;
     }
 
+    .container button {
+        width: 150px;
+    }
+
     #username {
         left: 380px;
     }
@@ -263,6 +275,10 @@ body {
         width: 100%;
         top: 7em;
         position: relative;
+    }
+
+    .container button {
+        width: 150px;
     }
 
     /* .cards img {
