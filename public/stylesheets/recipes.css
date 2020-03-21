@@ -35,6 +35,7 @@ body {
     font-size: 15px;
     color: #fff;
     padding: 3px;
+    opacity: 0;
     z-index: 100;
     border: 1px solid #fff;
     border-bottom: 2.5px solid #fff;
@@ -197,7 +198,7 @@ body {
     }
 
     .logout {
-        left: 850px;
+        left: 800px;
     }
 
 }
@@ -225,21 +226,45 @@ body {
     }
 
     #username {
-        left: 525px;
+        left: 505px;
     }
 
-  
+
     .logout {
-        left: 671px;
+        left: 601px;
         width: 52px;
     }
 
 }
 
 @media (min-width: 650px) and (max-width: 767px) {
-    /* body {
-        background: yellow;
-    } */
+
+    .hori-line {
+        width: 26%;
+    }
+
+ 
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
+
+    #username {
+        left: 472px;
+    }
+
+    .logout {
+        left: 610px;
+        top: -94px;
+        width: 52px;
+    }
+
+
     .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -256,7 +281,7 @@ body {
         width: 150px;
     }
 
-    #username {
+    /* #username {
         left: 380px;
     }
 
@@ -264,15 +289,23 @@ body {
         left: 521px;
         top: -43px;
         width: 52px;
-    }
+    } */
 
 }
 
 
 @media (min-width: 350px) and (max-width: 649px) {
-    /* body {
-        background: yellow;
-    } */
+
+
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
     .cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -289,11 +322,6 @@ body {
         width: 150px;
     }
 
-    /* .cards img {
-        width: 300px;
-        height: 300px;
-    } */
-
 
     #username {
         left: 155px;
@@ -308,47 +336,96 @@ body {
 }
 
 
+@media (min-width: 300px) and (max-width: 399px) {
+
+
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
+
+    #username {
+        left: 110px;
+    }
+
+    .logout {
+        left: 253px;
+        top: -94px;
+        width: 52px;
+    }
+
+    .hori-line {
+        width: 40%;
+    }
+
+}
+
+
+
 
 @media (min-width: 400px) and (max-width: 500px) {
 
 
     #username {
-        left: 218px;
+        left: 150px;
     }
 
     .logout {
-        left: 325px;
-        top: -43px;
+        left: 293px;
+        top: -94px;
         width: 52px;
+    }
+    .hori-line {
+        width: 30%;
     }
 
 }
 
 @media (min-width: 501px) and (max-width: 550px) {
 
+    .hori-line {
+        width: 30%;
+    }
 
     #username {
-        left: 249px;
+        left: 265px;
     }
 
     .logout {
-        left: 375px;
-        top: -43px;
+        left: 404px;
+        top: -94px;
         width: 52px;
     }
-
 }
 
 @media (min-width: 551px) and (max-width: 649px) {
 
+    .hori-line {
+        width: 26%;
+    }
+
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
 
     #username {
-        left: 309px;
+        left: 265px;
     }
 
     .logout {
-        left: 438px;
-        top: -43px;
+        left: 404px;
+        top: -94px;
         width: 52px;
     }
 

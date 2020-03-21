@@ -88,7 +88,6 @@ body {
     color: orange;
     border-bottom: 2.5px solid #fff;
     opacity: 1;
-    /* background: rgb(148, 142, 142); */
 }
 
 .check:hover {
@@ -120,9 +119,42 @@ opacity: 0.8;
     }
     .nav-item a {
         position: relative;
-        left: 800px;
+        left: 730px;
     }
+
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+    }
+    
 }
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    body {
+      background: yellow;
+    }
+    .nav-item a {
+        position: relative;
+        left: 400px;
+    }
+
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+    }
+    
+}
+
 
 
 @media (max-width: 689px) {
@@ -178,8 +210,6 @@ opacity: 0.8;
         flex-direction: row;
         justify-content: space-evenly;
     }
-
-    }
     
     .nav-item .signin {
         position: relative;
@@ -198,16 +228,18 @@ opacity: 0.8;
     .nav-item .signin:hover, .nav-item .signup:hover {
         border-bottom: 2.5px solid yellow;
     }
-    
+
     .check {
-        top: 200px;
+    
+         top: 200px;
         width: 50%;
         background: rgb(238, 240, 157);
         -ms-transform: rotate(45deg); /* IE 9 */
-        -ms-transform-origin: 20% 40%; /* IE 9 */
+         -ms-transform-origin: 20% 40%; /* IE 9 */
         transform: rotate(45deg);
-        transform-origin: 20% 40%;
+        transform-origin: 20% 40%; 
     }
+    
 
     #index-img {
         top: 136px;
