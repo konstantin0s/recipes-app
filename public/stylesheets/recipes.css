@@ -8,10 +8,10 @@ body {
 }
 
 #username {
-    text-transform: capitalize; 
+    text-transform: capitalize;
     position: absolute;
     top: 12px;
-    left: 840px;
+    left: 930px;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -41,7 +41,7 @@ body {
     position: relative;
     left: 1100px;
     top: -4px;
-     font-size: 1em;
+    font-size: 1em;
     border-bottom: 2.5px solid #fff;
 }
 
@@ -60,15 +60,32 @@ body {
 }
 
 .container h1 {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
+    font-size: 2em;
+    align-self: center;
+    font-weight: bold;
     left: 10px;
+    width: 100%;
+    padding-bottom: 0.5em;
+}
+
+.hori-line {
+    position: relative;
+    align-self: center;
+    width: 12%;
+    top: 5.2em;
+    left: 1.5%;
+    border-bottom: 4px solid orange;
 }
 
 .container button {
+    position: relative;
     width: 15%;
+    top: 8em;
 }
 
 .container .check {
@@ -80,19 +97,34 @@ body {
 }
 
 .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
+    left: -2em;
+    margin-bottom: 3em;
     margin: 4.5em 0em;
     width: 100%;
+    top: 7em;
+    position: relative;
 }
 
 .cardz {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4em;
-    margin-bottom: 3em;
+    margin-bottom: 3em; */
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
+    width: 28%;
+    margin-bottom: 3em; */
+}
+
+
+.cardz img {
+    position: relative;
+    width: 250px;
+    height: 250px;
 }
 
 .cardz h6 {
@@ -132,4 +164,168 @@ body {
 .footer-copyright a {
     text-decoration: none;
     color: aquamarine;
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
+
+    #username {
+        left: 700px;
+    }
+
+    .logout {
+        left: 850px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
+
+    .cards img {
+        width: 300px;
+        height: 300px;
+    }
+
+    #username {
+        left: 525px;
+    }
+
+  
+    .logout {
+        left: 671px;
+        width: 52px;
+    }
+
+}
+
+@media (min-width: 650px) and (max-width: 767px) {
+    /* body {
+        background: yellow;
+    } */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
+
+    #username {
+        left: 380px;
+    }
+
+    .logout {
+        left: 521px;
+        top: -43px;
+        width: 52px;
+    }
+
+}
+
+
+@media (min-width: 350px) and (max-width: 649px) {
+    /* body {
+        background: yellow;
+    } */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
+
+    /* .cards img {
+        width: 300px;
+        height: 300px;
+    } */
+
+
+    #username {
+        left: 155px;
+    }
+
+    .logout {
+        left: 278px;
+        top: -43px;
+        width: 52px;
+    }
+
+}
+
+
+
+@media (min-width: 400px) and (max-width: 500px) {
+
+
+    #username {
+        left: 218px;
+    }
+
+    .logout {
+        left: 325px;
+        top: -43px;
+        width: 52px;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 550px) {
+
+
+    #username {
+        left: 249px;
+    }
+
+    .logout {
+        left: 375px;
+        top: -43px;
+        width: 52px;
+    }
+
+}
+
+@media (min-width: 551px) and (max-width: 649px) {
+
+
+    #username {
+        left: 309px;
+    }
+
+    .logout {
+        left: 438px;
+        top: -43px;
+        width: 52px;
+    }
+
 }

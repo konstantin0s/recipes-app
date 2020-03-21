@@ -27,12 +27,14 @@
   </nav>
 
 <div class="container">
-    <h1>Cuisine Zone</h1>
-
+    <h1 class="text-center">Our Recipes</h1>
+<hr class="hori-line" />
     
   <button type="button" class="btn btn-primary check" 
-  name="addRecipe"> <a class="nav-link add-recipe" href="/recipes/add">Add
-      recipe</a></button>
+  name="addRecipe">
+   <a class="nav-link add-recipe" href="/recipes/add">
+   Add recipe</a>
+      </button>
   <div class="cards">
     {{#each recipes}}
     <div class="cardz">
@@ -47,6 +49,11 @@
   </div>
 </div>
 
-</body>
 
+<script async src="../javascript/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+</body>
 </html>

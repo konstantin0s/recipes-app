@@ -34,6 +34,7 @@ body {
 .signup {
     color: rgb(25, 41, 70)  !important;
     top: -4px;
+    font-size: 1.8em;
     right: -500px;
     border-bottom: 2.5px solid rgb(25, 41, 70);
 }
@@ -42,6 +43,11 @@ body {
     color: rgb(224, 124, 9) !important;
     text-decoration: none;
     border-bottom: 2.5px solid rgb(224, 124, 9);
+}
+
+
+.link {
+    font-size: 1em;
 }
 
 .father-container {
