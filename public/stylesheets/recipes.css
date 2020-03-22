@@ -19,7 +19,7 @@ body {
     text-transform: capitalize;
     position: absolute;
     top: 12px;
-    left: 930px;
+    left: 80%;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -269,7 +269,7 @@ body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 0.5em;
-        left: 0em;
+        left: -2.4em;
         margin-bottom: 3em;
         margin: 4.5em 0em;
         width: 100%;

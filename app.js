@@ -14,6 +14,7 @@ const app = express();
 app.use(cookieParser());
 
 
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
 
 //database on constantintofan85@gmail.com account - mongo db atlas
 //ADD YOUR ENV VAR TO HEROKU CONFIG VARS

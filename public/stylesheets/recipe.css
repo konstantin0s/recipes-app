@@ -11,7 +11,7 @@ body {
     text-transform: capitalize;
     position: absolute;
     top: 12px;
-    left: 840px;
+    left: 80%;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -22,8 +22,9 @@ body {
 
 .title {
     position: absolute;
-    top: 63px;
-    left: 13px;
+    top: 15px;
+    left: 30px;
+    height: 40px;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -39,8 +40,8 @@ body {
 }
 
 .logos img {
-    top: 4px;
-    left: 30px;
+    top: 0px;
+    left: 50px;
     height: 50px;
     width: 80px;
     cursor: pointer;
@@ -145,9 +146,56 @@ body {
     color: aquamarine;
 }
 
+@media (min-width: 490px) and (max-width: 550px) {
+    #username {
+        left: 55%;
+        top: -89px;
+        width: 112px;
+        position: relative;
+        text-align: center;
+    }
+
+    .logout {
+        top: -130px;
+        text-align: center;
+        left: 86%;
+        width: 11%;
+    }
+
+    .logos img {
+        top: 17px;
+        left: 0px;
+    }
+
+    .cards {
+        width: 80vw;
+        align-self: center;
+    }
+}
 
 
-@media (max-width: 607px) {
+@media (max-width: 489px) {
+
+    .logos img {
+        top: 17px;
+        left: 0px;
+    }
+
+    #username {
+        left: 35%;
+        top: -89px;
+        width: 112px;
+        position: relative;
+        text-align: center;
+    }
+
+    .logout {
+        top: -130px;
+        text-align: center;
+        left: 76%;
+        width: 11%;
+    }
+
     .cards {
         width: 80vw;
         align-self: center;
@@ -160,6 +208,32 @@ body {
     .cardz img {
         width: 90%;
         margin: 1em 0em;
+    }
+
+}
+
+@media (min-width: 551px) and (max-width: 767px) {
+    .logos img {
+        top: 17px;
+        left: 0px;
+    }
+
+    #username {
+        left: 64%;
+        width: 115px;
+        text-align: center;
+    }
+
+    .logout {
+        top: -94px;
+        text-align: center;
+        left: 87%;
+        width: 54px;
+    }
+
+    .cards {
+        width: 80vw;
+        align-self: center;
     }
 
 }
