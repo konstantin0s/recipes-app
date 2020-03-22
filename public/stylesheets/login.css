@@ -130,6 +130,11 @@ ul li {
     width: 100vw;
 }
 
+.error-message { 
+  left: 25px;
+  top: -90px;
+}
+
 .footer-copyright a {
     text-decoration: none;
     color: rgb(54, 85, 143);
