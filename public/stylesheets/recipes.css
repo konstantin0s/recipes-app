@@ -27,6 +27,12 @@ body {
     border-bottom: 2.5px solid #fff;
 }
 
+.row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .title {
     position: absolute;
@@ -77,7 +83,7 @@ body {
     font-size: 2em;
     align-self: center;
     font-weight: bold;
-    left: 10px;
+    left: 0px;
     width: 100%;
     padding-bottom: 0.5em;
 }
@@ -85,9 +91,8 @@ body {
 .hori-line {
     position: relative;
     align-self: center;
-    width: 12%;
+    width: 127px;
     top: 5.2em;
-    left: 1.5%;
     border-bottom: 4px solid orange;
 }
 
@@ -243,7 +248,7 @@ body {
         width: 26%;
     }
 
- 
+
     .logos img {
         height: 50px;
         width: 80px;
@@ -380,6 +385,7 @@ body {
         top: -94px;
         width: 52px;
     }
+
     .hori-line {
         width: 30%;
     }

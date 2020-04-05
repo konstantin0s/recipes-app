@@ -27,6 +27,7 @@ router.post("/signup", (req, res, next) => {
   const password = req.body.password;
 
 
+//do some sanitaze on input ? name = name.replace(/</g, "&lt;").replace(/>/g, "&lt;");
   if (username === "" || password === "" || username.length <  3 || password.length < 3) {
     res.render("auth/signup", {
       errorMessage: "The length must be at least 4 characters"

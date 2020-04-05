@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -6,11 +6,14 @@ body {
     overflow-x: hidden;
 }
 
+
+
 .logos img {
     height: 50px;
     width: 80px;
     cursor: pointer;
     left: 30px;
+    opacity: 1;
 }
 
 .title {
@@ -41,7 +44,7 @@ body {
 .nav-item a {
     position: relative;
     left: 1000px;
-    color:  orange !important;
+    color: orange !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,8 +58,8 @@ body {
 }
 
 .nav-item a:hover {
-        color: yellow !important;
-        border-bottom: 2.5px solid yellow;
+    color: yellow !important;
+    border-bottom: 2.5px solid yellow;
 }
 
 
@@ -77,7 +80,7 @@ body {
     justify-content: space-between;
 }
 
-.check  {
+.check {
     position: relative;
     top: 100px;
     padding: 5px;
@@ -91,9 +94,9 @@ body {
 }
 
 .check:hover {
-color: #000;
-background: yellow;
-opacity: 0.8;
+    color: #000;
+    background: yellow;
+    opacity: 0.8;
 }
 
 .footer-copyright {
@@ -114,9 +117,10 @@ opacity: 0.8;
 }
 
 @media (min-width: 1100px) and (max-width: 1300px) {
-    body {
+
+    /* body {
       background: yellow;
-    }
+    } */
     .nav-item a {
         position: relative;
         left: 730px;
@@ -126,18 +130,19 @@ opacity: 0.8;
         position: relative;
         right: 130px;
     }
-    
+
     .nav-item .signup {
         position: relative;
         right: 100px;
     }
-    
+
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
-    body {
-      background: yellow;
-    }
+    /* body {
+        background: yellow;
+    } */
+
     .nav-item a {
         position: relative;
         left: 400px;
@@ -147,12 +152,12 @@ opacity: 0.8;
         position: relative;
         right: 130px;
     }
-    
+
     .nav-item .signup {
         position: relative;
         right: 100px;
     }
-    
+
 }
 
 
@@ -172,7 +177,7 @@ opacity: 0.8;
         text-align: center;
         padding: 7px 10px;
     }
-    
+
     .fixed-top {
         padding: 2em;
     }
@@ -210,14 +215,14 @@ opacity: 0.8;
         flex-direction: row;
         justify-content: space-evenly;
     }
-    
+
     .nav-item .signin {
         position: relative;
         right: 130;
         color: #fff;
         border-bottom: 2.5px solid #fff;
     }
-    
+
     .nav-item .signup {
         position: relative;
         right: 100px;
@@ -225,21 +230,24 @@ opacity: 0.8;
         border-bottom: 2.5px solid #fff;
     }
 
-    .nav-item .signin:hover, .nav-item .signup:hover {
+    .nav-item .signin:hover,
+    .nav-item .signup:hover {
         border-bottom: 2.5px solid yellow;
     }
 
     .check {
-    
-         top: 200px;
+
+        top: 200px;
         width: 50%;
         background: rgb(238, 240, 157);
-        -ms-transform: rotate(45deg); /* IE 9 */
-         -ms-transform-origin: 20% 40%; /* IE 9 */
+        -ms-transform: rotate(45deg);
+        /* IE 9 */
+        -ms-transform-origin: 20% 40%;
+        /* IE 9 */
         transform: rotate(45deg);
-        transform-origin: 20% 40%; 
+        transform-origin: 20% 40%;
     }
-    
+
 
     #index-img {
         top: 136px;

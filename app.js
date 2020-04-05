@@ -53,6 +53,8 @@ app.get('/', function (req, res) {
 //add session
 app.use(session({
   secret: "basic-auth-secret",
+  saveUninitialized: true,
+  resave: true,
   cookie: {
     maxAge: 60000
   },
