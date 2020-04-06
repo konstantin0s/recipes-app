@@ -1,387 +1,387 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
-  height: 100%;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 .logos img {
-  height: 50px;
-  width: 80px;
-  cursor: pointer;
-  top: 0px;
-  left: 50px;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    top: 0px;
+    left: 50px;
 }
 
 #username {
-  text-transform: capitalize;
-  position: absolute;
-  top: 12px;
-  left: 80%;
-  font-size: 15px;
-  color: #fff;
-  padding: 3px;
-  z-index: 100;
-  border-bottom: 2.5px solid #fff;
+    text-transform: capitalize;
+    position: absolute;
+    top: 12px;
+    left: 80%;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    z-index: 100;
+    border-bottom: 2.5px solid #fff;
 }
 
 .row {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .title {
-  position: absolute;
-  top: 12px;
-  left: 40px;
-  font-size: 15px;
-  color: #fff;
-  padding: 3px;
-  opacity: 0;
-  z-index: 100;
-  border: 1px solid #fff;
-  border-bottom: 2.5px solid #fff;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    opacity: 0;
+    z-index: 100;
+    border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
 }
 
 .active .title:hover {
-  background: yellow;
-  color: #000 !important;
+    background: yellow;
+    color: #000 !important;
 }
 
 .logout {
-  position: relative;
-  left: 1100px;
-  top: -4px;
-  font-size: 1em;
-  border-bottom: 2.5px solid #fff;
+    position: relative;
+    left: 1100px;
+    top: -4px;
+    font-size: 1em;
+    border-bottom: 2.5px solid #fff;
 }
 
 .logout:hover {
-  color: yellow !important;
-  text-decoration: none;
-  border-bottom: 2.5px solid yellow;
+    color: yellow !important;
+    text-decoration: none;
+    border-bottom: 2.5px solid yellow;
 }
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 15em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15em;
 }
 
 .container h1 {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 2em;
-  align-self: center;
-  font-weight: bold;
-  left: 0px;
-  width: 100%;
-  padding-bottom: 0.5em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    align-self: center;
+    font-weight: bold;
+    left: 0px;
+    width: 100%;
+    padding-bottom: 0.5em;
 }
 
 .hori-line {
-  position: relative;
-  align-self: center;
-  width: 127px;
-  top: 5.2em;
-  border-bottom: 4px solid orange;
+    position: relative;
+    align-self: center;
+    width: 127px;
+    top: 5.2em;
+    border-bottom: 4px solid orange;
 }
 
 .container button {
-  position: relative;
-  width: 15%;
-  top: 8em;
+    position: relative;
+    width: 140px;
+    top: 8em;
 }
 
 .container .check {
-  align-self: center;
+    align-self: center;
 }
 
 .container button a:hover {
-  color: yellow;
+    color: yellow;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5em;
-  left: -2em;
-  margin-bottom: 3em;
-  margin: 4.5em 0em;
-  width: 100%;
-  top: 7em;
-  position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5em;
+    left: -2em;
+    margin-bottom: 3em;
+    margin: 4.5em 0em;
+    width: 100%;
+    top: 7em;
+    position: relative;
 }
 
 .cardz img {
-  position: relative;
-  width: 250px;
-  height: 250px;
+    position: relative;
+    width: 250px;
+    height: 250px;
 }
 
 .cardz h6 {
-  margin-top: 1.5em;
+    margin-top: 1.5em;
 }
 
 .next-recipe {
-  font-size: 15px;
-  color: #000;
-  padding: 5px;
-  z-index: 100;
-  font-weight: bold;
-  border: 1px solid #333;
-  text-decoration: none;
-  border-bottom: 2.5px solid #333;
-  cursor: pointer;
+    font-size: 15px;
+    color: #000;
+    padding: 5px;
+    z-index: 100;
+    font-weight: bold;
+    border: 1px solid #333;
+    text-decoration: none;
+    border-bottom: 2.5px solid #333;
+    cursor: pointer;
 }
 
 .next-recipe:hover {
-  background: yellow;
-  color: #000;
-  text-decoration: none;
+    background: yellow;
+    color: #000;
+    text-decoration: none;
 }
 
 .footer-copyright {
-  color: #fff;
-  font-size: 1.2em;
-  padding: 5px;
-  position: relative;
-  left: -5px;
-  bottom: -5px !important;
-  padding-bottom: 1em;
-  width: 100vw;
-  background: darkolivegreen;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+    position: relative;
+    left: -5px;
+    bottom: -5px !important;
+    padding-bottom: 1em;
+    width: 100vw;
+    background: darkolivegreen;
 }
 
 .footer-copyright a {
-  text-decoration: none;
-  color: aquamarine;
+    text-decoration: none;
+    color: aquamarine;
 }
 
 @media (min-width: 950px) and (max-width: 1200px) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.5em;
-    left: 0em;
-    margin-bottom: 3em;
-    margin: 4.5em 0em;
-    width: 100%;
-    top: 7em;
-    position: relative;
-  }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
 
-  .container button {
-    width: 150px;
-  }
+    .container button {
+        width: 150px;
+    }
 
-  #username {
-    left: 700px;
-  }
+    #username {
+        left: 700px;
+    }
 
-  .logout {
-    left: 800px;
-  }
+    .logout {
+        left: 800px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 949px) {
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5em;
-    left: 0em;
-    margin-bottom: 3em;
-    margin: 4.5em 0em;
-    width: 100%;
-    top: 7em;
-    position: relative;
-  }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
 
-  .container button {
-    width: 150px;
-  }
+    .container button {
+        width: 150px;
+    }
 
-  .cards img {
-    width: 300px;
-    height: 300px;
-  }
+    .cards img {
+        width: 300px;
+        height: 300px;
+    }
 
-  #username {
-    left: 505px;
-  }
+    #username {
+        left: 505px;
+    }
 
-  .logout {
-    left: 601px;
-    width: 52px;
-  }
+    .logout {
+        left: 601px;
+        width: 52px;
+    }
 }
 
 @media (min-width: 650px) and (max-width: 767px) {
-  .hori-line {
-    width: 26%;
-  }
+    .hori-line {
+        width: 26%;
+    }
 
-  .logos img {
-    height: 50px;
-    width: 80px;
-    cursor: pointer;
-    top: 24px;
-    position: relative;
-    left: 0px;
-  }
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
 
-  #username {
-    left: 472px;
-  }
+    #username {
+        left: 472px;
+    }
 
-  .logout {
-    left: 610px;
-    top: -94px;
-    width: 52px;
-  }
+    .logout {
+        left: 610px;
+        top: -94px;
+        width: 52px;
+    }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0.5em;
-    left: -2.4em;
-    margin-bottom: 3em;
-    margin: 4.5em 0em;
-    width: 100%;
-    top: 7em;
-    position: relative;
-  }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        left: -2.4em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
 
-  .container button {
-    width: 150px;
-  }
+    .container button {
+        width: 150px;
+    }
 
 
-@media (min-width: 350px) and (max-width: 649px) {
-  .logos img {
-    height: 50px;
-    width: 80px;
-    cursor: pointer;
-    top: 24px;
-    position: relative;
-    left: 0px;
-  }
+    @media (min-width: 350px) and (max-width: 649px) {
+        .logos img {
+            height: 50px;
+            width: 80px;
+            cursor: pointer;
+            top: 24px;
+            position: relative;
+            left: 0px;
+        }
 
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0.5em;
-    left: 0em;
-    margin-bottom: 3em;
-    margin: 4.5em 0em;
-    width: 100%;
-    padding: 3em;
-    top: 7em;
-    position: relative;
-  }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 0.5em;
+            left: 0em;
+            margin-bottom: 3em;
+            margin: 4.5em 0em;
+            width: 100%;
+            padding: 3em;
+            top: 7em;
+            position: relative;
+        }
 
-  .container button {
-    width: 150px;
-  }
+        .container button {
+            width: 150px;
+        }
 
-  #username {
-    left: 155px;
-  }
+        #username {
+            left: 155px;
+        }
 
-  .logout {
-    left: 278px;
-    top: -43px;
-    width: 52px;
-  }
-}
+        .logout {
+            left: 278px;
+            top: -43px;
+            width: 52px;
+        }
+    }
 
-@media (min-width: 300px) and (max-width: 399px) {
-  .logos img {
-    height: 50px;
-    width: 80px;
-    cursor: pointer;
-    top: 24px;
-    position: relative;
-    left: 0px;
-  }
+    @media (min-width: 300px) and (max-width: 399px) {
+        .logos img {
+            height: 50px;
+            width: 80px;
+            cursor: pointer;
+            top: 24px;
+            position: relative;
+            left: 0px;
+        }
 
-  #username {
-    left: 110px;
-  }
+        #username {
+            left: 110px;
+        }
 
-  .logout {
-    left: 253px;
-    top: -94px;
-    width: 52px;
-  }
+        .logout {
+            left: 253px;
+            top: -94px;
+            width: 52px;
+        }
 
-  .hori-line {
-    width: 40%;
-  }
-}
+        .hori-line {
+            width: 40%;
+        }
+    }
 
-@media (min-width: 400px) and (max-width: 500px) {
-  #username {
-    left: 150px;
-  }
+    @media (min-width: 400px) and (max-width: 500px) {
+        #username {
+            left: 150px;
+        }
 
-  .logout {
-    left: 293px;
-    top: -94px;
-    width: 52px;
-  }
+        .logout {
+            left: 293px;
+            top: -94px;
+            width: 52px;
+        }
 
-  .hori-line {
-    width: 30%;
-  }
-}
+        .hori-line {
+            width: 30%;
+        }
+    }
 
-@media (min-width: 501px) and (max-width: 550px) {
-  .hori-line {
-    width: 30%;
-  }
+    @media (min-width: 501px) and (max-width: 550px) {
+        .hori-line {
+            width: 30%;
+        }
 
-  #username {
-    left: 265px;
-  }
+        #username {
+            left: 265px;
+        }
 
-  .logout {
-    left: 404px;
-    top: -94px;
-    width: 52px;
-  }
-}
+        .logout {
+            left: 404px;
+            top: -94px;
+            width: 52px;
+        }
+    }
 
-@media (min-width: 551px) and (max-width: 649px) {
-  .hori-line {
-    width: 26%;
-  }
+    @media (min-width: 551px) and (max-width: 649px) {
+        .hori-line {
+            width: 26%;
+        }
 
-  .logos img {
-    height: 50px;
-    width: 80px;
-    cursor: pointer;
-    top: 24px;
-    position: relative;
-    left: 0px;
-  }
+        .logos img {
+            height: 50px;
+            width: 80px;
+            cursor: pointer;
+            top: 24px;
+            position: relative;
+            left: 0px;
+        }
 
-  #username {
-    left: 265px;
-  }
+        #username {
+            left: 265px;
+        }
 
-  .logout {
-    left: 404px;
-    top: -94px;
-    width: 52px;
-  }
-}
+        .logout {
+            left: 404px;
+            top: -94px;
+            width: 52px;
+        }
+    }

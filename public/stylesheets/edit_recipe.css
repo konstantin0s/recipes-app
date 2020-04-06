@@ -5,11 +5,11 @@
 body {
     overflow-x: hidden;
     height: 100%;
-    background: url('https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background: url('https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .logos img {
@@ -21,7 +21,7 @@ body {
 }
 
 #username {
-    text-transform: capitalize; 
+    text-transform: capitalize;
     position: absolute;
     top: 12px;
     left: 80%;
@@ -56,9 +56,9 @@ body {
 .logout {
     position: relative;
     left: 1100px;
-    top: -4px;
+    top: 0px;
     font-size: 1em;
-    padding-bottom: 0;
+    padding-bottom: 0.3em;
     border-bottom: 2.5px solid #fff;
 }
 
@@ -92,7 +92,7 @@ body {
     border: 2px solid #333;
     padding: 4em 3em;
     background: aliceblue;
-} 
+}
 
 .cards form {
     position: relative;
@@ -106,7 +106,10 @@ body {
     margin-bottom: 6em;
 }
 
-.btn-primary /*button */ {
+.btn-primary
+
+/*button */
+    {
     margin-top: 1em;
     width: 35%;
 }
