@@ -36,39 +36,40 @@
   <h4 class="text-center">Edit Recipe</h4>
 <form method="POST" action="/recipes/edit/{{recip.id}}" class="form">
 <div id="form-group">
-  <label for="level">Name:</label>
-  <input type="text" name="title" value="{{recip.title}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="title" value="{{recip.title}}" placeholder="Recipe Name" class="form-control">
 </div>
 <div id="form-group">
-  <label for="level">Level:</label>
-  <input type="text" name="level" value="{{recip.level}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="level" placeholder="Enter Level"  value="{{recip.level}}" class="form-control">
 </div>
 <div id="form-group">
-  <label for="ingredients">Ingredients:</label>
- <textarea name="ingredients" value="{{recip.ingredients}}" id="" cols="30" rows="10" class="form-control"></textarea>
+  <label for="ingredients"></label>
+ <textarea name="ingredients" value="{{recip.ingredients}}" id="" placeholder="Add Ingredients" 
+ cols="30" rows="10" class="form-control"></textarea>
  <div id="form-group">
-  <label for="level">Cuisine:</label>
-  <input type="text" name="cuisine" value="{{recip.cuisine}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="cuisine" placeholder="Cuisine" value="{{recip.cuisine}}" class="form-control">
 </div>
 <div id="form-group">
-  <label for="level">Dish:</label>
-  <input type="text" name="dishType" value="{{recip.dishType}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="dishType" placeholder="Dish Type" value="{{recip.dishType}}" class="form-control">
 </div>
 <div id="form-group" class="image">
-  <label for="level">Image:</label>
-     <input type='text' name='image' value="{{recip.image}}" placeholder="Image url"/>
+  <label for="level"></label>
+     <input type='text' class="form-control" name='image' value="{{recip.image}}" placeholder="Add Image url"/>
 </div>
 <div id="form-group">
-  <label for="level">Duration:</label>
-  <input type="text" name="duration" value="{{recip.duration}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="duration" placeholder="Duration"  value="{{recip.duration}}" class="form-control">
 </div>
 <div id="form-group">
-  <label for="level">Cook:</label>
-  <input type="text" name="creator" value="{{recip.creator}}" class="form-control">
+  <label for="level"></label>
+  <input type="text" name="creator" placeholder="Chef Name"  value="{{recip.creator}}" class="form-control">
 </div>
 <div id="form-group">
-  <label for="level">Date:</label>
-  <input type="date" name="date" value="{{recip.date}}" class="form-control">
+  <label for="level"></label>
+  <input type="date" name="date" placeholder="Add Date" value="{{recip.date}}" class="form-control">
 </div>
  <input type="submit" class="btn btn-primary" value="Submit">
 </div>
