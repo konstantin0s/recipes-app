@@ -258,7 +258,6 @@ body {
     margin: 4.5em 0em;
     width: 100%;
     top: 7em;
-    padding: 6em;
     position: relative;
   }
 
@@ -266,16 +265,6 @@ body {
     width: 150px;
   }
 
-  /* #username {
-        left: 380px;
-    }
-
-    .logout {
-        left: 521px;
-        top: -43px;
-        width: 52px;
-    } */
-}
 
 @media (min-width: 350px) and (max-width: 649px) {
   .logos img {
