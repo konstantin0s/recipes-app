@@ -167,15 +167,29 @@ body {
     color: aquamarine;
 }
 
-@media (min-width: 950px) and (max-width: 1200px) {
-    .cards {
+
+
+
+
+@media screen and (min-width: 350px) and (max-width: 649px) {
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
+    .container .cards {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 0.5em;
         left: 0em;
         margin-bottom: 3em;
         margin: 4.5em 0em;
         width: 100%;
+        padding: 3em;
         top: 7em;
         position: relative;
     }
@@ -185,47 +199,100 @@ body {
     }
 
     #username {
-        left: 700px;
+        left: 155px;
     }
 
     .logout {
-        left: 800px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 949px) {
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 0.5em;
-        left: 0em;
-        margin-bottom: 3em;
-        margin: 4.5em 0em;
-        width: 100%;
-        top: 7em;
-        position: relative;
-    }
-
-    .container button {
-        width: 150px;
-    }
-
-    .cards img {
-        width: 300px;
-        height: 300px;
-    }
-
-    #username {
-        left: 505px;
-    }
-
-    .logout {
-        left: 601px;
+        left: 278px;
+        top: -43px;
         width: 52px;
     }
 }
 
-@media (min-width: 650px) and (max-width: 767px) {
+@media (min-width: 300px) and (max-width: 399px) {
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
+    #username {
+        left: 110px;
+    }
+
+    .logout {
+        left: 253px;
+        top: -94px;
+        width: 52px;
+    }
+
+    .hori-line {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    #username {
+        left: 150px;
+    }
+
+    .logout {
+        left: 293px;
+        top: -94px;
+        width: 52px;
+    }
+
+    .hori-line {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 550px) {
+    .hori-line {
+        width: 30%;
+    }
+
+    #username {
+        left: 265px;
+    }
+
+    .logout {
+        left: 404px;
+        top: -94px;
+        width: 52px;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 649px) {
+    .hori-line {
+        width: 26%;
+    }
+
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 24px;
+        position: relative;
+        left: 0px;
+    }
+
+    #username {
+        left: 265px;
+    }
+
+    .logout {
+        left: 404px;
+        top: -94px;
+        width: 52px;
+    }
+}
+
+
+@media screen and (min-width: 650px) and (max-width: 767px) {
     .hori-line {
         width: 26%;
     }
@@ -264,124 +331,63 @@ body {
     .container button {
         width: 150px;
     }
+}
 
+@media screen and (min-width: 768px) and (max-width: 949px) {
 
-    @media (min-width: 350px) and (max-width: 649px) {
-        .logos img {
-            height: 50px;
-            width: 80px;
-            cursor: pointer;
-            top: 24px;
-            position: relative;
-            left: 0px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-gap: 0.5em;
-            left: 0em;
-            margin-bottom: 3em;
-            margin: 4.5em 0em;
-            width: 100%;
-            padding: 3em;
-            top: 7em;
-            position: relative;
-        }
-
-        .container button {
-            width: 150px;
-        }
-
-        #username {
-            left: 155px;
-        }
-
-        .logout {
-            left: 278px;
-            top: -43px;
-            width: 52px;
-        }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
     }
 
-    @media (min-width: 300px) and (max-width: 399px) {
-        .logos img {
-            height: 50px;
-            width: 80px;
-            cursor: pointer;
-            top: 24px;
-            position: relative;
-            left: 0px;
-        }
-
-        #username {
-            left: 110px;
-        }
-
-        .logout {
-            left: 253px;
-            top: -94px;
-            width: 52px;
-        }
-
-        .hori-line {
-            width: 40%;
-        }
+    .container button {
+        width: 150px;
     }
 
-    @media (min-width: 400px) and (max-width: 500px) {
-        #username {
-            left: 150px;
-        }
-
-        .logout {
-            left: 293px;
-            top: -94px;
-            width: 52px;
-        }
-
-        .hori-line {
-            width: 30%;
-        }
+    .cards img {
+        width: 300px;
+        height: 300px;
     }
 
-    @media (min-width: 501px) and (max-width: 550px) {
-        .hori-line {
-            width: 30%;
-        }
-
-        #username {
-            left: 265px;
-        }
-
-        .logout {
-            left: 404px;
-            top: -94px;
-            width: 52px;
-        }
+    #username {
+        left: 505px;
     }
 
-    @media (min-width: 551px) and (max-width: 649px) {
-        .hori-line {
-            width: 26%;
-        }
-
-        .logos img {
-            height: 50px;
-            width: 80px;
-            cursor: pointer;
-            top: 24px;
-            position: relative;
-            left: 0px;
-        }
-
-        #username {
-            left: 265px;
-        }
-
-        .logout {
-            left: 404px;
-            top: -94px;
-            width: 52px;
-        }
+    .logout {
+        left: 601px;
+        width: 52px;
     }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1200px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 7em;
+        position: relative;
+    }
+
+    .container button {
+        width: 150px;
+    }
+
+    #username {
+        left: 700px;
+    }
+
+    .logout {
+        left: 800px;
+    }
+}
