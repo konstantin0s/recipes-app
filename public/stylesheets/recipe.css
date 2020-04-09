@@ -11,7 +11,7 @@ body {
     text-transform: capitalize;
     position: absolute;
     top: 12px;
-    left: 80%;
+    left: 78%;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -48,9 +48,9 @@ body {
 }
 
 .logout {
-    position: relative;
-    top: -4px;
-    left: 1100px;
+    position: absolute;
+    top: 4px;
+    left: 90%;
     font-size: 1em;
     border-bottom: 2.5px solid #fff;
 }
@@ -146,32 +146,6 @@ body {
     color: aquamarine;
 }
 
-@media (min-width: 490px) and (max-width: 550px) {
-    #username {
-        left: 55%;
-        top: -89px;
-        width: 112px;
-        position: relative;
-        text-align: center;
-    }
-
-    .logout {
-        top: -130px;
-        text-align: center;
-        left: 86%;
-        width: 11%;
-    }
-
-    .logos img {
-        top: 17px;
-        left: 0px;
-    }
-
-    .cards {
-        width: 80vw;
-        align-self: center;
-    }
-}
 
 
 @media (max-width: 489px) {
@@ -183,8 +157,8 @@ body {
 
     #username {
         left: 35%;
-        top: -89px;
-        width: 112px;
+        top: -88px;
+        width: 140px;
         position: relative;
         text-align: center;
     }
@@ -212,6 +186,33 @@ body {
 
 }
 
+@media (min-width: 490px) and (max-width: 550px) {
+    #username {
+        left: 55%;
+        top: -88px;
+        width: 140px;
+        position: relative;
+        text-align: center;
+    }
+
+    .logout {
+        top: -130px;
+        text-align: center;
+        left: 86%;
+        width: 11%;
+    }
+
+    .logos img {
+        top: 17px;
+        left: 0px;
+    }
+
+    .cards {
+        width: 80vw;
+        align-self: center;
+    }
+}
+
 @media (min-width: 551px) and (max-width: 767px) {
     .logos img {
         top: 17px;
@@ -219,8 +220,8 @@ body {
     }
 
     #username {
-        left: 64%;
-        width: 115px;
+        left: 53%;
+        width: 140px;
         text-align: center;
     }
 
@@ -258,11 +259,11 @@ body {
 @media (min-width: 950px) and (max-width: 1200px) {
 
     #username {
-        left: 700px;
+        left: 60%;
     }
 
     .logout {
-        left: 800px;
+        left: 80%;
     }
 
     .logos img {
@@ -279,11 +280,11 @@ body {
     }
 
     #username {
-        left: 500px;
+        left: 60%;
     }
 
     .logout {
-        left: 600px;
+        left: 80%;
     }
 
 }
