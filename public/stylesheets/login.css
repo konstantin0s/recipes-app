@@ -130,9 +130,9 @@ ul li {
     width: 100vw;
 }
 
-.error-message { 
-  left: 25px;
-  top: -90px;
+.error-message {
+    left: 25px;
+    top: -90px;
 }
 
 .footer-copyright a {
@@ -173,8 +173,10 @@ ul li {
 
 
     .nav-item .signup {
-        position: absolute;
-        top: 310px;
+        position: relative;
+        top: 160px;
+        color: orange !important;
+        border-bottom: 2.5px solid #fff;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
@@ -389,7 +391,7 @@ ul li {
 }
 
 @media (min-width: 700px) and (max-width: 767px) {
-    
+
     .collapse.show {
         display: block;
         height: 100vh;

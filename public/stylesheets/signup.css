@@ -97,7 +97,7 @@ body {
 
 }
 
-.g-recaptcha > div {
+.g-recaptcha>div {
     width: 27vw !important;
 }
 
@@ -159,8 +159,8 @@ body {
     }
 
     .nav-item .signin {
-        position: absolute;
-        top: 310px;
+        position: relative;
+        top: 160px;
         font-size: 2.4em;
         left: 25%;
         text-align: center;
@@ -184,8 +184,8 @@ body {
         overflow: hidden;
         left: 1px;
         background: url('https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .image {
@@ -235,11 +235,11 @@ body {
         width: 100%;
     }
 
- iframe {
-    width: 65vw !important;
-    position: relative;
-    left: -20px;
- }
+    iframe {
+        width: 65vw !important;
+        position: relative;
+        left: -20px;
+    }
 
     .form-container {
         position: relative;
@@ -262,89 +262,6 @@ body {
         height: 100vh;
     }
 
-    /*vertical bar line */
-
-    /* ul li {
-        list-style: none;
-    }
-
-    .bar-left {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 159px;
-        left: 36px;
-        z-index: 110;
-    }
-
-    .bar-left>li {
-        position: relative;
-        top: -79px;
-        height: 19%
-    }
-
-    .bar-left>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-left>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-left>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-left>li:last-of-type:after {
-        top: -50%;
-    }
-
-    .bar-right {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 159px;
-        left: 257px;
-        z-index: 110;
-    }
-
-    .bar-right>li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-    }
-
-    .bar-right>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-right>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-right>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-right>li:last-of-type:after {
-        top: -50%;
-    } */
 
     .error-message {
         top: -4em;
@@ -371,13 +288,13 @@ body {
         width: 23vw !important;
         position: relative;
         left: -33px;
-     }
+    }
 }
 
 @media (min-width: 950px) and (max-width: 1200px) {
 
 
-     iframe{
+    iframe {
         width: 27vw !important;
         position: relative;
         left: -20px;
@@ -402,6 +319,7 @@ body {
         top: 11em;
         width: 70%;
     }
+
     .signin {
         left: 270px;
     }
@@ -413,7 +331,7 @@ body {
         top: 11em;
     }
 
-    .error-message { 
+    .error-message {
         width: 44vw;
     }
 
@@ -421,7 +339,7 @@ body {
     iframe {
         width: 38vw !important;
     }
-    
+
     .collapse.show {
         display: block;
         height: 100vh;
@@ -466,19 +384,19 @@ body {
 
 @media (max-width: 607px) {
 
-.g-recaptcha div>iframe {
-    left: 0px;
-    width: 34vw;
-    float: left;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin: 0;
-    position: absolute;
-}
+    .g-recaptcha div>iframe {
+        left: 0px;
+        width: 34vw;
+        float: left;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0;
+        position: absolute;
+    }
 
-.rc-anchor-normal .rc-anchor-pt {
-    margin: 2px 13px 0 0;
-    padding-right: 2px;
-    position: relative !important;
-}
+    .rc-anchor-normal .rc-anchor-pt {
+        margin: 2px 13px 0 0;
+        padding-right: 2px;
+        position: relative !important;
+    }
 }
