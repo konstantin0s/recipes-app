@@ -54,8 +54,9 @@ body {
 
 .logout {
     position: relative;
-    left: 1100px;
-    top: -4px;
+    position: absolute;
+    left: 90%;
+    top: 4px;
     font-size: 1em;
     border-bottom: 2.5px solid #fff;
 }
@@ -220,13 +221,14 @@ body {
     }
 
     #username {
-        left: 110px;
+        left: 25%;
     }
 
     .logout {
-        left: 253px;
+        left: 80%;
         top: -94px;
         width: 52px;
+        position: relative;
     }
 
     .hori-line {
@@ -236,13 +238,14 @@ body {
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
     #username {
-        left: 150px;
+        left: 30%;
     }
 
     .logout {
-        left: 293px;
+        left: 75%;
         top: -94px;
         width: 52px;
+        position: relative;
     }
 
     .hori-line {
@@ -256,11 +259,12 @@ body {
     }
 
     #username {
-        left: 265px;
+        left: 40%;
     }
 
     .logout {
-        left: 404px;
+        left: 80%;
+        position: relative;
         top: -94px;
         width: 52px;
     }
@@ -281,13 +285,14 @@ body {
     }
 
     #username {
-        left: 265px;
+        left: 50%;
     }
 
     .logout {
-        left: 404px;
+        left: 88%;
         top: -94px;
         width: 52px;
+        position: relative;
     }
 }
 
@@ -307,13 +312,14 @@ body {
     }
 
     #username {
-        left: 472px;
+        left: 50%;
     }
 
     .logout {
-        left: 610px;
+        left: 80%;
         top: -94px;
         width: 52px;
+        position: relative;
     }
 
     .cards {
@@ -357,16 +363,15 @@ body {
     }
 
     #username {
-        left: 505px;
+        left: 72%;
     }
 
     .logout {
-        left: 601px;
-        width: 52px;
+        left: 88%
     }
 }
 
-@media screen and (min-width: 950px) and (max-width: 1200px) {
+@media screen and (min-width: 950px) and (max-width: 1300px) {
     .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -384,10 +389,10 @@ body {
     }
 
     #username {
-        left: 700px;
+        left: 72%;
     }
 
     .logout {
-        left: 800px;
+        left: 88%
     }
 }

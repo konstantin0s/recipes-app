@@ -157,7 +157,7 @@ body {
     #username {
         left: 35%;
         top: -89px;
-        width: 112px;
+        width: 140px;
         position: relative;
         text-align: center;
     }
@@ -187,10 +187,11 @@ body {
 
 @media (min-width: 490px) and (max-width: 550px) {
     #username {
-        left: 55%;
+
         top: -89px;
-        width: 112px;
         position: relative;
+        width: 140px;
+        left: 45%;
         text-align: center;
     }
 
@@ -219,8 +220,8 @@ body {
     }
 
     #username {
-        left: 64%;
-        width: 115px;
+        width: 140px;
+        left: 45%;
         text-align: center;
     }
 
@@ -251,6 +252,34 @@ body {
 
     .logout {
         left: 600px;
+    }
+
+}
+
+
+@media (min-width: 950px) and (max-width: 1300px) {
+
+    #username {
+        left: 60%;
+    }
+
+    .logout {
+        left: 80%;
+        position: absolute;
+        top: 9px;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    #username {
+        left: 60%;
+    }
+
+    .logout {
+        left: 80%;
+        position: absolute;
+        top: 9px;
     }
 
 }
