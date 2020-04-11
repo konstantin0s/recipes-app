@@ -98,10 +98,21 @@ body {
     border-bottom: 4px solid orange;
 }
 
+
 .container button {
     position: relative;
     width: 140px;
     top: 8em;
+    color: #000;
+    font-weight: bold;
+}
+
+.container button:hover {
+    background-color: #333;
+}
+
+.add-recipe {
+    color: #000;
 }
 
 .container .check {
@@ -109,7 +120,8 @@ body {
 }
 
 .container button a:hover {
-    color: yellow;
+    color: #fff;
+    font-weight: bold;
 }
 
 .cards {
@@ -145,6 +157,7 @@ body {
 .list-group-item {
     position: relative;
     display: inline-block;
+    background: rgb(221, 217, 217);
 }
 
 .next-recipe {
