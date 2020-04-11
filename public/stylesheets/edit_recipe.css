@@ -283,3 +283,17 @@ body {
     }
 
 }
+
+@media screen and (min-width: 300px) and (max-width: 780px) {
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
+    .page-footer,
+    .footer-copyright {
+        width: 120vw;
+    }
+}

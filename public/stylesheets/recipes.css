@@ -206,6 +206,11 @@ body {
 
 
 @media screen and (min-width: 350px) and (max-width: 649px) {
+    .title {
+        position: absolute;
+        top: 98px;
+    }
+
     .logos img {
         height: 50px;
         width: 80px;
@@ -244,6 +249,14 @@ body {
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
+
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
     .logos img {
         height: 50px;
         width: 80px;
@@ -270,6 +283,14 @@ body {
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
+
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
     #username {
         left: 30%;
     }
@@ -287,6 +308,14 @@ body {
 }
 
 @media screen and (min-width: 501px) and (max-width: 550px) {
+
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
     .hori-line {
         width: 30%;
     }
@@ -304,6 +333,14 @@ body {
 }
 
 @media screen and (min-width: 551px) and (max-width: 649px) {
+
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
     .hori-line {
         width: 26%;
     }
@@ -331,6 +368,14 @@ body {
 
 
 @media screen and (min-width: 650px) and (max-width: 767px) {
+
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+
     .hori-line {
         width: 26%;
     }

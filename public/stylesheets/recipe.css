@@ -165,24 +165,28 @@ body {
     }
 
     .logout {
-        top: -130px;
+        top: 2px;
         text-align: center;
         left: 76%;
-        width: 11%;
+        width: 14%;
     }
 
     .cards {
-        width: 80vw;
+        width: 90vw;
         align-self: center;
     }
 
     .cardz {
-        width: 90%;
+        width: 100%;
     }
 
     .cardz img {
         width: 90%;
         margin: 1em 0em;
+    }
+
+    .cardz button {
+        width: 50%;
     }
 
 }
@@ -209,8 +213,16 @@ body {
     }
 
     .cards {
-        width: 80vw;
+        width: 90vw;
         align-self: center;
+    }
+
+    .cardz {
+        width: 100%;
+    }
+
+    .cardz button {
+        width: 50%;
     }
 }
 
@@ -234,8 +246,17 @@ body {
     }
 
     .cards {
-        width: 80vw;
+        width: 90vw;
         align-self: center;
+    }
+
+    .cardz {
+        width: 100%;
+    }
+
+
+    .cardz button {
+        width: 50%;
     }
 
 }
@@ -288,4 +309,13 @@ body {
         left: 80%;
     }
 
+}
+
+@media screen and (min-width: 300px) and (max-width: 780px) {
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
 }

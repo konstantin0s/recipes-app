@@ -28,8 +28,7 @@ body {
 }
 
 .index-img {
-  background: url('https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
-    no-repeat center center fixed;
+  background: url('https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -113,6 +112,7 @@ body {
 }
 
 @media (min-width: 1100px) and (max-width: 1300px) {
+
   /* body {
       background: yellow;
     } */
@@ -208,14 +208,14 @@ body {
     position: relative;
     right: 130px;
     color: #fff;
-    top: 120px;
+    top: 20px;
     border-bottom: 2.5px solid #fff;
   }
 
   .nav-item .signup {
     position: relative;
     right: 100px;
-    top: 220px;
+    top: 120px;
     color: #fff;
     border-bottom: 2.5px solid #fff;
   }
