@@ -107,14 +107,15 @@ body {
     width: 100%;
 }
 
-.cardz button,
-.delete-recipe {
-    width: 40%;
+.cardz button {
+    width: 30%;
     margin-top: 0.5em;
     margin-right: 1em;
 }
 
-.edit-recipe {
+
+.edit-recipe,
+.delete-recipe {
     width: 100%;
 }
 
