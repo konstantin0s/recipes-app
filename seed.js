@@ -10,7 +10,7 @@ Recipes.find({}).removeAsync()
     dishType: 'dinner',
     image: 'https://unsplash.com/photos/al9eh9QkdPA',
     duration: 33,
-    creator: 'mama',
+    creator: 'Gina',
     created: '22-01-2019'
   });
 });
