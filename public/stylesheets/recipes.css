@@ -357,6 +357,20 @@ body {
         left: 0px;
     }
 
+    .formless {
+        left: -75px;
+    }
+
+    #input:focus {
+        width: 300px;
+        opacity: 1;
+        cursor: text;
+    }
+
+    #input:focus~.search-x {
+        right: -330px;
+    }
+
     .container .cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
