@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const request = require('request');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cookieParser = require('cookie-parser');
@@ -77,7 +76,6 @@ app.use(bodyParser.json());
 
 
 app.locals.title = 'CuiSZone';
-let Recipes = require('./models/recipes');
 
 const index = require('./routes/index');
 app.use('/', index);
@@ -88,8 +86,8 @@ app.use('/', authRouter);
 app.use((req, res, next) => {
   if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
     next(); // ==> go to the next route ---
-    let user = req.session.currentUser;
-
+    // let user = req.session.currentUser;
+    // res.json(user);
   } else { //    |
     res.redirect("/login"); //    |
   } //    |
@@ -106,17 +104,7 @@ app.use('/', edit);
 const deleteRecipe = require('./routes/delete');
 app.use('/', deleteRecipe);
 
-
-app.get("/logout", function(req, res){
-  var cookie = req.cookies;
-  for (var prop in cookie) {
-      if (!cookie.hasOwnProperty(prop)) {
-          continue;
-      }    
-      res.cookie(prop, '', {expires: new Date(0)});
-  }
-  res.redirect('/');
-});
+;
 
 app.listen(process.env.PORT || 5000, function() {
   console.log("Server started on port 5000 :)");

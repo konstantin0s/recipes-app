@@ -13,7 +13,7 @@ const User = require("../models/user");
 
 
 
-router.get("/signup", (req, res, next) => {
+router.get("/signup", (res) => {
   res.render("auth/signup");
 });
 
@@ -80,7 +80,7 @@ router.post('//signup', function(req, res) {
   });
 });
 
-router.get("/login", (req, res, next) => {
+router.get("/login", (req, res) => {
   res.render("auth/login");
 });
 
@@ -121,12 +121,25 @@ router.post("/login", (req, res, next) => {
   })
 });
 
-router.get("/logout", (req, res, next) => {
-  res.clearCookie("name");
-  req.session.destroy((err) => {
-    // cannot access session here
-    res.redirect("/");
-  });
-});
+// router.get("/logout", (req, res) => {
+//   res.clearCookie("name");
+//   req.session.destroy((err) => {
+//     // cannot access session here
+//     console.log(err);
+//     res.redirect("/");
+//   })
+// });
+
+router.get("/logout", function(req, res){
+  var cookie = req.cookies;
+  for (var prop in cookie) {
+    var hasCookieProp = {}.hasOwnProperty.call(prop, cookie);
+      if (!hasCookieProp) {
+          continue;
+      }    
+      res.cookie(prop, '', {expires: new Date(0)});
+  }
+  res.redirect('/');
+})
 
 module.exports = router;
