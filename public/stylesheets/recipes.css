@@ -7,6 +7,37 @@ body {
     height: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dish-type h2 {
+    font-size: 1em;
+    color: #333;
+    font-weight: 600;
+}
+
+.dish-type {
+    position: relative;
+    top: 60px;
+    height: 200px;
+    width: 98%;
+    padding: 5px;
+    background: wheat;
+    border: 1px solid #333;
+}
+
+.dish-type img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 .logos img {
     height: 50px;
     width: 80px;
@@ -28,7 +59,8 @@ body {
 }
 
 .row {
-    position: relative;
+    position: absolute;
+    top: -10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +103,7 @@ body {
 .formless {
     position: relative;
     margin: auto;
-    top: 113px;
+    top: 59px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -217,19 +249,19 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 2em;
+    justify-content: flex-start;
+    /* text-align: center; */
+    font-size: 1.4em;
     align-self: center;
     font-weight: bold;
-    left: 0px;
+    left: 10px;
     width: 100%;
     padding-bottom: 0.5em;
 }
 
 .hori-line {
     position: relative;
-    align-self: center;
+    left: 6px;
     width: 127px;
     top: 5.2em;
     border-bottom: 4px solid orange;
@@ -239,7 +271,7 @@ body {
 .container button {
     position: relative;
     width: 140px;
-    top: 8em;
+    top: 2.5em;
     color: #000;
     font-weight: bold;
 }
@@ -269,7 +301,7 @@ body {
     margin-bottom: 3em;
     margin: 4.5em 0em;
     width: 100%;
-    top: 7em;
+    top: 2em;
     position: relative;
     text-align: center;
 }
@@ -380,7 +412,7 @@ body {
         margin: 4.5em 0em;
         width: 100%;
         padding: 3em;
-        top: 7em;
+        top: 2em;
         position: relative;
     }
 
@@ -559,7 +591,7 @@ body {
         margin-bottom: 3em;
         margin: 4.5em 0em;
         width: 100%;
-        top: 7em;
+        top: 2em;
         position: relative;
     }
 
@@ -578,7 +610,7 @@ body {
         margin-bottom: 3em;
         margin: 4.5em 0em;
         width: 100%;
-        top: 7em;
+        top: 2em;
         position: relative;
     }
 
@@ -609,7 +641,7 @@ body {
         margin-bottom: 3em;
         margin: 4.5em 0em;
         width: 100%;
-        top: 7em;
+        top: 2em;
         position: relative;
     }
 

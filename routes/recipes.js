@@ -20,5 +20,35 @@ router.get('/recipes', (req, res) => {
   });
 });
 
+//deserts only
+router.get('/desserts', (req, res) => {
+  Recipes.find({"dishType": "Dessert"}, (err, dessert) => {
+
+      if (err) {
+        console.log(err);
+      } else {
+          res.render('dessert',
+          {dessert: dessert});
+          console.log(dessert);
+      }
+
+    }
+  );
+})
+
+router.get('/cuisine', (req, res) => {
+  Recipes.find({"cusine": "Italian"}, (err, dessert) => {
+      if (err) {
+        console.log(err);
+      } else {
+          res.render('dessert',
+          {dessert: dessert});
+          console.log(dessert);
+      }
+
+    }
+  );
+})
+
 
 module.exports = router;

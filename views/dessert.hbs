@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -21,42 +21,16 @@
          <li class="logos">
             <img src="../images/cuiszie.png" alt="">
           </li>
-               <li>
+               </li>
           <a class="nav-link title" href="/recipes">{{title}} <span class="sr-only">(current)</span></a></li>
       <li class="nav-item"><h3 id="username">Welcome, {{user.username}}</h3></li>
         <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
       </ul>
     </div>
   </nav>
-
-<div class="container">
-
- <div class="formless">
-        <form>
-        <input id="input" class="input" type="text"
-        placeholder="Search" aria-label="Search" />
-         <div class="search-x"></div>
-      </form>
-  </div>
-
-  <div class="row">
-      <h1 class="our-recipes">Our Recipes</h1>
-    <hr class="hori-line" />
-  </div>
-    
-  <button type="button" class="btn btn-default check" 
-  name="addRecipe">
-   <a class="nav-link add-recipe" href="/recipes/add">
-   Add recipe</a>
-      </button>
-
-<div class="dish-type">
-<img src="https://images.pexels.com/photos/2161643/pexels-photo-2161643.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
-    <li class="nav-item"><a class="nav-link dessert" href="/desserts"><h2>Desserts</h2><a></li>
-</div>
-
+  
   <div class="cards" id="cards">
-    {{#each recipes}}
+    {{#each dessert}}
     <div class="cardz">
       <li class="list-group-item">
         <a data-fancybox="gallery" href={{this.image}}><img src={{this.image}}></a>
@@ -71,7 +45,6 @@
 </div>
 
 
-<script async src="../javascript/search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
