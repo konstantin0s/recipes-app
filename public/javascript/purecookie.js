@@ -68,5 +68,5 @@ function purecookieDismiss() {
 }
 
 setTimeout(() => {
-  window.onload = cookieConsent();
+  cookieConsent();
 }, 1000);

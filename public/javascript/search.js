@@ -9,16 +9,16 @@ var inputSearch = document.getElementById('input')
 function searchHandler(event) {
   var filter, cards, txtValue;
   filter = jsUcfirst(inputSearch.value);
-  // console.log(filter)
+  console.log(filter)
   cards = document.getElementById("cards");
  var li = cards.getElementsByTagName('li');
 
  for (var i = 0; i < li.length; i++) {
-  var a = li[i].getElementsByTagName("a")[0];
+  var a = li[i].getElementsByClassName("next-recipe")[0];
 if (a) {
   txtValue = a.textContent || a.innerText;
 
-  // console.log(txtValue);
+  console.log(txtValue);
   if (txtValue.indexOf(filter) > -1) {
     li[i].style.display = "";
   } else {
