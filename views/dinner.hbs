@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/recipes.css">
+  <title>Recipes</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+         <li class="logos">
+            <img src="../images/cuiszie.png" alt="">
+          </li>
+               </li>
+          <a class="nav-link title" href="/recipes">{{title}} <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><h3 id="username">Welcome, {{user.username}}</h3></li>
+        <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="cards" id="cards">
+    {{#each dinner}}
+    <div class="cardz">
+      <li class="list-group-item">
+        <a data-fancybox="gallery" href={{this.image}}><img src={{this.image}}></a>
+      {{!-- <img src={{this.image}} /> --}}
+        <a class="next-recipe" alt="See recipee" href="/recipe/{{this._id}}"
+        >{{this.title}}</a>
+        <h6>Chef: {{this.creator}}</h6>
+        </li>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+</body>
+</html>

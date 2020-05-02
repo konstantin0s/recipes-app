@@ -18,23 +18,35 @@ a {
 .dish-type h2 {
     font-size: 1em;
     color: #333;
+    position: relative;
+    top: 10px;
     font-weight: 600;
+}
+
+.dish-type h2:hover {
+    color: orangered;
+    font-weight: bold;
 }
 
 .dish-type {
     position: relative;
     top: 60px;
-    height: 200px;
+    height: 160px;
     width: 98%;
     padding: 5px;
     background: wheat;
     border: 1px solid #333;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .dish-type img {
     position: relative;
     width: 100px;
     height: 100px;
+    top: 10px;
     border-radius: 50%;
 }
 

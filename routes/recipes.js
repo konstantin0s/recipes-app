@@ -22,32 +22,55 @@ router.get('/recipes', (req, res) => {
 
 //deserts only
 router.get('/desserts', (req, res) => {
+  let sess = req.session;
+
   Recipes.find({"dishType": "Dessert"}, (err, dessert) => {
 
       if (err) {
         console.log(err);
       } else {
+        if(sess.currentUser) {
           res.render('dessert',
-          {dessert: dessert});
+          {dessert: dessert,  user: sess.currentUser});
           console.log(dessert);
+        }
       }
 
-    }
-  );
+    });
 })
 
-router.get('/cuisine', (req, res) => {
-  Recipes.find({"cusine": "Italian"}, (err, dessert) => {
+//salads
+router.get('/dinner', (req, res) => {
+  let sess = req.session;
+
+  Recipes.find({"dishType": "Dinner"}, (err, dinner) => {
+
       if (err) {
         console.log(err);
       } else {
-          res.render('dessert',
-          {dessert: dessert});
-          console.log(dessert);
+        if(sess.currentUser) {
+          res.render('dinner',
+          {dinner: dinner,  user: sess.currentUser});
+          console.log(dinner);
       }
-
     }
-  );
+    });
+})
+
+router.get('/italian', (req, res) => {
+  let sess = req.session;
+
+  Recipes.find({"cuisine": "Italian"}, (err, italian) => {
+      if (err) {
+        console.log(err);
+      } else {
+        if(sess.currentUser) {
+          res.render('italian',
+          {italian: italian,  user: sess.currentUser});
+          console.log(italian);
+        }
+      }
+    });
 })
 
 
