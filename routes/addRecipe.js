@@ -2,6 +2,7 @@
 const express = require('express');
 const router  = express.Router();
 const bodyParser   = require('body-parser');
+const dateFormat = require('dateformat');
 let Recipes = require('../models/recipes');
 
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -23,11 +24,11 @@ router.get('/recipes/add', function(req, res) {
     newRecipe.ingredients = req.body.ingredients;
     newRecipe.cuisine = req.body.cuisine;
     newRecipe.dishType = req.body.dishType;
-    newRecipe.durations = req.body.durations;
+    newRecipe.directions = req.body.directions;
     newRecipe.image = req.body.image;
     newRecipe.duration = req.body.duration;
     newRecipe.creator = req.body.creator;
-    newRecipe.date = req.body.date;
+    newRecipe.date = dateFormat(req.body.date);
  
     newRecipe.save(function(err) {
          if (err) {

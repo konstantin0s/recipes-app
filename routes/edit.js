@@ -1,6 +1,7 @@
 const express = require('express');
 const router  = express.Router();
 const bodyParser   = require('body-parser');
+const dateFormat = require('dateformat');
 let Recipes = require('../models/recipes');
 
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -25,9 +26,9 @@ router.use(bodyParser.json());
   });
 
   //update submit
-  router.get('/recipes/add', function(req, res) {
-    res.render('add_recipes');
-    });
+  // router.get('/recipes/add', function(req, res) {
+  //   res.render('add_recipes');
+  //   });
   
      //add submit POST route
      router.post('/recipes/edit/:id', function(req, res) {
@@ -38,11 +39,11 @@ router.use(bodyParser.json());
       recips.ingredients = req.body.ingredients;
       recips.cuisine = req.body.cuisine;
       recips.dishType = req.body.dishType;
-      newRecipe.durations = req.body.durations;
+      recips.directions = req.body.directions;
       recips.image = req.body.image;
       recips.duration = req.body.duration;
       recips.creator = req.body.creator;
-      recips.date = req.body.date;
+      recips.date = dateFormat(req.body.date);
 
       let query = {_id: req.params.id}
    
@@ -51,6 +52,7 @@ router.use(bodyParser.json());
              console.log(err);
              return;
            } else {
+             console.log(recips)
              res.redirect('/recipes');
            }
       });
