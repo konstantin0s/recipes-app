@@ -38,6 +38,7 @@ router.use(bodyParser.json());
       recips.ingredients = req.body.ingredients;
       recips.cuisine = req.body.cuisine;
       recips.dishType = req.body.dishType;
+      newRecipe.durations = req.body.durations;
       recips.image = req.body.image;
       recips.duration = req.body.duration;
       recips.creator = req.body.creator;

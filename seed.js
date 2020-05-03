@@ -38,15 +38,17 @@ let Recipes = require('./models/recipes');
             for (let i = 0; i < 30; i++) {
                 recipes.push({
                     title: faker.name.title(),
-                    level: faker.name.findName(),
-                    ingredients: faker.name.findName(),
+                    level: faker.random.word(),
+                    ingredients: faker.random.words(),
                     cuisine: faker.lorem.sentence(),
-                    image: faker.image.image(),
-                    dishType: faker.date.past(),
-                    duration: faker.date.recent()
+                    image: faker.image.imageUrl(),
+                    dishType: faker.random.word(),
+                    duration: faker.random.number(),
+                    creator: faker.name.findName(),
+                    date: faker.date.recent()
                 }); 
             }
-            return Movie.create(movies);
+            return Recipes.create(recipes);
         })
         .then(() => {
             console.log('The seeds are planted :)')

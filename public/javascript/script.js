@@ -10,7 +10,7 @@ $(document).ready(function () {
         url: '/recipe/' + id,
         success: function (response) {
           alert('Deleting recipe');
-          window.location.href = '/';
+          window.location.href = '/recipes';
         },
         error: function (err) {
           console.log(err);

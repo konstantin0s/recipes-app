@@ -10,12 +10,14 @@ router.use(bodyParser.json());
    router.delete('/recipe/:id', function(req, res) {
     let query = {_id: req.params.id}
 
-    Recipes.remove(query, function(err) {
-      if(err) {
+    Recipes.deleteMany(query, function(err) {
+      if (err) {
         console.log(err);
+        return;
+      } else {
+        res.sendStatus(200);
       }
-      res.send('Success');
-    })
+ });
   })
 
 

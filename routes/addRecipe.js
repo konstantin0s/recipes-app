@@ -23,6 +23,7 @@ router.get('/recipes/add', function(req, res) {
     newRecipe.ingredients = req.body.ingredients;
     newRecipe.cuisine = req.body.cuisine;
     newRecipe.dishType = req.body.dishType;
+    newRecipe.durations = req.body.durations;
     newRecipe.image = req.body.image;
     newRecipe.duration = req.body.duration;
     newRecipe.creator = req.body.creator;
@@ -33,6 +34,7 @@ router.get('/recipes/add', function(req, res) {
            console.log(err);
            return;
          } else {
+           console.log(newRecipe)
            res.redirect('/recipes');
          }
     });
