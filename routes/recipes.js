@@ -39,7 +39,7 @@ router.get('/desserts', (req, res) => {
     });
 })
 
-//salads
+//dinner
 router.get('/dinner', (req, res) => {
   let sess = req.session;
 
@@ -55,8 +55,27 @@ router.get('/dinner', (req, res) => {
       }
     }
     });
+});
+
+//lunch
+router.get('/lunch', (req, res) => {
+  let sess = req.session;
+
+  Recipes.find({"dishType": "Lunch"}, (err, lunch) => {
+
+      if (err) {
+        console.log(err);
+      } else {
+        if(sess.currentUser) {
+          res.render('lunch',
+          {lunch: lunch,  user: sess.currentUser});
+          console.log(lunch);
+      }
+    }
+    });
 })
 
+//italian recipes
 router.get('/italian', (req, res) => {
   let sess = req.session;
 

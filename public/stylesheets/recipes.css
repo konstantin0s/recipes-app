@@ -7,6 +7,10 @@ body {
     height: 100%;
 }
 
+input {
+    text-transform: capitalize;
+}
+
 li {
     list-style: none;
 }
@@ -654,10 +658,36 @@ a {
     }
 }
 
-@media screen and (min-width: 950px) and (max-width: 1300px) {
+@media screen and (min-width: 950px) and (max-width: 1150px) {
     .recipe-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        left: 0em;
+        margin-bottom: 3em;
+        margin: 4.5em 0em;
+        width: 100%;
+        top: 2em;
+        position: relative;
+    }
+
+    .container button {
+        width: 150px;
+    }
+
+    #username {
+        left: 72%;
+    }
+
+    .logout {
+        left: 88%
+    }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1300px) {
+    .recipe-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 0.5em;
         left: 0em;
         margin-bottom: 3em;

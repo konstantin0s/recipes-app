@@ -40,7 +40,7 @@
   </div>
 
   <div class="row">
-      <h1 class="our-recipes">Dessert recipes</h1>
+      <h1 class="our-recipes">Lunch recipes</h1>
     <hr class="hori-line" />
   </div>
     
@@ -67,6 +67,7 @@
     <li class="nav-item"><a class="nav-link dessert" href="/lunch"><h2>Lunch</h2><a></li>
 </div>
 
+
 <div class="dinner">
   <img src="https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
     <li class="nav-item"><a class="nav-link dessert" href="/desserts"><h2>Dinner</h2><a></li>
@@ -80,11 +81,10 @@
 </div>
 
   <div class="recipe-container" id="cards">
-    {{#each dessert}}
+    {{#each lunch}}
     <div class="cardz">
       <li class="list-group-item">
         <a data-fancybox="gallery" href={{this.image}}><img src={{this.image}}></a>
-      {{!-- <img src={{this.image}} /> --}}
         <a class="next-recipe" alt="See recipee" href="/recipe/{{this._id}}"
         >{{this.title}}</a>
         <h6>Chef: {{this.creator}}</h6>
