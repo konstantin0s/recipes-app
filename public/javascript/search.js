@@ -1,9 +1,15 @@
 //implement search
-var inputSearch = document.getElementById('input')
+var inputSearch = document.getElementById('input');
+if (inputSearch == null) {
+    //do nothing, just to avoid error on inputSearch when null;
+} else {
   inputSearch.addEventListener('keyup', () => {
     this.searchHandler();
   });
-  
+
+}
+
+
 
 
 function searchHandler(event) {
