@@ -90,6 +90,19 @@ body {
     flex-direction: column;
     align-self: center;
     margin-bottom: 2em;
+    text-align: center;
+}
+
+.cardz a:first-of-type {
+    text-align: center;
+    position: relative;
+}
+
+.cardz h1 {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+    left: 0em;
 }
 
 .cardz img {
