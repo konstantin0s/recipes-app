@@ -19,6 +19,15 @@ a {
     text-decoration: none;
 }
 
+.dish,
+.dinner,
+.italian,
+.lunch {
+    position: relative;
+    align-self: center;
+    text-align: center;
+}
+
 .dish-type h2 {
     font-size: 1em;
     color: #333;
