@@ -31,6 +31,13 @@ body {
     color: #000 !important;
 }
 
+.on-right {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 3.5px solid rgb(25, 41, 70);
+}
+
+
 .signup {
     color: rgb(25, 41, 70) !important;
     top: -4px;
@@ -85,6 +92,9 @@ body {
     padding: 2.5em 2em 2em;
     border-radius: 10px;
     width: 100%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .col-md-4 .g-recaptcha {
@@ -245,6 +255,8 @@ ul li {
         padding: 2.5em 2em 2em;
         border-radius: 10px;
         width: 100%;
+        left: 0;
+        display: inline-block;
     }
 
 
