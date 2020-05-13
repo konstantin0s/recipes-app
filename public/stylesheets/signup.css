@@ -31,6 +31,16 @@ body {
     color: #000 !important;
 }
 
+.on-right {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 3.5px solid rgb(25, 41, 70);
+}
+
+.on-right:hover {
+    color: rgb(28, 122, 184) !important;
+}
+
 
 .signin {
     color: rgb(25, 41, 70) !important;
@@ -41,9 +51,9 @@ body {
 }
 
 .signin:hover {
-    color: rgb(224, 124, 9) !important;
+    color: rgb(224, 124, 9);
     text-decoration: none;
-    border-bottom: 2.5px solid rgb(224, 124, 9);
+    border-bottom: 2.5px solid rgb(28, 122, 184)
 }
 
 
@@ -81,11 +91,15 @@ body {
     margin: 0;
     position: relative;
     top: 0em;
-    left: -1.5em;
+    left: 0em;
+    display: inline-block;
     background: rgb(221, 217, 217);
     padding: 2.5em 2em 2em;
     border-radius: 10px;
     width: 100%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #form h2 {
@@ -110,8 +124,6 @@ body {
     top: 0;
 }
 
-
-
 .footer-copyright {
     color: rgb(25, 41, 70);
     font-size: 1.2em;
@@ -120,11 +132,13 @@ body {
     bottom: 0;
     width: 100vw;
     left: 0px;
+    font-weight: bold;
 }
 
 .footer-copyright a {
     text-decoration: none;
     color: rgb(54, 85, 143);
+    font-weight: bold;
 }
 
 @media (max-width: 689px) {
@@ -148,12 +162,12 @@ body {
     }
 
     .signin {
-        color: orange !important;
+        color: rgb(255, 115, 0) !important;
         border-bottom: 2.5px solid #fff;
     }
 
     .signin:hover {
-        color: rgb(224, 124, 9) !important;
+        color: rgb(240, 236, 23) !important;
         text-decoration: none;
         border-bottom: 2.5px solid rgb(224, 124, 9);
     }

@@ -130,6 +130,11 @@ ul li {
     top: 0;
 }
 
+.error-message {
+    left: 25px;
+    top: -90px;
+}
+
 .footer-copyright {
     color: rgb(25, 41, 70);
     font-size: 1.2em;
@@ -138,16 +143,13 @@ ul li {
     bottom: 0;
     left: 0px;
     width: 100vw;
-}
-
-.error-message {
-    left: 25px;
-    top: -90px;
+    font-weight: bold;
 }
 
 .footer-copyright a {
     text-decoration: none;
     color: rgb(54, 85, 143);
+    font-weight: bold;
 }
 
 @media (max-width: 689px) {
@@ -171,7 +173,7 @@ ul li {
     }
 
     .signup {
-        color: orange !important;
+        color: rgb(255, 115, 0) !important;
         border-bottom: 2.5px solid #fff;
     }
 
