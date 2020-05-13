@@ -13,7 +13,7 @@ const User = require("../models/user");
 
 
 
-router.get("/signup", (res) => {
+router.get("/signup", (req, res) => {
   res.render("auth/signup");
 });
 
@@ -61,7 +61,7 @@ router.post("/signup", (req, res, next) => {
   })
 });
 
-router.post('//signup', function(req, res) {
+router.post('/signup', function(req, res) {
   if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
   {
     return res.json({"responseError" : "Please select captcha first"});
