@@ -250,14 +250,23 @@ body {
     }
 
     iframe {
-        width: 65vw !important;
+        width: 53vw !important;
         position: relative;
         left: -20px;
     }
 
-    .form-container {
+    #form .rc-anchor-logo-img-portrait {
         position: relative;
-        top: 32px;
+        left: 0px;
+    }
+
+    #form .rc-anchor-normal .rc-anchor-pt a {
+        left: 5px;
+    }
+
+    .form-container {
+        position: fixed;
+        top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -283,6 +292,12 @@ body {
         width: 66%
     }
 
+
+    .rc-anchor-light.rc-anchor-normal {
+        border: 1px solid #d3d3d3;
+        position: relative;
+        width: 80% !important;
+    }
 
     .page-footer {
         position: absolute;
