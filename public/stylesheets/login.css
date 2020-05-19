@@ -263,8 +263,8 @@ ul li {
 
 
     .form-container {
-        position: relative;
-        top: 32px;
+        position: fixed;
+        top: 150px;
         width: 100%;
         display: flex;
         flex-direction: column;
