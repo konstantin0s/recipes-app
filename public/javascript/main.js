@@ -21,6 +21,10 @@ window.addEventListener("load", mobileBackground);
 
 
   //load with fadein on page
-  window.onload = function() {
+  // window.onload =
+  
+   function loaderx() {
     document.body.classList.add('loaderx');
   }
+
+  loaderx();
