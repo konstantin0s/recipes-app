@@ -66,7 +66,7 @@ router.post('/signup', function(req, res) {
   {
     return res.json({"responseError" : "Please select captcha first"});
   }
-  const secretKey = "6LeR0ZMUAAAAANDnXcoQiTvxYDIghn9DZrrf7wFQ";
+  const secretKey = process.env.CAPTCHA_KEY;
 
   const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
 
