@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://konstantin0s:tehnician@cluster0-duzhh.mongodb.net/test-jestest?retryWrites=true&w=majority';
+require("dotenv").config();
+var mongoDB = process.env.MONGODB_URL_TEST;
 
 mongoose.connect(mongoDB);
 
