@@ -25,6 +25,38 @@ a {
     text-decoration: none;
 }
 
+.bg-holder {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 300px;
+    background: url('https://source.unsplash.com/random') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.check {
+    position: relative;
+    left: 2em;
+    top: 0px;
+    padding: 1px;
+    margin-left: 3em;
+    font-size: 0.9em;
+    background-color: #fff;
+    text-align: center;
+    color: #000;
+    border-bottom: 2.5px solid #fff;
+    opacity: 1;
+}
+
+.check:hover {
+    color: #000;
+    background-color: yellow;
+    opacity: 0.8;
+}
+
 .dish,
 .dinner,
 .italian,
@@ -310,7 +342,7 @@ a {
 }
 
 .add-recipe {
-    color: #000;
+    color: #000 !important;
 }
 
 .container .check {

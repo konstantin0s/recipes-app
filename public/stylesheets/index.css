@@ -1,248 +1,213 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .logos img {
-  height: 50px;
-  width: 80px;
-  cursor: pointer;
-  left: 30px;
-  opacity: 1;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    left: 30px;
+    opacity: 1;
 }
 
 .title {
-  position: absolute;
-  top: 15px;
-  left: 40px;
-  font-size: 15px;
-  color: #fff;
-  padding: 3px;
-  opacity: 0;
-  z-index: 100;
-  border: 1px solid #fff;
-  border-bottom: 2.5px solid #fff;
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 3px;
+    opacity: 0;
+    z-index: 100;
+    border: 1px solid #fff;
+    border-bottom: 2.5px solid #fff;
 }
 
 .index-img {
-  background: url('https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
-  background-size: cover;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  height: 100%;
+    background: url('https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 100%;
 }
 
 .nav-item a {
-  position: relative;
-  left: 1000px;
-  color: orange !important;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0px 30px;
-  font-size: 1.8em;
-  font-weight: bold;
-  cursor: pointer;
-  border-bottom: 2.5px solid #fff;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
+    position: relative;
+    left: 1000px;
+    color: orange !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 2.5px solid #fff;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
 }
 
 .nav-item a:hover {
-  color: yellow !important;
-  border-bottom: 2.5px solid yellow;
+    color: yellow !important;
+    border-bottom: 2.5px solid yellow;
 }
 
 .nav-item .signin {
-  position: relative;
-  right: 130px;
+    position: relative;
+    right: 130px;
 }
 
 .nav-item .signup {
-  position: relative;
-  right: 100px;
+    position: relative;
+    right: 100px;
 }
 
 .nav-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.check {
-  position: relative;
-  top: 100px;
-  padding: 5px;
-  margin-left: 3em;
-  font-size: 2.4em;
-  width: 25%;
-  text-align: center;
-  color: orange;
-  border-bottom: 2.5px solid #fff;
-  opacity: 1;
-}
-
-.check:hover {
-  color: #000;
-  background: yellow;
-  opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer-copyright {
-  color: rgb(25, 41, 70);
-  font-size: 1.2em;
-  padding: 5px;
-  position: fixed;
-  bottom: 0;
-  padding-bottom: 1em;
-  width: 100vw;
-  left: 0;
-  border-bottom: 2.5px solid #fff;
+    color: rgb(25, 41, 70);
+    font-size: 1.2em;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 1em;
+    width: 100vw;
+    left: 0;
+    border-bottom: 2.5px solid #fff;
 }
 
 .footer-copyright a {
-  text-decoration: none;
-  color: rgb(30, 50, 87);
+    text-decoration: none;
+    color: rgb(30, 50, 87);
 }
 
 @media (min-width: 1100px) and (max-width: 1300px) {
-
-  /* body {
+    /* body {
       background: yellow;
     } */
-  .nav-item a {
-    position: relative;
-    left: 730px;
-  }
-
-  .nav-item .signin {
-    position: relative;
-    right: 130px;
-  }
-
-  .nav-item .signup {
-    position: relative;
-    right: 100px;
-  }
+    .nav-item a {
+        position: relative;
+        left: 730px;
+    }
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1099px) {
-  /* body {
+    /* body {
         background: yellow;
     } */
-
-  .nav-item a {
-    position: relative;
-    left: 400px;
-  }
-
-  .nav-item .signin {
-    position: relative;
-    right: 130px;
-  }
-
-  .nav-item .signup {
-    position: relative;
-    right: 100px;
-  }
+    .nav-item a {
+        position: relative;
+        left: 400px;
+    }
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+    }
 }
 
 @media (max-width: 689px) {
-  body {
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
-  }
-
-  .title {
-    left: 74%;
-    top: 33px;
-    width: 20%;
-    text-align: center;
-    padding: 7px 10px;
-  }
-
-  .fixed-top {
-    padding: 2em;
-  }
-
-  .logos {
-    position: relative;
-    top: -3.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-  }
-
-  .logos img {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    align-self: center;
-    width: 250px;
-    height: 250px;
-    left: 0;
-  }
-
-  .nav-item a {
-    position: absolute;
-    top: -29px;
-    font-size: 2.4em;
-    left: 0%;
-    margin-bottom: 12px;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .nav-item .signin {
-    position: relative;
-    right: 130px;
-    color: #fff;
-    top: 20px;
-    border-bottom: 2.5px solid #fff;
-  }
-
-  .nav-item .signup {
-    position: relative;
-    right: 100px;
-    top: 120px;
-    color: #fff;
-    border-bottom: 2.5px solid #fff;
-  }
-
-  .nav-item .signin:hover,
-  .nav-item .signup:hover {
-    border-bottom: 2.5px solid yellow;
-  }
-
-  .check {
-    top: 200px;
-    width: 50%;
-    background: rgb(238, 240, 157);
-    -ms-transform: rotate(45deg);
-    /* IE 9 */
-    -ms-transform-origin: 20% 40%;
-    /* IE 9 */
-    transform: rotate(45deg);
-    transform-origin: 20% 40%;
-  }
-
-  #index-img {
-    top: 136px;
-  }
-
-  .collapse.show {
-    display: block;
-    height: 100vh;
-  }
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .title {
+        left: 74%;
+        top: 33px;
+        width: 20%;
+        text-align: center;
+        padding: 7px 10px;
+    }
+    .fixed-top {
+        padding: 2em;
+    }
+    .logos {
+        position: relative;
+        top: -3.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 250px;
+        height: 250px;
+        left: 0;
+    }
+    .nav-item a {
+        position: absolute;
+        top: -29px;
+        font-size: 2.4em;
+        left: 0%;
+        margin-bottom: 12px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+        color: #fff;
+        top: 20px;
+        border-bottom: 2.5px solid #fff;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+        top: 120px;
+        color: #fff;
+        border-bottom: 2.5px solid #fff;
+    }
+    .nav-item .signin:hover,
+    .nav-item .signup:hover {
+        border-bottom: 2.5px solid yellow;
+    }
+    .check {
+        top: 200px;
+        width: 50%;
+        background: rgb(238, 240, 157);
+        -ms-transform: rotate(45deg);
+        color: #000;
+        /* IE 9 */
+        -ms-transform-origin: 20% 40%;
+        /* IE 9 */
+        transform: rotate(45deg);
+        transform-origin: 20% 40%;
+    }
+    #index-img {
+        top: 136px;
+    }
+    .collapse.show {
+        display: block;
+        height: 100vh;
+    }
 }

@@ -24,6 +24,13 @@
           </li>
                <li>
           <a class="nav-link title" href="/recipes">{{title}} <span class="sr-only">(current)</span></a></li>
+          <li>
+                <button type="button" class="btn btn-default check" 
+              name="addRecipe">
+              <a class="nav-link add-recipe" href="/recipes/add">
+              Add recipe</a>
+              </button>
+          </li>
       <li class="nav-item"><h3 id="username">Welcome, {{user.username}}</h3></li>
         <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
       </ul>
@@ -44,12 +51,10 @@
       <h1 class="our-recipes">Our Recipes</h1>
     <hr class="hori-line" />
   </div>
-    
-  <button type="button" class="btn btn-default check" 
-  name="addRecipe">
-   <a class="nav-link add-recipe" href="/recipes/add">
-   Add recipe</a>
-      </button>
+
+  <div class="bg-holder">
+      <!-- container with a background only -->
+  </div>
 
 <div class="dish-type">
 
