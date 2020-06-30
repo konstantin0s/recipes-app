@@ -131,7 +131,9 @@ a {
     border-bottom: 2.5px solid yellow;
 }
 
+
 /* seach bar style */
+
 .formless {
     position: relative;
     margin: auto;
@@ -143,7 +145,6 @@ a {
     height: 100px;
     margin-bottom: 2em;
 }
-
 
 .search-x {
     position: absolute;
@@ -165,7 +166,6 @@ a {
     cursor: pointer;
 }
 
-
 .search-x::before {
     content: "";
     position: absolute;
@@ -181,7 +181,6 @@ a {
     transition: all .5s;
 }
 
-
 .search-x::after {
     content: "";
     position: absolute;
@@ -196,7 +195,6 @@ a {
     border: 2px solid white;
     transition: all .5s;
 }
-
 
 #input {
     font-family: 'Inconsolata', monospace;
@@ -227,8 +225,6 @@ a {
 #input:hover {
     cursor: pointer;
 }
-
-
 
 #input:focus {
     width: 500px;
@@ -266,6 +262,7 @@ a {
     font-weight: bolder;
 }
 
+
 /* end of seach bar style */
 
 .container {
@@ -299,7 +296,6 @@ a {
     top: 5.2em;
     border-bottom: 4px solid orange;
 }
-
 
 .container button {
     position: relative;
@@ -349,6 +345,7 @@ a {
     position: relative;
     text-align: center;
     margin-bottom: 2em;
+    z-index: 0;
 }
 
 .cardz img {
@@ -413,24 +410,17 @@ a {
     bottom: 0;
 }
 
-
-
-
 @media screen and (min-width: 350px) and (max-width: 649px) {
     .title {
         position: absolute;
         top: 98px;
     }
-
     .dish-type {
         overflow-y: hidden;
     }
-
     .dish-type img {
         margin: 0 0.5em;
     }
-
-
     .logos img {
         height: 50px;
         width: 80px;
@@ -439,21 +429,17 @@ a {
         position: relative;
         left: 0px;
     }
-
     .formless {
         left: -75px;
     }
-
     #input:focus {
         width: 300px;
         opacity: 1;
         cursor: text;
     }
-
     #input:focus~.search-x {
         right: -330px;
     }
-
     .container .recipe-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -466,15 +452,12 @@ a {
         top: 2em;
         position: relative;
     }
-
     .container button {
         width: 150px;
     }
-
     #username {
         left: 155px;
     }
-
     .logout {
         left: 278px;
         top: -43px;
@@ -483,14 +466,12 @@ a {
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
-
     .title {
         position: absolute;
         top: 79px;
         height: 40px;
         left: 15px;
     }
-
     .logos img {
         height: 50px;
         width: 80px;
@@ -499,65 +480,54 @@ a {
         position: relative;
         left: 0px;
     }
-
     #username {
         left: 25%;
     }
-
     .logout {
         left: 80%;
         top: -94px;
         width: 52px;
         position: relative;
     }
-
     .hori-line {
         width: 40%;
     }
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
-
     .title {
         position: absolute;
         top: 79px;
         height: 40px;
         left: 15px;
     }
-
     #username {
         left: 30%;
     }
-
     .logout {
         left: 75%;
         top: -94px;
         width: 52px;
         position: relative;
     }
-
     .hori-line {
         width: 30%;
     }
 }
 
 @media screen and (min-width: 501px) and (max-width: 550px) {
-
     .title {
         position: absolute;
         top: 79px;
         height: 40px;
         left: 15px;
     }
-
     .hori-line {
         width: 30%;
     }
-
     #username {
         left: 40%;
     }
-
     .logout {
         left: 80%;
         position: relative;
@@ -567,18 +537,15 @@ a {
 }
 
 @media screen and (min-width: 551px) and (max-width: 649px) {
-
     .title {
         position: absolute;
         top: 79px;
         height: 40px;
         left: 15px;
     }
-
     .hori-line {
         width: 26%;
     }
-
     .logos img {
         height: 50px;
         width: 80px;
@@ -587,11 +554,9 @@ a {
         position: relative;
         left: 0px;
     }
-
     #username {
         left: 50%;
     }
-
     .logout {
         left: 88%;
         top: -94px;
@@ -600,20 +565,16 @@ a {
     }
 }
 
-
 @media screen and (min-width: 650px) and (max-width: 767px) {
-
     .title {
         position: absolute;
         top: 79px;
         height: 40px;
         left: 15px;
     }
-
     .hori-line {
         width: 26%;
     }
-
     .logos img {
         height: 50px;
         width: 80px;
@@ -622,18 +583,15 @@ a {
         position: relative;
         left: 0px;
     }
-
     #username {
         left: 50%;
     }
-
     .logout {
         left: 80%;
         top: -94px;
         width: 52px;
         position: relative;
     }
-
     .recipe-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -645,14 +603,12 @@ a {
         top: 2em;
         position: relative;
     }
-
     .container button {
         width: 150px;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 949px) {
-
     .recipe-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -664,20 +620,16 @@ a {
         top: 2em;
         position: relative;
     }
-
     .container button {
         width: 150px;
     }
-
     .recipe-container img {
         width: 300px;
         height: 300px;
     }
-
     #username {
         left: 69%;
     }
-
     .logout {
         left: 88%
     }
@@ -695,15 +647,12 @@ a {
         top: 2em;
         position: relative;
     }
-
     .container button {
         width: 150px;
     }
-
     #username {
         left: 72%;
     }
-
     .logout {
         left: 88%
     }
@@ -721,15 +670,12 @@ a {
         top: 2em;
         position: relative;
     }
-
     .container button {
         width: 150px;
     }
-
     #username {
         left: 72%;
     }
-
     .logout {
         left: 88%
     }

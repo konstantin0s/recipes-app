@@ -18,13 +18,3 @@ window.addEventListener("resize", mobileBackground);
 window.addEventListener("load", mobileBackground);
 
 // mobileBackground();
-
-
-  //load with fadein on page
-  // window.onload =
-  
-   function loaderx() {
-    document.body.classList.add('loaderx');
-  }
-
-  loaderx();
