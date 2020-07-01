@@ -104,42 +104,6 @@ body {
     color: #9dfc03;
 }
 
-@media (min-width: 1100px) and (max-width: 1300px) {
-    /* body {
-      background: yellow;
-    } */
-    .nav-item a {
-        position: relative;
-        left: 730px;
-    }
-    .nav-item .signin {
-        position: relative;
-        right: 130px;
-    }
-    .nav-item .signup {
-        position: relative;
-        right: 100px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1099px) {
-    /* body {
-        background: yellow;
-    } */
-    .nav-item a {
-        position: relative;
-        left: 400px;
-    }
-    .nav-item .signin {
-        position: relative;
-        right: 130px;
-    }
-    .nav-item .signup {
-        position: relative;
-        right: 100px;
-    }
-}
-
 @media (max-width: 689px) {
     body {
         overflow-x: hidden;
@@ -172,6 +136,9 @@ body {
         align-self: center;
         width: 250px;
         height: 250px;
+        left: 0;
+    }
+    .nav-item {
         left: 0;
     }
     .nav-item a {
@@ -221,5 +188,38 @@ body {
     .collapse.show {
         display: block;
         height: 100vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1099px) {
+    /* body {
+        background: yellow;
+    } */
+    .nav-item a {
+        position: relative;
+        left: 400px;
+    }
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    .nav-item a {
+        position: relative;
+        left: 730px;
+    }
+    .nav-item .signin {
+        position: relative;
+        right: 130px;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
     }
 }

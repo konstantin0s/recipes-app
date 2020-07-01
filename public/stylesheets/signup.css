@@ -319,6 +319,9 @@ body {
         bottom: 0;
         z-index: 1;
     }
+    .footer-copyright {
+        left: 0;
+    }
 }
 
 @media (min-width: 1201px) {

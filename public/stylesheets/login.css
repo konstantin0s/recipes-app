@@ -442,3 +442,9 @@ ul li {
         color: yellow !important;
     }
 }
+
+@media (max-width: 769px) {
+    .footer-copyright {
+        left: 0;
+    }
+}
