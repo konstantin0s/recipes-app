@@ -26,16 +26,10 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    /* border: 1px solid rgb(212, 20, 20); */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     margin: 0;
-}
-
-.navbar-collapse li {
-    position: relative;
-    width: 9%;
 }
 
 nav a:hover {
@@ -136,15 +130,15 @@ a {
     width: 80px;
     cursor: pointer;
     top: 0px;
-    left: -25px;
+    left: 25px;
 }
 
 #username {
     text-transform: capitalize;
     position: absolute;
-    top: -0.7rem;
+    top: 9px;
     left: 80%;
-    width: 100%;
+    text-align: center;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -182,7 +176,7 @@ a {
     position: relative;
     position: absolute;
     left: 90%;
-    top: -1.2rem;
+    top: 0;
     font-size: 1em;
     border-bottom: 2.5px solid #fff;
 }
@@ -1091,6 +1085,8 @@ a {
         width: 150px;
     }
     #username {
+        position: absolute;
+        top: 8px;
         left: 72%;
     }
     .logout {
