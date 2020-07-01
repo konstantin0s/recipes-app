@@ -1,16 +1,44 @@
-* {
+/* GLOBAL STYLES */
+
+* * {
     box-sizing: border-box;
 }
 
 body {
     overflow-x: hidden;
     height: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
 }
 
 #fadein .loaderx {
     opacity: 1;
     padding: 5px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#navbarCollapse {
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse ul {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(212, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+#navbarCollapse li {
+    position: relative;
+}
+
+nav a:hover {
+    color: #000;
 }
 
 input {
@@ -39,8 +67,8 @@ a {
 
 .check {
     position: relative;
-    left: 2em;
-    top: 0px;
+    left: 3em;
+    top: 3px;
     padding: 1px;
     margin-left: 3em;
     font-size: 0.9em;
@@ -442,7 +470,81 @@ a {
     bottom: 0;
 }
 
+@media (min-width: 300px) and (max-width: 399px) {
+    #navbarCollapse li {
+        margin: 2px 0px;
+        background: rgb(199, 191, 191);
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+    }
+    #navbarCollapse li a,
+    h3 {
+        color: #151515;
+    }
+    #navbarCollapse ul {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .check {
+        position: relative;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        margin-left: 0;
+    }
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        top: 0px;
+        position: relative;
+        left: 0px;
+    }
+    #username {
+        left: 0;
+        position: relative;
+        color: #151515;
+    }
+    .logout {
+        position: relative;
+        left: 0;
+    }
+    .hori-line {
+        width: 40%;
+    }
+}
+
 @media screen and (min-width: 350px) and (max-width: 649px) {
+    #navbarCollapse ul {
+        text-align: center;
+        justify-content: center;
+    }
+    #navbarCollapse li {
+        margin: 2px 0px;
+        background: rgb(199, 191, 191);
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+    }
+    #navbarCollapse li a,
+    h3 {
+        color: #151515;
+    }
     .title {
         position: absolute;
         top: 98px;
@@ -457,7 +559,7 @@ a {
         height: 50px;
         width: 80px;
         cursor: pointer;
-        top: 24px;
+        top: 0px;
         position: relative;
         left: 0px;
     }
@@ -484,20 +586,92 @@ a {
         top: 2em;
         position: relative;
     }
+    .check {
+        position: relative;
+        top: 0;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        margin-left: 0;
+    }
     .container button {
         width: 150px;
     }
     #username {
-        left: 155px;
+        left: 0;
+        position: relative;
+        color: #151515;
     }
     .logout {
-        left: 278px;
-        top: -43px;
-        width: 52px;
+        position: relative;
+        left: 0;
     }
 }
 
-@media (min-width: 300px) and (max-width: 399px) {
+@media screen and (min-width: 400px) and (max-width: 500px) {
+    #navbarCollapse ul {
+        text-align: center;
+        justify-content: center;
+    }
+    #navbarCollapse li a,
+    h3 {
+        color: #151515;
+    }
+    .title {
+        position: absolute;
+        top: 79px;
+        height: 40px;
+        left: 15px;
+    }
+    .check {
+        position: relative;
+        top: 0;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        margin-left: 0;
+    }
+    #username {
+        left: 0;
+        position: relative;
+        color: #151515;
+    }
+    .logout {
+        position: relative;
+        left: 0;
+    }
+    .hori-line {
+        width: 30%;
+    }
+    .check {
+        position: relative;
+        left: 3em;
+        z-index: 40;
+    }
+    .logos img {
+        height: 50px;
+        width: 80px;
+        cursor: pointer;
+        position: relative;
+        left: 0px;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 550px) {
+    #navbarCollapse ul {
+        text-align: center;
+        justify-content: center;
+    }
     .title {
         position: absolute;
         top: 79px;
@@ -508,57 +682,29 @@ a {
         height: 50px;
         width: 80px;
         cursor: pointer;
-        top: 24px;
         position: relative;
         left: 0px;
     }
-    #username {
-        left: 25%;
-    }
-    .logout {
-        left: 80%;
-        top: -94px;
-        width: 52px;
-        position: relative;
-    }
-    .hori-line {
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 400px) and (max-width: 500px) {
-    .title {
-        position: absolute;
-        top: 79px;
-        height: 40px;
-        left: 15px;
-    }
-    #username {
-        left: 30%;
-    }
-    .logout {
-        left: 75%;
-        top: -94px;
-        width: 52px;
-        position: relative;
-    }
-    .hori-line {
-        width: 30%;
-    }
-}
-
-@media screen and (min-width: 501px) and (max-width: 550px) {
-    .title {
-        position: absolute;
-        top: 79px;
-        height: 40px;
-        left: 15px;
-    }
     .hori-line {
         width: 30%;
     }
     #username {
-        left: 40%;
+        left: 0;
+        position: relative;
+        color: #151515;
+    }
+    .check {
+        position: relative;
+        top: 0;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        margin-left: 0;
     }
     .logout {
         left: 80%;
