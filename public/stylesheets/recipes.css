@@ -17,24 +17,25 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-#navbarCollapse {
+.navbar-collapse {
     display: flex;
     justify-content: space-between;
 }
 
-.collapse ul {
+.navbar-collapse ul {
     position: relative;
     width: 100%;
     height: auto;
-    border: 1px solid rgb(212, 20, 20);
+    /* border: 1px solid rgb(212, 20, 20); */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     margin: 0;
 }
 
-#navbarCollapse li {
+.navbar-collapse li {
     position: relative;
+    width: 9%;
 }
 
 nav a:hover {
@@ -135,14 +136,15 @@ a {
     width: 80px;
     cursor: pointer;
     top: 0px;
-    left: 50px;
+    left: -25px;
 }
 
 #username {
     text-transform: capitalize;
     position: absolute;
-    top: 12px;
+    top: -0.7rem;
     left: 80%;
+    width: 100%;
     font-size: 15px;
     color: #fff;
     padding: 3px;
@@ -180,7 +182,7 @@ a {
     position: relative;
     position: absolute;
     left: 90%;
-    top: 4px;
+    top: -1.2rem;
     font-size: 1em;
     border-bottom: 2.5px solid #fff;
 }
@@ -476,22 +478,43 @@ a {
 }
 
 @media (min-width: 300px) and (max-width: 399px) {
-    #navbarCollapse li {
-        margin: 2px 0px;
-        background: rgb(199, 191, 191);
-        position: relative;
-        flex-grow: 1;
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
         width: 100%;
+        left: 0;
+        top: 51px;
     }
-    #navbarCollapse li a,
-    h3 {
-        color: #151515;
-    }
-    #navbarCollapse ul {
+    .navbar .show ul {
         align-items: center;
         text-align: center;
         justify-content: center;
         margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(2),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
     }
     .check {
         position: relative;
@@ -535,20 +558,54 @@ a {
 }
 
 @media screen and (min-width: 350px) and (max-width: 649px) {
-    #navbarCollapse ul {
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
         text-align: center;
         justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
     }
-    #navbarCollapse li {
-        margin: 2px 0px;
-        background: rgb(199, 191, 191);
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
         position: relative;
         flex-grow: 1;
         width: 100%;
+        font-size: 1.5em;
     }
-    #navbarCollapse li a,
+    .navbar .show li:nth-child(2),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
     h3 {
-        color: #151515;
+        color: #fff;
     }
     .title {
         position: absolute;
@@ -570,6 +627,9 @@ a {
     }
     .formless {
         left: -75px;
+    }
+    #input:not(.show) {
+        z-index: 203;
     }
     #input:focus {
         width: 300px;
@@ -610,22 +670,57 @@ a {
     #username {
         left: 0;
         position: relative;
-        color: #151515;
+        color: #fff;
+        border-bottom: none;
+        top: 0;
     }
     .logout {
         position: relative;
         left: 0;
+        border-bottom: none;
+        top: 0;
+        color: #fff;
     }
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
-    #navbarCollapse ul {
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        align-items: center;
         text-align: center;
         justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
     }
-    #navbarCollapse li a,
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(2),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
     h3 {
-        color: #151515;
+        color: #fff;
     }
     .title {
         position: absolute;
@@ -643,25 +738,24 @@ a {
         color: #000;
         border-bottom: 2.5px solid #fff;
         opacity: 1;
+        z-index: 1;
         left: 0;
         margin-left: 0;
+        z-index: 1;
     }
     #username {
         left: 0;
         position: relative;
-        color: #151515;
+        color: #fff;
+        font-size: 1em;
     }
     .logout {
         position: relative;
         left: 0;
+        color: #fff;
     }
     .hori-line {
         width: 30%;
-    }
-    .check {
-        position: relative;
-        left: 3em;
-        z-index: 40;
     }
     .logos img {
         height: 50px;
@@ -673,10 +767,6 @@ a {
 }
 
 @media screen and (min-width: 501px) and (max-width: 550px) {
-    #navbarCollapse ul {
-        text-align: center;
-        justify-content: center;
-    }
     .title {
         position: absolute;
         top: 79px;
@@ -696,7 +786,7 @@ a {
     #username {
         left: 0;
         position: relative;
-        color: #151515;
+        color: #fff;
     }
     .check {
         position: relative;
