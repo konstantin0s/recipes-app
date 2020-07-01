@@ -24,7 +24,6 @@ body {
     border-bottom: 2.5px solid #fff;
 }
 
-
 .title {
     position: absolute;
     top: 12px;
@@ -96,9 +95,9 @@ body {
 }
 
 .btn-primary
-
 /*button */
-    {
+
+{
     margin-top: 1em;
     width: 35%;
 }
@@ -106,7 +105,6 @@ body {
 .image {
     margin: 1em 0em;
 }
-
 
 .page-footer {
     width: 100%;
@@ -128,7 +126,6 @@ body {
     padding-bottom: 0;
     width: 100vw;
     background: darkolivegreen;
-
 }
 
 .footer-copyright a {
@@ -143,5 +140,54 @@ body {
         height: 40px;
         opacity: 1;
         left: 15px;
+    }
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(2),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
     }
 }

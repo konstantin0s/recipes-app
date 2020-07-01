@@ -553,7 +553,7 @@ a {
         left: 0;
     }
     .hori-line {
-        width: 40%;
+        width: 28vw;
     }
 }
 
@@ -599,7 +599,7 @@ a {
         width: 100%;
         font-size: 1.5em;
     }
-    .navbar .show li:nth-child(2),
+    .navbar .show li:nth-child(1),
     .navbar .show .logos {
         display: none;
     }
@@ -626,7 +626,7 @@ a {
         left: 0px;
     }
     .formless {
-        left: -75px;
+        left: -55px;
     }
     #input:not(.show) {
         z-index: 203;
@@ -681,6 +681,9 @@ a {
         top: 0;
         color: #fff;
     }
+    .hori-line {
+        width: 28vw;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
@@ -714,7 +717,7 @@ a {
         width: 100%;
         font-size: 1.5em;
     }
-    .navbar .show li:nth-child(2),
+    .navbar .show li:nth-child(1),
     .navbar .show .logos {
         display: none;
     }
@@ -730,7 +733,7 @@ a {
     }
     .check {
         position: relative;
-        top: 0;
+        top: 6px;
         padding: 0px 10px;
         font-size: 0.9em;
         background-color: #fff;
@@ -753,9 +756,10 @@ a {
         position: relative;
         left: 0;
         color: #fff;
+        border-bottom: none;
     }
     .hori-line {
-        width: 30%;
+        width: 28vw;
     }
     .logos img {
         height: 50px;
@@ -767,6 +771,44 @@ a {
 }
 
 @media screen and (min-width: 501px) and (max-width: 550px) {
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
     .title {
         position: absolute;
         top: 79px;
@@ -781,7 +823,7 @@ a {
         left: 0px;
     }
     .hori-line {
-        width: 30%;
+        width: 23vw;
     }
     #username {
         left: 0;
@@ -801,15 +843,47 @@ a {
         left: 0;
         margin-left: 0;
     }
-    .logout {
-        left: 80%;
-        position: relative;
-        top: -94px;
-        width: 52px;
-    }
 }
 
 @media screen and (min-width: 551px) and (max-width: 649px) {
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
     .title {
         position: absolute;
         top: 79px;
@@ -817,7 +891,7 @@ a {
         left: 15px;
     }
     .hori-line {
-        width: 26%;
+        width: 23vw;
     }
     .logos img {
         height: 50px;
@@ -828,17 +902,66 @@ a {
         left: 0px;
     }
     #username {
-        left: 50%;
-    }
-    .logout {
-        left: 88%;
-        top: -94px;
-        width: 52px;
         position: relative;
+        left: 0;
+        font-size: 1em;
+        border-bottom: 0;
+        top: 0px;
+    }
+    .check {
+        position: relative;
+        top: 6px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        margin-left: 0;
     }
 }
 
 @media screen and (min-width: 650px) and (max-width: 767px) {
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40!important;
+        background-color: #343a40!important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: none;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
     .title {
         position: absolute;
         top: 79px;
@@ -846,7 +969,10 @@ a {
         left: 15px;
     }
     .hori-line {
-        width: 26%;
+        width: 26vw;
+    }
+    .formless {
+        left: 0px;
     }
     .logos img {
         height: 50px;
@@ -857,13 +983,18 @@ a {
         left: 0px;
     }
     #username {
-        left: 50%;
+        position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 0;
     }
     .logout {
-        left: 80%;
-        top: -94px;
-        width: 52px;
         position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 0;
+        color: #fff;
     }
     .recipe-container {
         display: grid;
@@ -878,6 +1009,19 @@ a {
     }
     .container button {
         width: 150px;
+    }
+    .check {
+        position: relative;
+        top: 6px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        left: 0;
+        margin-left: 0;
     }
 }
 
