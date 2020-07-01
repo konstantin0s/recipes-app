@@ -457,12 +457,17 @@ a {
     bottom: -5px !important;
     padding-bottom: 1em;
     width: 100vw;
-    background: darkolivegreen;
+    background: #0d2930;
 }
 
 .footer-copyright a {
     text-decoration: none;
-    color: aquamarine;
+    color: #fff;
+}
+
+.footer-copyright:hover,
+.footer-copyright a:hover {
+    color: rgb(215, 236, 26);
 }
 
 .page-footer {
