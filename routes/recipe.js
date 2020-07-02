@@ -3,21 +3,26 @@ const router = express.Router();
 let Recipes = require('../models/recipes');
 
 
-router.get('/recipe/:id', function(req, res) {
+router.get('/recipe/:id', async function(req, res, next) {
 
     let sess = req.session;
 
-    Recipes.findOne({ _id: req.params.id }, function(err, recipe) {
+    await Recipes.findOne({ _id: req.params.id }, function(err, recipe) {
             if (err) {
                 console.log(err);
             } else {
                 if (sess.currentUser) {
-                    res.render('recipe', { recipe: recipe, user: sess.currentUser });
+                    res.render('recipe', {
+                        recipe: recipe,
+                        user: sess.currentUser,
+                        updateRecipeSuccessMsg: req.flash('updateRecipeSuccessMsg'),
+                        updateRecipeErrorMsg: req.flash('updateRecipeErrorMsg')
+                    });
                 }
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 })
 

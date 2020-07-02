@@ -7,6 +7,8 @@ const cors = require('cors');
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const cookieParser = require('cookie-parser');
+const flash = require('req-flash');
+
 require("dotenv").config();
 
 const app = express();
@@ -43,6 +45,7 @@ app.use(function(req, res, next) {
     next();
 });
 
+
 app.get('/', function(req, res) {
     res.cookie('name', 'recipes'); //Sets name = recipes
     res.render('index');
@@ -62,6 +65,9 @@ app.use(session({
         ttl: 24 * 60 * 60 // 1 day
     })
 }));
+
+//display message on update/delete..
+app.use(flash());
 
 
 app.set('views', path.join(__dirname, 'views'));

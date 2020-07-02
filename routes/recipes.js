@@ -23,10 +23,10 @@ router.get('/recipes', async(req, res, next) => {
 });
 
 //deserts only
-router.get('/desserts', (req, res) => {
+router.get('/desserts', async(req, res, next) => {
     let sess = req.session;
 
-    Recipes.find({ "dishType": "Dessert" }, (err, dessert) => {
+    await Recipes.find({ "dishType": "Dessert" }, (err, dessert) => {
 
             if (err) {
                 console.log(err);
@@ -39,15 +39,15 @@ router.get('/desserts', (req, res) => {
 
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 })
 
 //dinner
-router.get('/dinner', (req, res) => {
+router.get('/dinner', async(req, res, next) => {
     let sess = req.session;
 
-    Recipes.find({ "dishType": "Dinner" }, (err, dinner) => {
+    await Recipes.find({ "dishType": "Dinner" }, (err, dinner) => {
 
             if (err) {
                 console.log(err);
@@ -59,15 +59,15 @@ router.get('/dinner', (req, res) => {
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 });
 
 //lunch
-router.get('/lunch', (req, res) => {
+router.get('/lunch', async(req, res, next) => {
     let sess = req.session;
 
-    Recipes.find({ "dishType": "Lunch" }, (err, lunch) => {
+    await Recipes.find({ "dishType": "Lunch" }, (err, lunch) => {
 
             if (err) {
                 console.log(err);
@@ -79,15 +79,15 @@ router.get('/lunch', (req, res) => {
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 })
 
 //italian recipes
-router.get('/italian', (req, res) => {
+router.get('/italian', async(req, res, next) => {
     let sess = req.session;
 
-    Recipes.find({ "cuisine": "Italian" }, (err, italian) => {
+    await Recipes.find({ "cuisine": "Italian" }, (err, italian) => {
             if (err) {
                 console.log(err);
             } else {
@@ -98,7 +98,7 @@ router.get('/italian', (req, res) => {
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 })
 

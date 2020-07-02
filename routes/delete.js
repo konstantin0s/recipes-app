@@ -7,10 +7,10 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 //delete celebrity
-router.delete('/recipe/:id', function(req, res) {
+router.delete('/recipe/:id', async function(req, res, next) {
     let query = { _id: req.params.id }
 
-    Recipes.deleteMany(query, function(err) {
+    await Recipes.deleteMany(query, function(err) {
             if (err) {
                 console.log(err);
                 return;
@@ -19,7 +19,7 @@ router.delete('/recipe/:id', function(req, res) {
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         })
 })
 

@@ -18,10 +18,10 @@ router.get("/signup", (req, res) => {
 });
 
 // BCrypt to encrypt passwords
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const bcryptSalt = 10;
 
-router.post("/signup", (req, res, next) => {
+router.post("/signup", async(req, res, next) => {
 
     const username = req.body.username;
     const password = req.body.password;
@@ -35,7 +35,7 @@ router.post("/signup", (req, res, next) => {
         return;
     }
 
-    User.findOne({ "username": username })
+    await User.findOne({ "username": username })
         .then(user => {
             if (user !== null) {
                 res.render("auth/signup", {
@@ -61,7 +61,7 @@ router.post("/signup", (req, res, next) => {
         })
 });
 
-router.post('/signup', function(req, res) {
+router.post('/signup', async function(req, res, next) {
     if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
         return res.json({ "responseError": "Please select captcha first" });
     }
@@ -69,7 +69,7 @@ router.post('/signup', function(req, res) {
 
     const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
 
-    request(verificationURL, function(error, response, body) {
+    await request(verificationURL, function(error, response, body) {
             body = JSON.parse(body);
 
             if (body.success !== undefined && !body.success) {
@@ -86,7 +86,7 @@ router.get("/login", (req, res) => {
     res.render("auth/login");
 });
 
-router.post("/login", (req, res, next) => {
+router.post("/login", async(req, res, next) => {
     const theUsername = req.body.username;
     const thePassword = req.body.password;
 
@@ -97,7 +97,7 @@ router.post("/login", (req, res, next) => {
         return;
     }
 
-    User.findOne({ "username": theUsername })
+    await User.findOne({ "username": theUsername })
         .then(user => {
             if (!user) {
                 res.render("auth/login", {

@@ -20,6 +20,50 @@ body {
 }
 
 
+/* hide message with a keyframe */
+
+@keyframes signup-response {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes signup-response {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.alert-success {
+    position: relative;
+    top: 6px;
+    animation: signup-response 0.5s 1;
+    -webkit-animation: signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+}
+
+.alert-error {
+    position: relative;
+    top: 6px;
+    animation: signup-response 0.5s 1;
+    -webkit-animation: signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+}
+
 .title {
     position: absolute;
     top: 15px;
@@ -69,7 +113,6 @@ body {
     width: 50%;
 }
 
-
 .cards {
     display: flex;
     flex-direction: column;
@@ -82,7 +125,6 @@ body {
     padding: 4em 3em;
     background: aliceblue;
 }
-
 
 .cardz {
     display: flex;
@@ -126,7 +168,6 @@ body {
     margin-right: 1em;
 }
 
-
 .edit-recipe,
 .delete-recipe {
     width: 100%;
@@ -152,7 +193,6 @@ body {
     bottom: -5px !important;
     width: 100vw;
     background: darkolivegreen;
-
 }
 
 .footer-copyright a {
@@ -160,15 +200,11 @@ body {
     color: aquamarine;
 }
 
-
-
 @media (max-width: 489px) {
-
     .logos img {
         top: 17px;
         left: 0px;
     }
-
     #username {
         left: 35%;
         top: -88px;
@@ -176,32 +212,26 @@ body {
         position: relative;
         text-align: center;
     }
-
     .logout {
         top: 2px;
         text-align: center;
         left: 76%;
         width: 14%;
     }
-
     .cards {
         width: 90vw;
         align-self: center;
     }
-
     .cardz {
         width: 100%;
     }
-
     .cardz img {
         width: 90%;
         margin: 1em 0em;
     }
-
     .cardz button {
         width: 50%;
     }
-
 }
 
 @media (min-width: 490px) and (max-width: 550px) {
@@ -212,28 +242,23 @@ body {
         position: relative;
         text-align: center;
     }
-
     .logout {
         top: -130px;
         text-align: center;
         left: 86%;
         width: 11%;
     }
-
     .logos img {
         top: 17px;
         left: 0px;
     }
-
     .cards {
         width: 90vw;
         align-self: center;
     }
-
     .cardz {
         width: 100%;
     }
-
     .cardz button {
         width: 50%;
     }
@@ -244,34 +269,27 @@ body {
         top: 17px;
         left: 0px;
     }
-
     #username {
         left: 53%;
         width: 140px;
         text-align: center;
     }
-
     .logout {
         top: -94px;
         text-align: center;
         left: 87%;
         width: 54px;
     }
-
     .cards {
         width: 90vw;
         align-self: center;
     }
-
     .cardz {
         width: 100%;
     }
-
-
     .cardz button {
         width: 50%;
     }
-
 }
 
 @media (min-width: 608px) and (max-width: 950px) {
@@ -279,49 +297,37 @@ body {
         width: 80vw;
         align-self: center;
     }
-
     .cardz {
         width: 90%;
     }
-
     .cardz img {
         width: 90%;
         margin: 1em 0em;
     }
-
 }
 
 @media (min-width: 950px) and (max-width: 1200px) {
-
     #username {
         left: 60%;
     }
-
     .logout {
         left: 80%;
     }
-
     .logos img {
         left: 30px;
     }
-
 }
 
-
 @media (min-width: 768px) and (max-width: 949px) {
-
     .logos img {
         left: 30px;
     }
-
     #username {
         left: 60%;
     }
-
     .logout {
         left: 80%;
     }
-
 }
 
 @media screen and (min-width: 300px) and (max-width: 780px) {

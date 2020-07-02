@@ -9,11 +9,11 @@ router.use(bodyParser.json());
 
 
 //load edit form
-router.get('/recipe/edit/:id', function(req, res) {
+router.get('/recipe/edit/:id', async function(req, res, next) {
 
     let sess = req.session;
 
-    Recipes.findOne({ _id: req.params.id }, function(err, recip) {
+    await Recipes.findOne({ _id: req.params.id }, function(err, recip) {
             if (err) {
                 console.log(err);
             } else {
@@ -23,7 +23,7 @@ router.get('/recipe/edit/:id', function(req, res) {
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 });
 
@@ -33,7 +33,7 @@ router.get('/recipe/edit/:id', function(req, res) {
 //   });
 
 //add submit POST route
-router.post('/recipes/edit/:id', function(req, res) {
+router.post('/recipes/edit/:id', async function(req, res, next) {
 
     let recips = {};
     recips.title = req.body.title;
@@ -48,18 +48,22 @@ router.post('/recipes/edit/:id', function(req, res) {
     recips.date = dateFormat(req.body.date);
 
     let query = { _id: req.params.id }
+        // console.log(query);
 
-    Recipes.updateMany(query, recips, function(err) {
+    await Recipes.updateMany(query, recips, function(err) {
             if (err) {
+                req.flash('updateRecipeErrorMsg', 'Something went wrong while updating recipe!');
                 console.log(err);
                 return;
             } else {
-                console.log(recips)
-                res.redirect('/recipes');
+                console.log(recips);
+                req.flash('updateRecipeSuccessMsg', 'Recipe updated successfully!');
+                res.redirect(`/recipe/${query._id}`);
+
             }
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 });
 

@@ -33,6 +33,16 @@
 
     <div class="cards">
       <div class="cardz">
+
+            
+{{#if updateRecipeSuccessMsg }}
+<div class="alert alert-success">{{ updateRecipeSuccessMsg }}</div> 
+{{/if}}
+
+{{#if updateRecipeErrorMsg }}
+<div class="alert alert-danger">{{ updateRecipeErrorMsg }}</div>
+ {{/if}}
+
         <h1>{{recipe.title}}</h1>
            <p>Posted on: {{dateFormat recipe.date "dddd, MMMM Do YYYY "}}</p>
                 <a data-fancybox="gallery" href={{recipe.image}}><img src={{recipe.image}}></a>
