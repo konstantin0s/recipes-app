@@ -141,6 +141,27 @@ body {
 }
 
 
+/* hide message with a keyframe */
+
+@keyframes signup-response {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes signup-response {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
 /* sign up error message */
 
 .error-message {
@@ -157,6 +178,13 @@ body {
     justify-content: center;
     width: 100%;
     font-size: 1.5em;
+    animation: signup-response 0.5s 1;
+    -webkit-animation: signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
 }
 
 #form h2 {
