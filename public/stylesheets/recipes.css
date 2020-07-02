@@ -1,14 +1,12 @@
 /* GLOBAL STYLES */
 
-* * {
+* {
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-    height: 100%;
-    font-family: 'Fira Sans', sans-serif;
-    margin: 0;
+#fadein {
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #fadein .loaderx {
@@ -136,8 +134,8 @@ a {
 #username {
     text-transform: capitalize;
     position: absolute;
-    top: 9px;
-    left: 80%;
+    top: 8px;
+    left: 76%;
     text-align: center;
     font-size: 15px;
     color: #fff;

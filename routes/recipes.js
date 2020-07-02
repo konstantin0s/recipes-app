@@ -3,10 +3,10 @@ const router = express.Router();
 let Recipes = require('../models/recipes');
 
 /* GET recipes page */
-router.get('/recipes', (req, res) => {
+router.get('/recipes', async(req, res, next) => {
     let sess = req.session;
 
-    Recipes.find({}, (err, recipes) => {
+    await Recipes.find({}, (err, recipes) => {
             if (err) {
                 console.log(err);
             } else {
@@ -18,7 +18,7 @@ router.get('/recipes', (req, res) => {
 
         })
         .catch(error => {
-            console.error(error);
+            next(error);
         });
 });
 
