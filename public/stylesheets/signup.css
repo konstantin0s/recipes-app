@@ -140,6 +140,25 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+
+/* sign up error message */
+
+.error-message {
+    position: relative;
+    background: #F02B63;
+    top: -18px;
+    box-sizing: border-box;
+    color: #fff;
+    left: 0;
+    margin: 20px auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+
 #form h2 {
     margin-bottom: 2em;
 }
@@ -304,11 +323,6 @@ body {
         display: block;
         height: 100vh;
     }
-    .error-message {
-        top: -4em;
-        left: 63px;
-        width: 66%
-    }
     .rc-anchor-light.rc-anchor-normal {
         border: 1px solid #d3d3d3;
         position: relative;
@@ -369,9 +383,6 @@ body {
     .form-container {
         top: 11em;
     }
-    .error-message {
-        width: 44vw;
-    }
     iframe {
         width: 38vw !important;
     }
@@ -409,6 +420,9 @@ body {
     }
     .mr-auto .nav-item .nav-link:hover {
         color: yellow !important;
+    }
+    .error-message {
+        width: 300px;
     }
 }
 

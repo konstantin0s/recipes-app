@@ -105,21 +105,4 @@
      color: #fff;
      transition: .3s ease background;
  }
- /* sign in error message */
- 
- .error-message {
-     background: #F02B63;
-     top: -4em;
-     box-sizing: border-box;
-     color: #fff;
-     left: 0px;
-     margin: 20px auto;
-     padding: 20px;
-     position: absolute;
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     width: 88%;
-     font-size: 1.1em;
- }
  /*# sourceMappingURL=style.css.map */
