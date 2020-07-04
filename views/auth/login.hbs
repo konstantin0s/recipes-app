@@ -51,6 +51,13 @@
 
   <div class="form-container">
 
+{{#if updatePasswordSuccessMsg }}
+<div class="alert alert-success">{{ updatePasswordSuccessMsg }}</div> 
+{{/if}}
+
+{{#if sendPasswordSuccessMsg }}
+<div class="alert alert-success">{{ sendPasswordSuccessMsg }}</div> 
+{{/if}}
 
     <form action="/login" method="POST" id="form">
 
@@ -67,6 +74,9 @@
 
       <p class="account-message">
         Don't have an account? <a class="signup link" href="/signup">Sign up</a>
+      </p>
+       <p class="account-message">
+        Forgot Password? <a class="signup link" href="/recover">Reset Password</a>
       </p>
     </form>
   </div>

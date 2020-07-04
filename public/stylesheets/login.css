@@ -113,6 +113,18 @@ body {
     width: 55%;
 }
 
+
+/* success password login */
+
+.alert-success {
+    position: relative;
+    top: -59px;
+    left: -20px;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
 #form {
     margin: 0;
     position: relative;

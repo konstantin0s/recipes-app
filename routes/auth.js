@@ -3,32 +3,38 @@ const router = express.Router();
 const request = require('request');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-router.use(cookieParser());
 
+
+
+router.use(cookieParser());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 
 const User = require("../models/user");
+const Token = require("../models/token");
 
+
+// BCrypt to encrypt passwords
+const bcrypt = require("bcryptjs");
+const bcryptSalt = 10;
 
 
 router.get("/signup", (req, res) => {
     res.render("auth/signup");
 });
 
-// BCrypt to encrypt passwords
-const bcrypt = require("bcryptjs");
-const bcryptSalt = 10;
 
 router.post("/signup", async(req, res, next) => {
 
     const username = req.body.username;
+    const email = req.body.email;
     const password = req.body.password;
 
 
     //do some sanitaze on input ? name = name.replace(/</g, "&lt;").replace(/>/g, "&lt;");
-    if (username === "" || password === "" || username.length < 3 || password.length < 3) {
+    if (username === "" || password === "" || email === "" ||
+        username.length < 3 || email.length < 3 || password.length < 3) {
         res.render("auth/signup", {
             errorMessage: "The length must be at least 4 characters"
         });
@@ -50,6 +56,7 @@ router.post("/signup", async(req, res, next) => {
 
             User.create({
                     username,
+                    email,
                     password: hashPass
                 })
                 .then(() => {
@@ -73,9 +80,14 @@ router.post('/signup', async function(req, res, next) {
             body = JSON.parse(body);
 
             if (body.success !== undefined && !body.success) {
-                return res.json({ "responseError": "Failed captcha verification" });
+                res.render("auth/signup", {
+                    errorMessage: "Failed captcha verification"
+                });
+                return;
             }
-            res.json({ "responseSuccess": "Sucess" });
+            // res.json({ "responseSuccess": "Sucess" });
+            res.redirect("/login");
+
         })
         .catch(error => {
             next(error);
@@ -83,7 +95,10 @@ router.post('/signup', async function(req, res, next) {
 });
 
 router.get("/login", (req, res) => {
-    res.render("auth/login");
+    res.render("auth/login", {
+        updatePasswordSuccessMsg: req.flash('updatePasswordSuccessMsg'),
+        sendPasswordSuccessMsg: req.flash('sendPasswordSuccessMsg'),
+    });
 });
 
 router.post("/login", async(req, res, next) => {
@@ -119,9 +134,19 @@ router.post("/login", async(req, res, next) => {
             }
         })
         .catch(error => {
+            console.log('pula', error);
             next(error);
         })
 });
+
+// router.get("/recover", (req, res) => {
+//     res.redirect("login");
+// });
+
+// router.get("/reset", (req, res) => {
+//     res.render("auth/reset");
+// });
+
 
 // router.get("/logout", (req, res) => {
 //   res.clearCookie("name");
@@ -131,6 +156,85 @@ router.post("/login", async(req, res, next) => {
 //     res.redirect("/");
 //   })
 // });
+
+// ===EMAIL VERIFICATION
+// @route GET api/verify/:token
+// @desc Verify token
+// @access Public
+router.get('/verify/:token', async function(req, res) {
+    if (!req.params.token) {
+        return res.status(400).json({ message: "We were unable to find a user for this token." });
+    }
+
+    try {
+        // Find a matching token
+        const token = await Token.findOne({ token: req.params.token });
+
+        if (!token) {
+            return res.status(400).json({ message: 'We were unable to find a valid token. Your token my have expired.' });
+        }
+
+        // If we found a token, find a matching user
+        User.findOne({ _id: token.userId }, (err, user) => {
+            if (!user) return res.status(400).json({ message: 'We were unable to find a user for this token.' });
+
+            if (user.isVerified) return res.status(400).json({ message: 'This user has already been verified.' });
+
+            // Verify and save the user
+            user.isVerified = true;
+            user.save(function(err) {
+                if (err) return res.status(500).json({ message: err.message });
+
+                res.status(200).send("The account has been verified. Please log in.");
+            });
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+});
+
+// @route POST api/resend
+// @desc Resend Verification Token
+// @access Public
+router.post('/resend', async function(req, res) {
+    try {
+        const { email } = req.body;
+
+        const user = await User.findOne({ email });
+        console.log(user);
+
+        if (!user) return res.status(401).json({ message: 'The email address ' + req.body.email + ' is not associated with any account. Double-check your email address and try again.' });
+
+        if (user.isVerified) return res.status(400).json({ message: 'This account has already been verified. Please log in.' });
+
+        await sendVerificationEmail(user, req, res);
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+});
+
+async function sendVerificationEmail(user, req, res) {
+    try {
+        const token = user.generateVerificationToken();
+
+        // Save the verification token
+        await token.save();
+
+        let subject = "Account Verification Token";
+        let to = user.email;
+        let from = process.env.FROM_EMAIL;
+        let link = "http://localhost:5000/verify/" + token.token;
+        let html = `<p>Hi ${user.username}<p><br><p>Please click on the following <a href="${link}">link</a> to verify your account.</p> 
+                  <br><p>If you did not request this, please ignore this email.</p>`;
+
+        await sendEmail({ to, from, subject, html });
+
+        res.status(200).json({ message: 'A verification email has been sent to ' + user.email + '.' });
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+};
+
 
 router.get("/logout", function(req, res) {
     var cookie = req.cookies;

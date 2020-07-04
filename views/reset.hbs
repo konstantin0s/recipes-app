@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="../stylesheets/style.css">
   <link rel="stylesheet" href="../stylesheets/signup.css">
    <script src="/javascript/loader.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <title>Recipes</title>
+  <title>Reset</title>
 </head>
 
 <body>
@@ -37,23 +36,15 @@
   </nav>
 
 
-  <div class="image">
-    <!--inject image with csss -->
-  </div>
-  <div class="father-container">
+
+ <div class="father-container">
 
     <div class="form-container">
 
-      <form id="form" action="/signup" method="POST">
-           <input type="text" name="username" placeholder="Username">
-           <input type="text" name="email" placeholder="Email">
-           <input type="password" name="password" placeholder="Password">
-
-        <div class="form-group col-md-4">
-          <div class="g-recaptcha" data-sitekey="6LeR0ZMUAAAAAHe19OLvaksuM7cB-k8XHCCmE96b"></div>
-        </div>
-
-        <button type="submit">Create account</button>
+      <form id="form" action="/reset/{{token}}" method="POST">
+        <input type="password" name="password" placeholder="New Password" autofocus="true">
+  <input type="password" name="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Update Password</button>
         <p class="account-message">
           Having an account? <a class="signin link" href="/login">Sign in</a>
         </p>
@@ -65,10 +56,9 @@
       {{/if}}
 
     </div>
-  </div>
 
 
-<script async src="../javascript/main.js"></script>
+    <script async src="../javascript/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
