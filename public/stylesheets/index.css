@@ -15,7 +15,7 @@ body {
 }
 
 .check {
-    display: none;
+    width: 40%;
 }
 
 .title {
@@ -32,7 +32,7 @@ body {
 }
 
 .index-img {
-    background: url('https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260') no-repeat center center fixed;
+    background: url('https://images.pexels.com/photos/4553118/pexels-photo-4553118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     overflow: hidden;
@@ -40,6 +40,51 @@ body {
     top: 30px;
     width: 100%;
     height: 100%;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+
+/* transparent container*/
+
+div.transbox {
+    display: inline-block;
+    margin: 30px;
+    background-color: #333;
+    border: 1px solid black;
+    opacity: 0.6;
+    position: relative;
+    top: 110px;
+    width: 50%;
+    left: 10%;
+    border-left: 4px solid green;
+    height: auto;
+}
+
+div.transbox .box-title {
+    top: 20px;
+    left: 5%;
+    margin-bottom: 5px;
+}
+
+div.transbox .box-desc {
+    top: -45px;
+}
+
+div.transbox p {
+    top: -45px;
+}
+
+div.transbox p,
+.box-title,
+.box-desc {
+    position: relative;
+    margin: 5%;
+    font-weight: bold;
+    color: #fff;
 }
 
 .nav-item {
@@ -53,7 +98,7 @@ body {
 .nav-item a {
     position: relative;
     left: 1000px;
-    color: #f8fc03 !important;
+    color: #00008b !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -83,7 +128,7 @@ body {
 
 .footer-copyright {
     font-weight: bold;
-    color: #f8fc03;
+    color: #00008b;
     font-size: 2.2em;
     padding: 5px;
     position: fixed;
@@ -95,13 +140,13 @@ body {
 
 .footer-copyright a {
     text-decoration: none;
-    color: #f8fc03;
+    color: #00008b;
     font-weight: bold;
 }
 
 .footer-copyright:hover,
 .footer-copyright a:hover {
-    color: #9dfc03;
+    color: #004080;
 }
 
 @media (max-width: 689px) {
