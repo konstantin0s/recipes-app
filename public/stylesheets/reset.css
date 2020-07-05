@@ -88,7 +88,7 @@ body {
 }
 
 .father-container {
-    background: url('https://images.pexels.com/photos/940302/pexels-photo-940302.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background: url('https://images.pexels.com/photos/2130134/pexels-photo-2130134.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-repeat: no-repeat;
     background-size: cover;
     width: 65%;
@@ -116,42 +116,13 @@ body {
 
 /* success password login */
 
-
-/* hide message with a keyframe */
-
-@keyframes reset-pass {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@-webkit-keyframes reset-pass {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.alert-success,
-.alert-error {
+.alert-success {
     position: relative;
     top: -59px;
     left: -20px;
     width: 100%;
     margin-left: 0px;
     padding-left: 0px;
-    animation: reset-pass 0.5s 1;
-    -webkit-animation: reset-pass 0.5s 1;
-    animation-fill-mode: forwards;
-    animation-delay: 12s;
-    -webkit-animation-delay: 12s;
-    /* Safari and Chrome */
-    -webkit-animation-fill-mode: forwards;
 }
 
 #form {

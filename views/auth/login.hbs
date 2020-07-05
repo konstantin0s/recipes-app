@@ -38,17 +38,6 @@
 </div>
 <div class="father-container">
 
-
-  <!--vertical bar line -->
-  <ul class="bar-left">
-    <li></li>
-    <li></li>
-  </ul>
-  <ul class="bar-right">
-    <li></li>
-    <li></li>
-  </ul>
-
   <div class="form-container">
 
 {{#if updatePasswordSuccessMsg }}
@@ -60,7 +49,7 @@
 {{/if}}
 
 {{#if sendPasswordErrorMsg }}
-<div class="alert alert-success">{{ sendPasswordErrorMsg }}</div> 
+<div class="alert alert-error">{{ sendPasswordErrorMsg }}</div> 
 {{/if}}
 
     <form action="/login" method="POST" id="form">
