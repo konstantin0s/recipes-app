@@ -45,7 +45,7 @@ router.post("/recover", async(req, res, next) => {
         let subject = "Password change request";
         let to = user.email;
         let from = 'constantintofan85@gmail.com'
-        let link = "http://localhost:5000/reset/" + user.resetPasswordToken;
+        let link = "https://cuisezone.herokuapp.com/reset/" + user.resetPasswordToken;
         console.log(req.headers.host);
         let html = `<p>Hi ${user.username}</p>
                     <p>Please click on the following <a href="${link}">link</a> to reset your password.</p> 
@@ -56,9 +56,10 @@ router.post("/recover", async(req, res, next) => {
         res.redirect("/login");
         // res.status(200).json({ message: 'A reset email has been sent to ' + user.email + '.' });
     } catch (error) {
-        console.log('de unde erroare?', error);
-        console.log('log eerroor?', error.response.body.errors);
-        res.status(500).json({ message: error.message })
+        // console.log('de unde erroare?', error);
+        // console.log('log eerroor?', error.response.body.errors);
+        req.flash('sendPasswordErrorMsg', "A reset email couldn't been sent to " + user.email);
+        // res.status(500).json({ message: error.message })
     }
 });
 
@@ -93,7 +94,8 @@ router.post("/reset/:token", async(req, res, next) => {
         const user = await User.findOne({ resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() } });
 
         if (!user) {
-            return res.status(401).json({ message: 'Password reset token is invalid or has expired.' });
+            return req.flash('sendPasswordErrorMsg', 'Password reset token is invalid or has expired.');
+            // res.status(401).json({ message: 'Password reset token is invalid or has expired.' });
         }
 
         //Set the new password
@@ -117,7 +119,8 @@ router.post("/reset/:token", async(req, res, next) => {
         // res.status(200).json({ message: 'Your password has been updated.' });
 
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        return req.flash('sendPasswordErrorMsg', 'Password not updated, please try again.');
+        // res.status(500).json({ message: error.message })
     }
 });
 

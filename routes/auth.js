@@ -98,6 +98,7 @@ router.get("/login", (req, res) => {
     res.render("auth/login", {
         updatePasswordSuccessMsg: req.flash('updatePasswordSuccessMsg'),
         sendPasswordSuccessMsg: req.flash('sendPasswordSuccessMsg'),
+        sendPasswordErrorMsg: req.flash('sendPasswordErrorMsg')
     });
 });
 
@@ -223,7 +224,7 @@ async function sendVerificationEmail(user, req, res) {
         let subject = "Account Verification Token";
         let to = user.email;
         let from = process.env.FROM_EMAIL;
-        let link = "http://localhost:5000/verify/" + token.token;
+        let link = "https://cuisezone.herokuapp.com/verify/" + token.token;
         let html = `<p>Hi ${user.username}<p><br><p>Please click on the following <a href="${link}">link</a> to verify your account.</p> 
                   <br><p>If you did not request this, please ignore this email.</p>`;
 

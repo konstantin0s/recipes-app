@@ -59,6 +59,10 @@
 <div class="alert alert-success">{{ sendPasswordSuccessMsg }}</div> 
 {{/if}}
 
+{{#if sendPasswordErrorMsg }}
+<div class="alert alert-success">{{ sendPasswordErrorMsg }}</div> 
+{{/if}}
+
     <form action="/login" method="POST" id="form">
 
 
