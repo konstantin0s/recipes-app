@@ -58,6 +58,15 @@ a {
     background-size: cover;
 }
 
+#progress {
+    border-bottom: 6px solid blue;
+    width: 0;
+    position: fixed;
+    top: 67px;
+    left: 0;
+    z-index: 1000;
+}
+
 .check {
     position: relative;
     left: 3em;
@@ -421,7 +430,7 @@ a {
 .next-recipe {
     font-size: 15px;
     padding: 1em 0.5em;
-    color: #000;
+    color: #fff;
     top: 0px;
     display: block;
     width: 250px;

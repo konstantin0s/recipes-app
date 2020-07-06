@@ -45,9 +45,12 @@
     <div class="form-container">
 
       <form id="form" action="/signup" method="POST">
-           <input type="text" name="username" placeholder="Username">
-           <input type="text" name="email" placeholder="Email">
-           <input type="password" name="password" placeholder="Password">
+           <input type="text" name="username" data-help="Your unique username"
+            placeholder="Username">
+           <input type="text" name="email" data-help="Your valid email"
+           placeholder="Email">
+           <input type="password" name="password" data-help="Your unique password"
+            placeholder="Password">
 
         <div class="form-group col-md-4">
           <div class="g-recaptcha" data-sitekey="6LeR0ZMUAAAAAHe19OLvaksuM7cB-k8XHCCmE96b"></div>

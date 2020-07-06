@@ -20,6 +20,15 @@ body {
     cursor: pointer;
 }
 
+#progress {
+    border-bottom: 6px solid blue;
+    width: 0;
+    position: fixed;
+    top: 67px;
+    left: 0;
+    z-index: 1000;
+}
+
 #username {
     text-transform: capitalize;
     position: absolute;
