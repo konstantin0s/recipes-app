@@ -39,7 +39,11 @@ body {
 
 ::-webkit-input-placeholder {
     color: #333 !important;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.1.5em;
+}
+
+.email {
+    padding-right: 30px;
 }
 
 
@@ -47,7 +51,7 @@ body {
 
 ::-moz-placeholder {
     color: #333 !important;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.1.5em;
 }
 
 
@@ -55,7 +59,7 @@ body {
 
 :-ms-input-placeholder {
     color: #333 !important;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.1.5em;
 }
 
 
@@ -63,7 +67,7 @@ body {
 
 :-moz-placeholder {
     color: #333 !important;
-    padding: 0.3em 0.5em;
+    padding: 0.3em 0.1.5em;
 }
 
 
@@ -85,6 +89,13 @@ body {
 
 .link {
     font-size: 1em;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
 }
 
 .father-container {
@@ -111,6 +122,44 @@ body {
     text-align: center;
     padding: 2em;
     width: 55%;
+}
+
+
+/* enable absolute positioning */
+
+.inner-addon {
+    position: relative;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+/* align icon */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
 }
 
 
@@ -218,10 +267,25 @@ ul li {
     -webkit-animation-fill-mode: forwards;
 }
 
+.hint-message p {
+    position: relative;
+    top: -25px;
+}
+
+.extreme-help {
+    position: relative;
+    top: -51px;
+    width: 100%;
+}
+
+.extreme-help p {
+    color: #fff;
+}
+
 .footer-copyright {
     font-weight: bold;
-    color: rgb(25, 41, 70);
-    font-size: 2.2em;
+    color: #fff;
+    font-size: 1.2em;
     padding: 5px;
     position: fixed;
     bottom: 0;
@@ -231,8 +295,8 @@ ul li {
 }
 
 .footer-copyright a {
-    text-decoration: none;
-    color: rgb(25, 41, 70);
+    color: #fff;
+    font-size: 1.2em;
     font-weight: bold;
 }
 

@@ -31,6 +31,14 @@ body {
     color: #000 !important;
 }
 
+.log-title {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    color: #333;
+}
+
 .on-right {
     font-weight: bold;
     font-size: 2em;
@@ -69,18 +77,34 @@ body {
 
 /*below firefox 19 */
 
+
+/* sign up link */
+
+.on-right {
+    font-weight: bold;
+    border-bottom: 3.5px solid rgb(25, 41, 70);
+    top: 8px;
+    font-size: 2.2em;
+    position: absolute;
+    right: 6%;
+    float: right;
+    color: rgb(25, 41, 70) !important;
+}
+
+.on-right:hover {
+    color: rgb(28, 122, 184) !important;
+}
+
 .signup {
     color: rgb(25, 41, 70) !important;
-    top: -4px;
     font-size: 2.2em;
-    right: -500px;
     border-bottom: 2.5px solid rgb(25, 41, 70);
 }
 
 .signup:hover {
     color: #0ca1c9 !important;
-    text-decoration: none;
     border-bottom: 2.5px solid rgb(215, 236, 26);
+    text-decoration: none;
 }
 
 .link {
@@ -94,11 +118,12 @@ body {
     width: 65%;
     right: 0;
     top: 0;
-    height: 100%;
+    min-height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    object-fit: cover;
 }
 
 .form-container {
@@ -168,6 +193,57 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+#form input {
+    padding-right: 30px;
+}
+
+
+/* enable absolute positioning */
+
+.inner-addon {
+    position: relative;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+/
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+/* align icon */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
 .col-md-4 .g-recaptcha {
     width: 100%;
 }
@@ -183,7 +259,33 @@ body {
 }
 
 #form h2 {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+#form .acc-signup {
+    position: absolute;
+    border-top: 1px solid #333;
+    background: #fff;
+    color: #000;
+    padding-top: 5px;
+    padding-left: 0px;
+    width: 100%;
+    padding-right: 0px;
+    margin: 0;
+    left: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 0;
+    height: 4em;
+    bottom: -45px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#form .acc-signup h6 {
+    position: relative;
+    top: 8px;
 }
 
 ul li {

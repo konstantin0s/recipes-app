@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
-    integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../stylesheets/style.css">
   <link rel="stylesheet" href="../stylesheets/login.css">
    <script src="/javascript/loader.js"></script>
@@ -54,24 +53,31 @@
 
     <form action="/login" method="POST" id="form">
 
+  <h2 class="log-title">Log in to your account</h2>
+    <div class="inner-addon left-addon">
+          <i class="glyphicon glyphicon-user"></i>
+        <input type="text" placeholder="Username" name="username">
+     </div>
 
-      <input type="text" placeholder="Username" name="username">
-
-      <input type="password" placeholder="Password" name="password">
+         <div class="inner-addon left-addon">
+          <i class="glyphicon glyphicon-lock"></i>
+        <input type="password" placeholder="Password" name="password">
+     </div>
 
       {{#if errorMessage }}
       <div class="error-message">{{ errorMessage }}</div>
       {{/if}}
 
       <button class="btn btn-warning">Login</button>
-
-      <p class="account-message">
-        Don't have an account? <a class="signup link" href="/signup">Sign up</a>
-      </p>
-       <p class="account-message">
-        Forgot Password? <a class="signup link" href="/recover">Reset Password</a>
-      </p>
+  <div class="acc-signup">
+     <h6>   New to Cuisezone? <a class="signup link" href="/signup">Sign up</a></h6>
+      </div>
     </form>
+     
+
+        <div class="acc-recover">
+       <a class="signup link" href="/recover"> Forgot your password?</a>
+      </div>
   </div>
 </div>
 

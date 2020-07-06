@@ -32,6 +32,53 @@ body {
 }
 
 
+/* enable absolute positioning */
+
+.inner-addon {
+    position: relative;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+/* align icon */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
+
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
+
+
 /* ie */
 
 :-moz-placeholder {
@@ -47,6 +94,13 @@ body {
     width: 80px;
     cursor: pointer;
     left: 30px;
+}
+
+.already {
+    position: relative;
+    top: 13px;
+    left: 53px;
+    font-size: 1.9em;
 }
 
 .title {
@@ -72,9 +126,13 @@ body {
 
 .on-right {
     font-weight: bold;
-    font-size: 2em;
     border-bottom: 3.5px solid rgb(25, 41, 70);
+    top: 8px;
     font-size: 2.2em;
+    position: absolute;
+    right: 6%;
+    float: right;
+    color: rgb(25, 41, 70) !important;
 }
 
 .on-right:hover {
@@ -83,9 +141,7 @@ body {
 
 .signin {
     color: rgb(25, 41, 70) !important;
-    top: -4px;
     font-size: 2.2em;
-    right: -500px;
     border-bottom: 2.5px solid rgb(25, 41, 70);
 }
 

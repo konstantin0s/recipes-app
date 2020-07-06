@@ -218,10 +218,54 @@ ul li {
     -webkit-animation-fill-mode: forwards;
 }
 
+
+/* enable absolute positioning */
+
+.inner-addon {
+    position: relative;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.hint-message p {
+    position: relative;
+    top: -25px;
+}
+
+
+/* style icon */
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+
+/* align icon */
+
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+
+/* add padding  */
+
+.left-addon input {
+    padding-left: 30px;
+}
+
 .footer-copyright {
     font-weight: bold;
-    color: rgb(25, 41, 70);
-    font-size: 2.2em;
+    color: #fff;
+    font-size: 1.2em;
     padding: 5px;
     position: fixed;
     bottom: 0;
@@ -232,7 +276,7 @@ ul li {
 
 .footer-copyright a {
     text-decoration: none;
-    color: rgb(25, 41, 70);
+    color: #fff;
     font-weight: bold;
 }
 
