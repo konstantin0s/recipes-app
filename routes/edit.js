@@ -3,6 +3,8 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const dateFormat = require('dateformat');
 let Recipes = require('../models/recipes');
+const uploader = require("../models/cloudinary-setup");
+const path = require('path');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
@@ -12,6 +14,7 @@ router.use(bodyParser.json());
 router.get('/recipe/edit/:id', async function(req, res, next) {
 
     let sess = req.session;
+
 
     await Recipes.findOne({ _id: req.params.id }, function(err, recip) {
             if (err) {
@@ -33,7 +36,12 @@ router.get('/recipe/edit/:id', async function(req, res, next) {
 //   });
 
 //add submit POST route
-router.post('/recipes/edit/:id', async function(req, res, next) {
+router.post('/recipes/edit/:id', uploader.single("image"), async function(req, res, next) {
+
+    console.log('req file', req.file) // to see what is returned to you
+    console.log('req body', req.body) // to see what is returned to you
+    var imageFile = req.file.path;
+    console.log('imageFile: ', imageFile);
 
     let recips = {};
     recips.title = req.body.title;
@@ -42,7 +50,7 @@ router.post('/recipes/edit/:id', async function(req, res, next) {
     recips.cuisine = req.body.cuisine;
     recips.dishType = req.body.dishType;
     recips.directions = req.body.directions;
-    recips.image = req.body.image;
+    recips.image = req.file.path;
     recips.duration = req.body.duration;
     recips.creator = req.body.creator;
     recips.date = dateFormat(req.body.date);

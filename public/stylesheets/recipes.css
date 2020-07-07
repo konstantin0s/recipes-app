@@ -419,6 +419,10 @@ a {
 
 .cardz h6 {
     margin-top: 1.5em;
+    text-overflow: ellipsis;
+    width: 243px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .list-group-item {

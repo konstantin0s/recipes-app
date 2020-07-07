@@ -38,7 +38,7 @@
 
   <h4 class="text-center">Edit Recipe</h4>
   
-<form method="POST" action="/recipes/edit/{{recip.id}}" class="form">
+<form method="POST" enctype="multipart/form-data" action="/recipes/edit/{{recip.id}}" class="form">
 <div id="form-group">
   <label for="level"></label>
   <input type="text" name="title" value="{{recip.title}}" placeholder="Recipe Name" class="form-control">
@@ -65,8 +65,11 @@
  cols="30" rows="10" class="form-control"></textarea>
       </div>
 <div id="form-group" class="image">
-  <label for="level"></label>
-     <input type='text' class="form-control" name='image' value={{recip.image}} placeholder="Add Image url"/>
+        <input
+          type="file" name='image' id="addPic"
+          className="btn btn-warning addPic form-control" />
+  {{!-- <label for="level"></label>
+     <input type='text' class="form-control" name='image' value={{recip.image}} placeholder="Add Image url"/> --}}
 </div>
 <div id="form-group">
   <label for="level"></label>

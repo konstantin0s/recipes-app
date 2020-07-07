@@ -21,10 +21,10 @@ router.get('/recipes/add', function(req, res) {
 router.post('/recipes/add', uploader.single("image"), function(req, res, next) {
 
 
-    console.log('req file', req.file) // to see what is returned to you
-    console.log('req body', req.body) // to see what is returned to you
-    var imageFile = req.file.path;
-    console.log('imageFile: ', imageFile);
+    // console.log('req file', req.file) // to see what is returned to you
+    // console.log('req body', req.body) // to see what is returned to you
+    // var imageFile = req.file.path;
+    // console.log('imageFile: ', imageFile);
 
     let newRecipe = new Recipes({
 

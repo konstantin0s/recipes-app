@@ -109,7 +109,6 @@ const recipe = require('./routes/recipe');
 app.use('/', recipe);
 const addRecipe = require('./routes/addRecipe');
 app.use('/', addRecipe);
-// app.use('/', require('./routes/file-upload'));
 const edit = require('./routes/edit');
 app.use('/', edit);
 const deleteRecipe = require('./routes/delete');
