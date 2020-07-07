@@ -93,11 +93,6 @@ const authRouter = require('./routes/auth');
 app.use('/', authRouter);
 
 
-// const checkAuthRouter = require('./routes/checkAuth');
-// app.use('/', checkAuthRouter);
-
-
-
 app.use((req, res, next) => {
     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
         next(); // ==> go to the next route ---
@@ -114,6 +109,7 @@ const recipe = require('./routes/recipe');
 app.use('/', recipe);
 const addRecipe = require('./routes/addRecipe');
 app.use('/', addRecipe);
+// app.use('/', require('./routes/file-upload'));
 const edit = require('./routes/edit');
 app.use('/', edit);
 const deleteRecipe = require('./routes/delete');

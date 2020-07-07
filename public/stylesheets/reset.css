@@ -6,6 +6,12 @@ body {
     overflow: hidden;
 }
 
+body,
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .logos img {
     height: 50px;
     width: 80px;

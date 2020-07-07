@@ -34,7 +34,7 @@
   <div class="cards">
 
   <h3 class="text-center">Add a new Recipe</h3>
-  <form method="POST" action="/recipes/add" class="form">
+  <form method="POST" enctype="multipart/form-data" action="/recipes/add" class="form">
     <div id="form-group">
       <label for="level"></label>
       <input type="text" name="title" placeholder="Recipe Name" 
@@ -63,7 +63,10 @@
       </div>
       <div id="form-group" class="image">
         <label for="level"></label>
-        <input type='text' name='image' class="form-control" placeholder="Image url" />
+          <input
+          type="file" name='image' id="addPic"
+          className="btn btn-warning addPic form-control" />
+        {{!-- <input type='text' name='image' class="form-control" placeholder="Image url" /> --}}
 
       </div>
       <div id="form-group">
@@ -86,7 +89,7 @@
 </div>
 </div>
 
-{{!-- <script async src="../javascript/main.js"></script> --}}
+{{!-- <script src="../javascript/upload.js"></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">

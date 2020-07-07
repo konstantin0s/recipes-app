@@ -213,7 +213,7 @@ body {
     pointer-events: none;
 }
 
-/
+
 /* style icon */
 
 .inner-addon .glyphicon {
@@ -352,7 +352,7 @@ ul li {
 .footer-copyright {
     font-weight: bold;
     color: rgb(25, 41, 70);
-    font-size: 2.2em;
+    font-size: 1.4em;
     padding: 5px;
     position: fixed;
     bottom: 0;

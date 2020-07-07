@@ -3,6 +3,8 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const dateFormat = require('dateformat');
 let Recipes = require('../models/recipes');
+const uploader = require("../models/cloudinary-setup");
+const path = require('path');
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
@@ -14,20 +16,31 @@ router.get('/recipes/add', function(req, res) {
     }
 });
 
-//add submit POST route
-router.post('/recipes/add', function(req, res) {
 
-    let newRecipe = new Recipes();
-    newRecipe.title = req.body.title;
-    newRecipe.level = req.body.level;
-    newRecipe.ingredients = req.body.ingredients;
-    newRecipe.cuisine = req.body.cuisine;
-    newRecipe.dishType = req.body.dishType;
-    newRecipe.directions = req.body.directions;
-    newRecipe.image = req.body.image;
-    newRecipe.duration = req.body.duration;
-    newRecipe.creator = req.body.creator;
-    newRecipe.date = dateFormat(req.body.date);
+//add submit POST route
+router.post('/recipes/add', uploader.single("image"), function(req, res, next) {
+
+
+    console.log('req file', req.file) // to see what is returned to you
+    console.log('req body', req.body) // to see what is returned to you
+    var imageFile = req.file.path;
+    console.log('imageFile: ', imageFile);
+
+    let newRecipe = new Recipes({
+
+        title: req.body.title,
+        level: req.body.level,
+        ingredients: req.body.ingredients,
+        cuisine: req.body.cuisine,
+        dishType: req.body.dishType,
+        directions: req.body.directions,
+        image: req.file.path,
+        duration: req.body.duration,
+        creator: req.body.creator,
+        date: dateFormat(req.body.date)
+    });
+
+    console.log('image', newRecipe.image);
 
     newRecipe.save(function(err) {
             if (err) {
@@ -38,9 +51,9 @@ router.post('/recipes/add', function(req, res) {
                 res.redirect('/recipes');
             }
         })
-        .catch(err => {
-            console.error('Error while adding a new recipe', err)
-        });
+        // .catch(err => {
+        //     console.error('Error while adding a new recipe', err)
+        // });
 });
 
 module.exports = router;
