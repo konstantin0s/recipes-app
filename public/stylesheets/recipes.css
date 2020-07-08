@@ -9,9 +9,8 @@
     transition: opacity 0.5s;
 }
 
-#fadein .loaderx {
+#fadein.loaderx {
     opacity: 1;
-    padding: 5px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
