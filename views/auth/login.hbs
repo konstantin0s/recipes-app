@@ -2,89 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../stylesheets/style.css">
-  <link rel="stylesheet" href="../stylesheets/login.css">
-   <script src="/javascript/loader.js"></script>
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/login.css">
+    <script src="/javascript/loader.js"></script>
+    <title>Login</title>
 </head>
 
 <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-       <li class="logos">
-            <img src="../images/cuiszie.png" alt="">
-          </li>
-      <li class="nav-item active">
-        <a class="nav-link title" href="/">{{title}} <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link signup on-right" href="/signup">Sign up</a></li>
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="logos">
+                <img src="../images/cuiszie.png" alt="">
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link title" href="/">{{title}} <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link signup on-right" href="/signup">Sign up</a></li>
+        </ul>
+    </div>
 </nav>
 
 <div class="image">
-  <!--inject image with csss -->
+    <!--inject image with csss -->
 </div>
 <div class="father-container">
 
-  <div class="form-container">
+    <div class="form-container">
 
-{{#if updatePasswordSuccessMsg }}
-<div class="alert alert-success">{{ updatePasswordSuccessMsg }}</div> 
-{{/if}}
+        {{#if updatePasswordSuccessMsg }}
+        <div class="alert alert-success">{{ updatePasswordSuccessMsg }}</div>
+        {{/if}} {{#if sendPasswordSuccessMsg }}
+        <div class="alert alert-success">{{ sendPasswordSuccessMsg }}</div>
+        {{/if}} {{#if sendPasswordErrorMsg }}
+        <div class="alert alert-error">{{ sendPasswordErrorMsg }}</div>
+        {{/if}}
 
-{{#if sendPasswordSuccessMsg }}
-<div class="alert alert-success">{{ sendPasswordSuccessMsg }}</div> 
-{{/if}}
+        <form action="/login" method="POST" id="form">
 
-{{#if sendPasswordErrorMsg }}
-<div class="alert alert-error">{{ sendPasswordErrorMsg }}</div> 
-{{/if}}
+            <h2 class="log-title">Log in to your account</h2>
+            <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-user"></i>
+                <input type="text" placeholder="Username" name="username">
+            </div>
 
-    <form action="/login" method="POST" id="form">
+            <div class="inner-addon left-addon">
+                <i class="glyphicon glyphicon-lock"></i>
+                <input type="password" placeholder="Password" name="password">
+            </div>
 
-  <h2 class="log-title">Log in to your account</h2>
-    <div class="inner-addon left-addon">
-          <i class="glyphicon glyphicon-user"></i>
-        <input type="text" placeholder="Username" name="username">
-     </div>
+            {{#if errorMessage }}
+            <div class="error-message">{{ errorMessage }}</div>
+            {{/if}}
 
-         <div class="inner-addon left-addon">
-          <i class="glyphicon glyphicon-lock"></i>
-        <input type="password" placeholder="Password" name="password">
-     </div>
+            <button class="btn btn-warning">Login</button>
+            <div class="acc-signup">
+                <h6> New to Cuisezone? <a class="signup link" href="/signup">Sign up</a></h6>
+            </div>
+        </form>
 
-      {{#if errorMessage }}
-      <div class="error-message">{{ errorMessage }}</div>
-      {{/if}}
-
-      <button class="btn btn-warning">Login</button>
-  <div class="acc-signup">
-     <h6>   New to Cuisezone? <a class="signup link" href="/signup">Sign up</a></h6>
-      </div>
-    </form>
-     
 
         <div class="acc-recover">
-       <a class="signup link" href="/recover"> Forgot your password?</a>
-      </div>
-  </div>
+            <a class="signup link" href="/recover"> Forgot your password?</a>
+        </div>
+    </div>
 </div>
 
 <script async src="../javascript/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 </script>
 </body>
 

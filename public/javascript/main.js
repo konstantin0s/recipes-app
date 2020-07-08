@@ -1,7 +1,6 @@
 var navbar = document.getElementById('nav');
 // let errorMessage = document.getElementsByClassName('error-message');
 
-
 //add background to navigation on mobile
 function mobileBackground() {
     let docWidth = document.body.clientWidth;
@@ -13,8 +12,8 @@ function mobileBackground() {
     }
 }
 //the magic of adding remove background color on navigation
-window.addEventListener("resize", mobileBackground);
-window.addEventListener("load", mobileBackground);
+window.addEventListener('resize', mobileBackground);
+window.addEventListener('load', mobileBackground);
 
 // mobileBackground();
 
@@ -22,11 +21,11 @@ window.addEventListener("load", mobileBackground);
 let help = document.querySelector('#help');
 let fields = document.querySelectorAll('input');
 for (let field of Array.from(fields)) {
-    field.addEventListener('focus', event => {
+    field.addEventListener('focus', (event) => {
         let text = event.target.getAttribute('data-help');
         help.textContent = text;
     });
-    field.addEventListener('blur', event => {
+    field.addEventListener('blur', (event) => {
         help.textContent = '';
     });
 }

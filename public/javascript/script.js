@@ -1,4 +1,4 @@
-//delete recipe 
+//delete recipe
 $(document).ready(function() {
     $('.delete-recipe').on('click', function(e) {
         e.stopImmediatePropagation();

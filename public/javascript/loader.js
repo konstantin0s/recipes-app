@@ -1,6 +1,5 @@
-  //load with fadein on page
+//load with fadein on page
 
-    window.onload = function() {
-        document.body.classList.add('loaderx');
-      }
-    
+window.onload = function() {
+    document.body.classList.add('loaderx');
+};

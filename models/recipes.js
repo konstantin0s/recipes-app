@@ -44,4 +44,4 @@ let recipeSchema = mongoose.Schema({
     }
 });
 
-let Recipes = module.exports = mongoose.model('Recipes', recipeSchema);
+let Recipes = (module.exports = mongoose.model('Recipes', recipeSchema));

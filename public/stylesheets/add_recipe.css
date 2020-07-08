@@ -153,8 +153,8 @@ body {
         opacity: 0;
     }
     .navbar .show {
-        background-color: #343a40!important;
-        background-color: #343a40!important;
+        background-color: #343a40 !important;
+        background-color: #343a40 !important;
         height: 16em;
         position: absolute;
         width: 100%;

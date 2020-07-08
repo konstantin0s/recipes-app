@@ -1,10 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const Token = require('../models/token');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-
 
 const userSchema = new Schema({
     username: String,
@@ -19,7 +18,6 @@ const userSchema = new Schema({
         type: Date,
         required: false
     }
-
 }, {
     timestamps: true
 });
@@ -71,6 +69,6 @@ userSchema.methods.generateVerificationToken = function() {
     return new Token(payload);
 };
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

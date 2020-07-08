@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     if (!errors.isEmpty()) {
         console.log(errors);
         let error = {};
-        errors.array().map((err) => error[err.param] = err.msg);
+        errors.array().map((err) => (error[err.param] = err.msg));
         return res.status(422).json({ error });
     }
 

@@ -16,22 +16,17 @@ router.get('/recipe/:id', async function(req, res, next) {
                     return str.trim().split(". ");
                 };
 
-                // string_dots = function(str) {
-                //     return str.trim().split(".");
-                // };
-
-
-
                 var comaaa = string_comma(recipe.ingredients)
 
 
                 if (sess.currentUser) {
-                    console.log(recipe);
-                    console.log(recipe.ingredients);
+                    // console.log(recipe);
+                    // console.log(recipe.ingredients);
 
                     res.render('recipe', {
                         recipe: recipe,
                         ingredients: [comaaa],
+                        layout: false,
                         user: sess.currentUser,
                         updateRecipeSuccessMsg: req.flash('updateRecipeSuccessMsg'),
                         updateRecipeErrorMsg: req.flash('updateRecipeErrorMsg')
