@@ -21,7 +21,7 @@ router.get('/recipe/edit/:id', async function(req, res, next) {
                 console.log(err);
             } else {
                 if (sess.currentUser) {
-                    res.render('edit_recipe', { recip: recip, user: sess.currentUser });
+                    res.render('edit_recipe', { recip: recip, user: sess.currentUser, layout: false });
                 }
             }
         })

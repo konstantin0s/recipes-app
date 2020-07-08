@@ -12,7 +12,7 @@ router.get('/recipes', async(req, res, next) => {
             } else {
 
                 if (sess.currentUser) {
-                    res.render('recipes', { recipes: recipes, user: sess.currentUser });
+                    res.render('recipes', { recipes: recipes, user: sess.currentUser, layout: false });
                 }
             }
 
