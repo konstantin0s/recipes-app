@@ -22,7 +22,7 @@
       <li class="logos">
            <a href="/recipes">  <img src="../../images/cuiszie.png" alt=""></a>
       </li>
-      <li class="nav-item"><h3 id="username">Welcome, {{user.username}}</h3></li>
+              <li class="nav-item"><a class="nav-link" href="#" id="username"> {{user.username}}</a></li>
         <li class="nav-item"><a class="nav-link logout" href="/logout">Logout<a></li>
       </ul>
     </div>
@@ -83,8 +83,7 @@
     <div class="cardz">
       <li class="list-group-item">
         <a data-fancybox="gallery" href={{this.image}}><img src={{this.image}}></a>
-      {{!-- <img src={{this.image}} /> --}}
-        <a class="next-recipe" alt="See recipee" href="/recipe/{{this._id}}"
+        <a class="next-recipe btn btn-success" alt="See recipee" href="/recipe/{{this._id}}"
         >{{this.title}}</a>
         <h6>Chef: {{this.creator}}</h6>
         </li>

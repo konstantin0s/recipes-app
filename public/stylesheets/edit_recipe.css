@@ -24,7 +24,7 @@ body {
     border-bottom: 6px solid blue;
     width: 0;
     position: fixed;
-    top: 57px;
+    top: 67px;
     left: 0;
     z-index: 1000;
 }
@@ -32,7 +32,7 @@ body {
 #username {
     text-transform: capitalize;
     position: absolute;
-    top: 12px;
+    top: 13px;
     left: 80%;
     font-size: 15px;
     color: #fff;
@@ -61,8 +61,8 @@ body {
 }
 
 .logout {
-    position: relative;
-    left: 1100px;
+    position: absolute;
+    left: 90%;
     top: 0px;
     font-size: 1em;
     padding-bottom: 0.3em;
@@ -85,7 +85,7 @@ body {
 
 .text-center {
     position: relative;
-    top: -2em;
+    top: -1em;
 }
 
 .cards {
@@ -99,6 +99,8 @@ body {
     border: 2px solid #333;
     padding: 4em 3em;
     background: aliceblue;
+    position: relative;
+    top: 2em;
 }
 
 .cards form {
@@ -372,10 +374,11 @@ body {
 
 @media screen and (min-width: 1300px) {
     #username {
-        left: 60%;
+        left: 75%;
+        left: top: 13px;
     }
     .logout {
-        left: 80%;
+        left: 90%;
         position: absolute;
         top: 9px;
     }
