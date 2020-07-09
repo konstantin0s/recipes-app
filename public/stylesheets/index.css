@@ -98,6 +98,7 @@ div.transbox p,
 .nav-item a {
     position: relative;
     left: 1000px;
+    color: rgb(25, 41, 70) !important;
     /* color: #00008b !important; */
     display: flex;
     flex-direction: row;
@@ -106,7 +107,7 @@ div.transbox p,
     font-size: 2.2em;
     font-weight: bold;
     cursor: pointer;
-    border-bottom: 2.5px solid #fff;
+    border-bottom: 2.5px solid rgb(25, 41, 70);
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
 }

@@ -546,8 +546,8 @@ ul li {
         height: 250px;
     }
     .mr-auto .nav-item .nav-link {
-        color: orange !important;
-        border-bottom: 2.5px solid orange;
+        /* color: orange !important;
+        border-bottom: 2.5px solid orange; */
         margin-top: 1em;
         left: 285px;
         color: #fff !important;
