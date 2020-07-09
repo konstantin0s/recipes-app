@@ -98,7 +98,7 @@ div.transbox p,
 .nav-item a {
     position: relative;
     left: 1000px;
-    color: #00008b !important;
+    /* color: #00008b !important; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -216,16 +216,9 @@ div.transbox p,
         border-bottom: 2.5px solid yellow;
     }
     .check {
-        top: 200px;
+        top: 22px;
         width: 50%;
-        background: rgb(238, 240, 157);
-        -ms-transform: rotate(45deg);
-        color: #000;
-        /* IE 9 */
-        -ms-transform-origin: 20% 40%;
-        /* IE 9 */
-        transform: rotate(45deg);
-        transform-origin: 20% 40%;
+        left: 40%;
     }
     #index-img {
         top: 136px;
@@ -233,6 +226,9 @@ div.transbox p,
     .collapse.show {
         display: block;
         height: 100vh;
+    }
+    div.transbox {
+        width: 80%;
     }
 }
 

@@ -96,9 +96,9 @@ body {
 }
 
 .signup {
-    color: rgb(25, 41, 70) !important;
     font-size: 2.2em;
     border-bottom: 2.5px solid rgb(25, 41, 70);
+    color: rgb(25, 41, 70) !important;
 }
 
 .signup:hover {
@@ -207,7 +207,7 @@ body {
 
 /* style icon */
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -216,7 +216,7 @@ body {
 
 /* style icon */
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -225,11 +225,11 @@ body {
 
 /* align icon */
 
-.left-addon .glyphicon {
+.left-addon .fa {
     left: 0px;
 }
 
-.right-addon .glyphicon {
+.right-addon .fa {
     right: 0px;
 }
 
@@ -286,6 +286,18 @@ body {
 #form .acc-signup h6 {
     position: relative;
     top: 8px;
+    font-size: 1em;
+    color: rgb(25, 41, 70);
+}
+
+#form .acc-signup h6 a {
+    font-size: 1em;
+    color: rgb(25, 41, 70);
+}
+
+#form .acc-recover a {
+    font-size: 1em;
+    color: rgb(25, 41, 70) !important;
 }
 
 ul li {
@@ -383,31 +395,14 @@ ul li {
     .fixed-top {
         padding: 2em;
     }
-    .signup {
-        color: rgb(255, 115, 0) !important;
-        border-bottom: 2.5px solid #fff;
-    }
-    .signup:hover {
-        color: rgb(224, 124, 9) !important;
-        text-decoration: none;
-        border-bottom: 2.5px solid rgb(224, 124, 9);
-    }
-    .nav-item .signup {
+    #nav .navbar-togger {
         position: relative;
-        top: 50px;
-        color: orange !important;
-        border-bottom: 2.5px solid #fff;
-        font-size: 2.4em;
-        left: 25%;
-        text-align: center;
-        margin-bottom: 10px;
-        margin-top: 1em;
-        display: flex;
-        width: 50%;
-        flex-direction: column;
-        justify-content: center;
+        top: 0px;
+        left: 1em;
     }
     .logos {
+        position: relative;
+        top: 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -421,8 +416,44 @@ ul li {
         align-self: center;
         width: 250px;
         height: 250px;
-        top: -2em;
         left: 0;
+    }
+    .nav-item {
+        left: 0;
+    }
+    .nav-item a {
+        position: absolute;
+        top: -29px;
+        font-size: 2.4em;
+        left: 0%;
+        margin-bottom: 12px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .nav-item .signup {
+        position: relative;
+        right: 100px;
+        top: 120px;
+        padding-bottom: 0.5em;
+        border-bottom: 2.5px solid #fff;
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+    .nav-item .signup:hover {
+        border-bottom: 2.5px solid yellow;
+    }
+    .check {
+        top: 22px;
+        width: 50%;
+        left: 40%;
+    }
+    #index-img {
+        top: 136px;
+    }
+    .collapse.show {
+        display: block;
+        height: 100vh;
     }
     .father-container {
         top: 10px;
@@ -481,94 +512,6 @@ ul li {
         display: block;
         height: 100vh;
     }
-    /* .error-message {
-        top: -5em;
-        left: 63px;
-        width: 66%
-    } */
-    /*vertical bar line */
-    /* 
-    ul li {
-        list-style: none;
-    }
-
-    .bar-left {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 140px;
-        left: 40px;
-        z-index: 110;
-    }
-
-    .bar-left>li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-    }
-
-    .bar-left>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-left>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-left>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-left>li:last-of-type:after {
-        top: -50%;
-    }
-
-    .bar-right {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 140px;
-        left: 255px;
-        z-index: 110;
-    }
-
-    .bar-right>li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-    }
-
-    .bar-right>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-right>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-right>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-right>li:last-of-type:after {
-        top: -50%;
-    } */
     .page-footer {
         position: absolute;
         bottom: 0;
@@ -576,21 +519,9 @@ ul li {
     }
 }
 
-@media (min-width: 950px) and (max-width: 1200px) {
-    .form-container {
-        width: 70%;
-    }
-    .signup {
-        left: 370px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 949px) {
-    .form-container {
-        width: 70%;
-    }
-    .signup {
-        left: 270px;
+@media (max-width: 769px) {
+    .footer-copyright {
+        left: 0;
     }
 }
 
@@ -629,8 +560,32 @@ ul li {
     }
 }
 
-@media (max-width: 769px) {
-    .footer-copyright {
-        left: 0;
+@media (min-width: 768px) and (max-width: 949px) {
+    .form-container {
+        width: 70%;
+    }
+    /* .signup {
+        left: 270px;
+    } */
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+    .form-container {
+        width: 70%;
+    }
+    .signup {
+        left: 370px;
+    }
+}
+
+@media (min-width: 1401px) {
+    .form-container {
+        position: relative;
+        top: 0em;
+        width: 70%;
+    }
+    .on-right {
+        position: absolute;
+        right: 3em;
     }
 }

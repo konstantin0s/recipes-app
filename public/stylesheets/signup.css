@@ -41,7 +41,7 @@ body {
 
 /* style icon */
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -50,7 +50,7 @@ body {
 
 /* style icon */
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -59,11 +59,11 @@ body {
 
 /* align icon */
 
-.left-addon .glyphicon {
+.left-addon .fa {
     left: 0px;
 }
 
-.right-addon .glyphicon {
+.right-addon .fa {
     right: 0px;
 }
 
@@ -133,6 +133,9 @@ body {
     right: 6%;
     float: right;
     color: rgb(25, 41, 70) !important;
+    position: relative;
+    top: -10px;
+    left: 400px;
 }
 
 .on-right:hover {
@@ -298,6 +301,23 @@ body {
     font-weight: bold;
 }
 
+@media (max-width: 607px) {
+    .g-recaptcha div>iframe {
+        left: 0px;
+        width: 34vw;
+        float: left;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0;
+        position: absolute;
+    }
+    .rc-anchor-normal .rc-anchor-pt {
+        margin: 2px 13px 0 0;
+        padding-right: 2px;
+        position: relative !important;
+    }
+}
+
 @media (max-width: 689px) {
     body {
         overflow-x: hidden;
@@ -314,27 +334,26 @@ body {
     .fixed-top {
         padding: 2em;
     }
-    .signin {
-        color: rgb(255, 115, 0) !important;
-        border-bottom: 2.5px solid #fff;
-    }
     .signin:hover {
         color: #0ca1c9 !important;
         text-decoration: none;
-        border-bottom: 2.5px solid rgb(224, 124, 9);
+        border-bottom: 2.5px solid #fff;
     }
     .nav-item .signin {
         position: relative;
         top: 50px;
         font-size: 2.4em;
-        left: 25%;
+        left: 0%;
         text-align: center;
         margin-bottom: 10px;
         margin-top: 1em;
         display: flex;
-        width: 50%;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
+        padding-bottom: 0.5em;
+        border-bottom: 2.5px solid #fff;
+        color: rgba(255, 255, 255, 0.5) !important;
     }
     .father-container {
         top: 10px;
@@ -381,6 +400,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-self: center;
+        position: relative;
+        top: 1em;
     }
     ul li {
         list-style: none;
@@ -438,47 +459,6 @@ body {
     }
 }
 
-@media (min-width: 1201px) {
-    .form-container {
-        top: 5em;
-    }
-}
-
-@media (min-width: 690px) and (max-width: 1199px) {
-    iframe {
-        width: 23vw !important;
-        position: relative;
-        left: -33px;
-    }
-}
-
-@media (min-width: 950px) and (max-width: 1200px) {
-    iframe {
-        width: 27vw !important;
-        position: relative;
-        left: -20px;
-    }
-    .form-container {
-        top: 7em;
-    }
-    .signin {
-        left: 370px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 949px) {
-    iframe {
-        width: 38vw !important;
-    }
-    .form-container {
-        top: 11em;
-        width: 70%;
-    }
-    .signin {
-        left: 270px;
-    }
-}
-
 @media (min-width: 700px) and (max-width: 767px) {
     .form-container {
         top: 11em;
@@ -526,19 +506,77 @@ body {
     }
 }
 
-@media (max-width: 607px) {
-    .g-recaptcha div>iframe {
-        left: 0px;
-        width: 34vw;
-        float: left;
-        box-sizing: border-box;
-        overflow: hidden;
-        margin: 0;
-        position: absolute;
+@media (min-width: 1201px) {
+    .form-container {
+        top: 5em;
     }
-    .rc-anchor-normal .rc-anchor-pt {
-        margin: 2px 13px 0 0;
-        padding-right: 2px;
-        position: relative !important;
+}
+
+@media (min-width: 690px) and (max-width: 1199px) {
+    iframe {
+        width: 23vw !important;
+        position: relative;
+        left: -33px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+    iframe {
+        width: 38vw !important;
+    }
+    .form-container {
+        top: 11em;
+        width: 70%;
+    }
+    .signin {
+        left: 270px;
+    }
+    .already {
+        position: relative;
+        top: 13px;
+        left: -102px;
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+    iframe {
+        width: 27vw !important;
+        position: relative;
+        left: -20px;
+    }
+    .form-container {
+        top: 7em;
+    }
+    .signin {
+        left: 370px;
+    }
+    .already {
+        position: relative;
+        top: 13px;
+        left: -72px;
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .already {
+        position: relative;
+        top: 13px;
+        left: -72px;
+        font-size: 1.9em;
+    }
+}
+
+@media (min-width: 1401px) {
+    .form-container {
+        top: 8em;
+        width: 70%;
+    }
+    .already {
+        position: relative;
+        top: 13px;
+        left: -172px;
+        font-size: 1.9em;
     }
 }

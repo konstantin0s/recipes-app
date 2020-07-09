@@ -83,7 +83,7 @@ body {
     width: 50%;
 }
 
-.text-center {
+.edit-title {
     position: relative;
     top: -1em;
 }
@@ -127,31 +127,31 @@ body {
     margin: 1em 0em;
 }
 
-.page-footer {
-    width: 100%;
-    align-self: center;
-    position: relative;
-    bottom: -2.6em;
-    padding-bottom: 4em;
-    left: -1em;
-}
-
 .footer-copyright {
     color: #fff;
     font-size: 1.2em;
     padding: 5px;
-    position: absolute;
-    margin-top: 2em;
-    bottom: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    position: relative;
+    left: -5px;
+    bottom: -5px !important;
+    padding-bottom: 1em;
     width: 100vw;
     background: #0d2930;
 }
 
 .footer-copyright a {
     text-decoration: none;
-    color: aquamarine;
+    color: #fff;
+}
+
+.footer-copyright:hover,
+.footer-copyright a:hover {
+    color: rgb(215, 236, 26);
+}
+
+.page-footer {
+    position: relative;
+    bottom: 0;
 }
 
 @media screen and (min-width: 300px) and (max-width: 780px) {
@@ -296,29 +296,52 @@ body {
         width: 100%;
         font-size: 1.5em;
     }
-    .navbar .show li:nth-child(2) {
-        display: none;
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: inline-block;
+        margin: auto;
+        top: 11px;
     }
     .navbar li a,
     h3 {
         color: #fff;
     }
-    #username {
-        top: -89px;
+    .check {
         position: relative;
-        width: 140px;
-        left: 45%;
+        top: 18px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
         text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        z-index: 1;
+        left: 0;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .container button {
+        width: 150px;
+    }
+    #username {
+        position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 5px;
+        color: #fff;
     }
     .logout {
-        top: -130px;
-        text-align: center;
-        left: 86%;
-        width: 11%;
+        position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 11px;
+        color: #fff;
+        font-size: 1em;
     }
-    .logos img {
-        top: 17px;
-        left: 0px;
+    .logout:hover {
+        border-bottom: none;
     }
     .cards {
         width: 80vw;
@@ -331,16 +354,93 @@ body {
         top: 17px;
         left: 0px;
     }
-    #username {
-        width: 140px;
-        left: 45%;
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40 !important;
+        background-color: #343a40 !important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
         text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: inline-block;
+        margin: auto;
+        top: 11px;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
+    .check {
+        position: relative;
+        top: 18px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        z-index: 1;
+        left: 0;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .container button {
+        width: 150px;
+    }
+    #username {
+        position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 5px;
+        color: #fff;
     }
     .logout {
-        top: -94px;
-        text-align: center;
-        left: 87%;
-        width: 54px;
+        position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 11px;
+        color: #fff;
+        font-size: 1em;
+    }
+    .logout:hover {
+        border-bottom: none;
     }
     .cards {
         width: 80vw;
@@ -353,10 +453,11 @@ body {
         left: 30px;
     }
     #username {
-        left: 500px;
+        left: 70%;
     }
     .logout {
-        left: 600px;
+        left: 80%;
+        top: 5px;
     }
 }
 

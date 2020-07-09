@@ -4,119 +4,124 @@ const request = require('request');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
-
-
 router.use(cookieParser());
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
-
-const User = require("../models/user");
-const Token = require("../models/token");
-
+const User = require('../models/user');
+const Token = require('../models/token');
 
 // BCrypt to encrypt passwords
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 const bcryptSalt = 10;
 
-
-router.get("/signup", (req, res) => {
-    res.render("auth/signup");
+router.get('/signup', (req, res) => {
+    res.render('auth/signup', { layout: false });
 });
 
-
-router.post("/signup", async(req, res, next) => {
-
+router.post('/signup', async(req, res, next) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
 
-
     //do some sanitaze on input ? name = name.replace(/</g, "&lt;").replace(/>/g, "&lt;");
-    if (username === "" || password === "" || email === "" ||
-        username.length < 3 || email.length < 3 || password.length < 3) {
-        res.render("auth/signup", {
-            errorMessage: "The length must be at least 4 characters"
+    if (
+        username === '' ||
+        password === '' ||
+        email === '' ||
+        username.length < 3 ||
+        email.length < 3 ||
+        password.length < 3
+    ) {
+        res.render('auth/signup', {
+            errorMessage: 'The length must be at least 4 characters'
         });
         return;
     }
 
-    await User.findOne({ "username": username })
-        .then(user => {
+    await User.findOne({ username: username })
+        .then((user) => {
             if (user !== null) {
-                res.render("auth/signup", {
-                    errorMessage: "The username already exists!"
+                res.render('auth/signup', {
+                    errorMessage: 'The username already exists!'
                 });
                 return;
             }
-
 
             const salt = bcrypt.genSaltSync(bcryptSalt);
             const hashPass = bcrypt.hashSync(password, salt);
 
             User.create({
-                    username,
-                    email,
-                    password: hashPass
-                })
-                .then(() => {
-                    res.redirect("/login");
-                })
+                username,
+                email,
+                password: hashPass
+            }).then(() => {
+                res.redirect('/login');
+            });
         })
-        .catch(error => {
+        .catch((error) => {
             next(error);
-        })
+        });
 });
 
 router.post('/signup', async function(req, res, next) {
-    if (req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-        return res.json({ "responseError": "Please select captcha first" });
+    if (
+        req.body['g-recaptcha-response'] === undefined ||
+        req.body['g-recaptcha-response'] === '' ||
+        req.body['g-recaptcha-response'] === null
+    ) {
+        return res.json({ responseError: 'Please select captcha first' });
     }
     const secretKey = process.env.CAPTCHA_KEY;
 
-    const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+    const verificationURL =
+        'https://www.google.com/recaptcha/api/siteverify?secret=' +
+        secretKey +
+        '&response=' +
+        req.body['g-recaptcha-response'] +
+        '&remoteip=' +
+        req.connection.remoteAddress;
 
     await request(verificationURL, function(error, response, body) {
-            body = JSON.parse(body);
+        body = JSON.parse(body);
 
-            if (body.success !== undefined && !body.success) {
-                res.render("auth/signup", {
-                    errorMessage: "Failed captcha verification"
-                });
-                return;
-            }
-            // res.json({ "responseSuccess": "Sucess" });
-            res.redirect("/login");
-
-        })
-        .catch(error => {
-            next(error);
-        })
-});
-
-router.get("/login", (req, res) => {
-    res.render("auth/login", {
-        updatePasswordSuccessMsg: req.flash('updatePasswordSuccessMsg'),
-        sendPasswordSuccessMsg: req.flash('sendPasswordSuccessMsg'),
-        sendPasswordErrorMsg: req.flash('sendPasswordErrorMsg')
+        if (body.success !== undefined && !body.success) {
+            res.render('auth/signup', {
+                errorMessage: 'Failed captcha verification'
+            });
+            return;
+        }
+        // res.json({ "responseSuccess": "Sucess" });
+        res.redirect('/login');
+    }).catch((error) => {
+        next(error);
     });
 });
 
-router.post("/login", async(req, res, next) => {
+router.get('/login', (req, res) => {
+    res.render('auth/login', {
+        updatePasswordSuccessMsg: req.flash('updatePasswordSuccessMsg'),
+        sendPasswordSuccessMsg: req.flash('sendPasswordSuccessMsg'),
+        sendPasswordErrorMsg: req.flash('sendPasswordErrorMsg'),
+        layout: false
+    });
+});
+
+router.post('/login', async(req, res, next) => {
     const theUsername = req.body.username;
     const thePassword = req.body.password;
 
-    if (theUsername === "" || thePassword === "") {
-        res.render("auth/login", {
-            errorMessage: "Please enter both, username and password to sign up."
+    if (theUsername === '' || thePassword === '') {
+        res.render('auth/login', {
+            errorMessage: 'Please enter both, username and password to sign up.'
         });
         return;
     }
 
-    await User.findOne({ "username": theUsername })
-        .then(user => {
+    await User.findOne({ username: theUsername })
+        .then((user) => {
             if (!user) {
-                res.render("auth/login", {
+                res.render('auth/login', {
                     errorMessage: "The username doesn't exist."
                 });
                 return;
@@ -127,17 +132,17 @@ router.post("/login", async(req, res, next) => {
 
                 // console.log(user);
                 // console.log(req.session.currentUser);
-                res.redirect("/recipes");
+                res.redirect('/recipes');
             } else {
-                res.render("auth/login", {
-                    errorMessage: "Incorrect credentials"
+                res.render('auth/login', {
+                    errorMessage: 'Incorrect credentials'
                 });
             }
         })
-        .catch(error => {
+        .catch((error) => {
             console.log('pula', error);
             next(error);
-        })
+        });
 });
 
 // router.get("/recover", (req, res) => {
@@ -147,7 +152,6 @@ router.post("/login", async(req, res, next) => {
 // router.get("/reset", (req, res) => {
 //     res.render("auth/reset");
 // });
-
 
 // router.get("/logout", (req, res) => {
 //   res.clearCookie("name");
@@ -164,7 +168,9 @@ router.post("/login", async(req, res, next) => {
 // @access Public
 router.get('/verify/:token', async function(req, res) {
     if (!req.params.token) {
-        return res.status(400).json({ message: "We were unable to find a user for this token." });
+        return res
+            .status(400)
+            .json({ message: 'We were unable to find a user for this token.' });
     }
 
     try {
@@ -172,25 +178,35 @@ router.get('/verify/:token', async function(req, res) {
         const token = await Token.findOne({ token: req.params.token });
 
         if (!token) {
-            return res.status(400).json({ message: 'We were unable to find a valid token. Your token my have expired.' });
+            return res.status(400).json({
+                message: 'We were unable to find a valid token. Your token my have expired.'
+            });
         }
 
         // If we found a token, find a matching user
         User.findOne({ _id: token.userId }, (err, user) => {
-            if (!user) return res.status(400).json({ message: 'We were unable to find a user for this token.' });
+            if (!user)
+                return res.status(400).json({
+                    message: 'We were unable to find a user for this token.'
+                });
 
-            if (user.isVerified) return res.status(400).json({ message: 'This user has already been verified.' });
+            if (user.isVerified)
+                return res
+                    .status(400)
+                    .json({ message: 'This user has already been verified.' });
 
             // Verify and save the user
             user.isVerified = true;
             user.save(function(err) {
                 if (err) return res.status(500).json({ message: err.message });
 
-                res.status(200).send("The account has been verified. Please log in.");
+                res.status(200).send(
+                    'The account has been verified. Please log in.'
+                );
             });
         });
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 });
 
@@ -204,13 +220,21 @@ router.post('/resend', async function(req, res) {
         const user = await User.findOne({ email });
         console.log(user);
 
-        if (!user) return res.status(401).json({ message: 'The email address ' + req.body.email + ' is not associated with any account. Double-check your email address and try again.' });
+        if (!user)
+            return res.status(401).json({
+                message: 'The email address ' +
+                    req.body.email +
+                    ' is not associated with any account. Double-check your email address and try again.'
+            });
 
-        if (user.isVerified) return res.status(400).json({ message: 'This account has already been verified. Please log in.' });
+        if (user.isVerified)
+            return res.status(400).json({
+                message: 'This account has already been verified. Please log in.'
+            });
 
         await sendVerificationEmail(user, req, res);
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 });
 
@@ -221,23 +245,24 @@ async function sendVerificationEmail(user, req, res) {
         // Save the verification token
         await token.save();
 
-        let subject = "Account Verification Token";
+        let subject = 'Account Verification Token';
         let to = user.email;
         let from = process.env.FROM_EMAIL;
-        let link = "https://cuisezone.herokuapp.com/verify/" + token.token;
+        let link = 'https://cuisezone.herokuapp.com/verify/' + token.token;
         let html = `<p>Hi ${user.username}<p><br><p>Please click on the following <a href="${link}">link</a> to verify your account.</p> 
                   <br><p>If you did not request this, please ignore this email.</p>`;
 
         await sendEmail({ to, from, subject, html });
 
-        res.status(200).json({ message: 'A verification email has been sent to ' + user.email + '.' });
+        res.status(200).json({
+            message: 'A verification email has been sent to ' + user.email + '.'
+        });
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
-};
+}
 
-
-router.get("/logout", function(req, res) {
+router.get('/logout', function(req, res) {
     var cookie = req.cookies;
     for (var prop in cookie) {
         var hasCookieProp = {}.hasOwnProperty.call(prop, cookie);
@@ -247,6 +272,6 @@ router.get("/logout", function(req, res) {
         res.cookie(prop, '', { expires: new Date(0) });
     }
     res.redirect('/');
-})
+});
 
 module.exports = router;

@@ -14,6 +14,16 @@
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
+.navbar .collapsed {
+    position: relative;
+    top: 0px;
+}
+
+.navbar-toggler {
+    position: relative;
+    top: -6px;
+}
+
 a {
     color: #00b7ff;
 }
@@ -522,7 +532,7 @@ a {
 }
 
 .page-footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 
@@ -600,6 +610,9 @@ a {
     .logout {
         position: relative;
         left: 0;
+    }
+    .logout:hover {
+        border-bottom: none;
     }
     .hori-line {
         width: 28vw;
@@ -700,9 +713,12 @@ a {
         top: 2em;
         position: relative;
     }
+    .progress {
+        top: 66px;
+    }
     .check {
         position: relative;
-        top: 0;
+        top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
         background-color: #fff;
@@ -710,25 +726,32 @@ a {
         color: #000;
         border-bottom: 2.5px solid #fff;
         opacity: 1;
+        z-index: 1;
         left: 0;
         margin-left: 0;
+        z-index: 1;
     }
     .container button {
         width: 150px;
     }
     #username {
-        left: 0;
         position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 70px;
         color: #fff;
-        border-bottom: none;
-        top: 0;
     }
     .logout {
         position: relative;
         left: 0;
         border-bottom: none;
-        top: 0;
+        top: 11px;
         color: #fff;
+        font-size: 1em;
+    }
+    .logout:hover {
+        border-bottom: none;
     }
     .hori-line {
         width: 28vw;
@@ -782,7 +805,7 @@ a {
     }
     .check {
         position: relative;
-        top: 6px;
+        top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
         background-color: #fff;
@@ -800,11 +823,16 @@ a {
         position: relative;
         color: #fff;
         font-size: 1em;
+        top: 18px;
     }
     .logout {
         position: relative;
         left: 0;
         color: #fff;
+        border-bottom: none;
+        font-size: 1em;
+    }
+    .logout:hover {
         border-bottom: none;
     }
     .hori-line {
@@ -878,6 +906,7 @@ a {
         left: 0;
         position: relative;
         color: #fff;
+        top: 10px;
     }
     .check {
         position: relative;
@@ -955,11 +984,11 @@ a {
         left: 0;
         font-size: 1em;
         border-bottom: 0;
-        top: 0px;
+        top: 17px;
     }
     .check {
         position: relative;
-        top: 6px;
+        top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
         background-color: #fff;
@@ -1036,16 +1065,19 @@ a {
         left: 0;
         border-bottom: 0;
         font-size: 1em;
-        top: 0;
+        top: 16px;
     }
     .logout {
         position: relative;
         left: 0;
         border-bottom: none;
-        top: 0;
+        top: 15px;
         color: #fff;
         font-size: 1em;
         text-align: center;
+    }
+    .logout:hover {
+        border-bottom: none;
     }
     .recipe-container {
         display: grid;
@@ -1063,7 +1095,7 @@ a {
     }
     .check {
         position: relative;
-        top: 6px;
+        top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
         background-color: #fff;

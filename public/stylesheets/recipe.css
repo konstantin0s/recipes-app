@@ -335,28 +335,105 @@ body {
 }
 
 .page-footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0px;
 }
 
 @media (max-width: 489px) {
-    .logos img {
-        top: 17px;
-        left: 0px;
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40 !important;
+        background-color: #343a40 !important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: inline-block;
+        margin: auto;
+        top: 11px;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
+    .check {
+        position: relative;
+        top: 18px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        z-index: 1;
+        left: 0;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .container button {
+        width: 150px;
     }
     #username {
-        left: 35%;
-        top: -88px;
-        width: 140px;
         position: relative;
-        text-align: center;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 5px;
+        color: #fff;
     }
     .logout {
-        top: 2px;
-        text-align: center;
-        left: 76%;
-        width: 14%;
+        position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 11px;
+        color: #fff;
+        font-size: 1em;
+    }
+    .logout:hover {
+        border-bottom: none;
+    }
+    .ingredients {
+        left: 0px;
+        top: 86px;
+        margin-bottom: 6em;
+        width: 100%;
     }
     .cards {
         width: 90vw;
@@ -375,22 +452,99 @@ body {
 }
 
 @media (min-width: 490px) and (max-width: 550px) {
-    #username {
-        left: 55%;
-        top: -88px;
-        width: 140px;
-        position: relative;
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40 !important;
+        background-color: #343a40 !important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
         text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: inline-block;
+        margin: auto;
+        top: 11px;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
+    .check {
+        position: relative;
+        top: 18px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        z-index: 1;
+        left: 0;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .container button {
+        width: 150px;
+    }
+    #username {
+        position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 5px;
+        color: #fff;
     }
     .logout {
-        top: -130px;
-        text-align: center;
-        left: 86%;
-        width: 11%;
+        position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 11px;
+        color: #fff;
+        font-size: 1em;
     }
-    .logos img {
-        top: 17px;
+    .logout:hover {
+        border-bottom: none;
+    }
+    .ingredients {
         left: 0px;
+        top: 86px;
+        margin-bottom: 6em;
+        width: 100%;
     }
     .cards {
         width: 90vw;
@@ -405,20 +559,99 @@ body {
 }
 
 @media (min-width: 551px) and (max-width: 767px) {
-    .logos img {
-        top: 17px;
-        left: 0px;
+    .navbar {
+        height: 4em;
+    }
+    .navbar ul {
+        opacity: 0;
+        display: none;
+    }
+    .navbar li .add-recipe {
+        display: none;
+        opacity: 0;
+    }
+    .navbar .show {
+        background-color: #343a40 !important;
+        background-color: #343a40 !important;
+        height: 16em;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 51px;
+    }
+    .navbar .show ul {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        opacity: 1;
+        height: 16em;
+    }
+    .navbar .show ul .add-recipe {
+        display: inline-flex;
+        opacity: 1;
+        z-index: 0;
+    }
+    .navbar .show li {
+        background: #414647;
+        position: relative;
+        flex-grow: 1;
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .navbar .show li:nth-child(1),
+    .navbar .show .logos {
+        display: inline-block;
+        margin: auto;
+        top: 11px;
+    }
+    .navbar li a,
+    h3 {
+        color: #fff;
+    }
+    .check {
+        position: relative;
+        top: 18px;
+        padding: 0px 10px;
+        font-size: 0.9em;
+        background-color: #fff;
+        text-align: center;
+        color: #000;
+        border-bottom: 2.5px solid #fff;
+        opacity: 1;
+        z-index: 1;
+        left: 0;
+        margin-left: 0;
+        z-index: 1;
+    }
+    .container button {
+        width: 150px;
     }
     #username {
-        left: 53%;
-        width: 140px;
-        text-align: center;
+        position: relative;
+        left: 0;
+        border-bottom: 0;
+        font-size: 1em;
+        top: 5px;
+        color: #fff;
     }
     .logout {
-        top: -94px;
-        text-align: center;
-        left: 87%;
-        width: 54px;
+        position: relative;
+        left: 0;
+        border-bottom: none;
+        top: 11px;
+        color: #fff;
+        font-size: 1em;
+    }
+    .logout:hover {
+        border-bottom: none;
+    }
+    .ingredients {
+        left: 0px;
+        top: 86px;
+        margin-bottom: 6em;
+        width: 100%;
     }
     .cards {
         width: 90vw;
