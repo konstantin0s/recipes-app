@@ -12,6 +12,7 @@
 #fadein.loaderx {
     opacity: 1;
     font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar .collapsed {
@@ -383,6 +384,7 @@ a {
     flex-direction: column;
     justify-content: center;
     padding-bottom: 15em;
+    overflow-x: hidden;
 }
 
 .container h1 {
@@ -475,38 +477,58 @@ a {
 .cardz .list-group-item {
     position: relative;
     display: inline-block;
-    background-color: rgb(221, 217, 217);
-    width: 95%;
+    background-color: #fff;
+    width: 100%;
+    padding: 0;
 }
 
+
+/* 
 .cardz .list-group-item .fancy,
 .cardz .list-group-item .fancy img {
     position: relative;
-    /* width: 95%; */
-}
+   width: 100;
+} */
 
 .next-recipe {
-    font-size: 15px;
     padding: 1em 0.5em;
-    color: #fff;
-    top: 0px;
+    color: #000;
+    top: 10px;
     display: block;
     width: 100%;
     text-align: center;
     position: relative;
     z-index: 100;
-    font-weight: bold;
-    border: 1px solid #333;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
     text-decoration: none;
-    border-bottom: 2.5px solid #333;
+    /* border-bottom: 2.5px solid #333; */
     cursor: pointer;
 }
 
 .next-recipe:hover {
-    background: yellow;
-    color: #333;
+    color: green;
     text-decoration: none;
     transform: scale(1.03);
+}
+
+.star-icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    align-self: center;
+    top: -5px;
+}
+
+.star-icons i {
+    color: yellow;
+    font-size: 1.9em;
+    margin: 0.2em;
 }
 
 .footer-copyright {
@@ -617,6 +639,9 @@ a {
     .hori-line {
         width: 28vw;
     }
+    #progress {
+        top: 65px;
+    }
 }
 
 @media screen and (min-width: 350px) and (max-width: 649px) {
@@ -707,14 +732,14 @@ a {
         grid-gap: 0.5em;
         left: 0em;
         margin-bottom: 3em;
-        margin: 4.5em 0em;
+        /* margin: 4.5em 0em; */
         width: 100%;
-        padding: 3em;
+        padding: 0.2em;
         top: 2em;
         position: relative;
     }
-    .progress {
-        top: 66px;
+    #progress {
+        top: 65px;
     }
     .check {
         position: relative;
@@ -755,6 +780,9 @@ a {
     }
     .hori-line {
         width: 28vw;
+    }
+    #progress {
+        top: 65px;
     }
 }
 
@@ -1106,6 +1134,9 @@ a {
         left: 0;
         margin-left: 0;
     }
+    #progress {
+        top: 65px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 949px) {
@@ -1124,7 +1155,7 @@ a {
         width: 150px;
     }
     .recipe-container img {
-        width: 300px;
+        width: 100%;
         height: 300px;
     }
     #username {
