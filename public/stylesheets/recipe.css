@@ -506,18 +506,24 @@ li {
     .logout:hover {
         border-bottom: none;
     }
-    .cards .recipe-details {
-        top: -30px;
-        margin-bottom: 100px;
-    }
     .buttons-container {
         top: 4px;
+    }
+    .cards .recipe-details {
+        margin-top: 100px;
+        position: relative;
+        width: 80%;
+        top: -50px;
     }
     .ingredients {
         left: 0px;
         top: 130px;
         margin-bottom: 6em;
         width: 100%;
+    }
+    .star-icons {
+        top: -124px;
+        left: 0;
     }
     .cards {
         width: 90vw;
@@ -624,12 +630,18 @@ li {
     .logout:hover {
         border-bottom: none;
     }
-    .cards .recipe-details {
-        top: -30px;
-        margin-bottom: 100px;
-    }
     .buttons-container {
         top: 4px;
+    }
+    .star-icons {
+        top: -124px;
+        left: 0;
+    }
+    .cards .recipe-details {
+        margin-top: 100px;
+        position: relative;
+        width: 80%;
+        top: -50px;
     }
     .ingredients {
         left: 0px;
@@ -737,6 +749,10 @@ li {
     }
     .logout:hover {
         border-bottom: none;
+    }
+    .star-icons {
+        top: -124px;
+        left: 0;
     }
     .cards .recipe-details {
         margin-top: 100px;

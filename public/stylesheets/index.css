@@ -198,14 +198,18 @@ div.transbox p,
         flex-direction: row;
         justify-content: space-evenly;
     }
-    .nav-item .signin {
+    #nav .signin,
+    #nav .signup {
+        color: #fff !important;
+    }
+    #nav .nav-item .signin {
         position: relative;
         right: 130px;
         color: #fff;
         top: 20px;
         border-bottom: 2.5px solid #fff;
     }
-    .nav-item .signup {
+    #nav .nav-item .signup {
         position: relative;
         right: 100px;
         top: 120px;
@@ -230,6 +234,77 @@ div.transbox p,
     }
     div.transbox {
         width: 80%;
+    }
+}
+
+@media (min-width: 699px) and (max-width: 767px) {
+    .title {
+        left: 74%;
+        top: 33px;
+        width: 20%;
+        text-align: center;
+        padding: 7px 10px;
+    }
+    .fixed-top {
+        padding: 2em;
+    }
+    .logos {
+        position: relative;
+        top: -3.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .logos img {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-self: center;
+        width: 250px;
+        height: 250px;
+        left: 0;
+    }
+    .nav-item {
+        left: 0;
+    }
+    .nav-item a {
+        position: absolute;
+        top: -29px;
+        font-size: 2.4em;
+        left: 0%;
+        margin-bottom: 12px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .collapse.show {
+        display: block;
+        height: 100vh;
+    }
+    #nav .signin,
+    #nav .signup {
+        color: #fff !important;
+    }
+    #nav .nav-item .signin {
+        position: relative;
+        right: 130px;
+        color: #fff;
+        top: 20px;
+        border-bottom: 2.5px solid #fff;
+    }
+    #nav .nav-item .signup {
+        position: relative;
+        right: 100px;
+        top: 120px;
+        color: #fff;
+        border-bottom: 2.5px solid #fff;
+    }
+    .nav-item .signin:hover,
+    .nav-item .signup:hover {
+        border-bottom: 2.5px solid yellow;
     }
 }
 
