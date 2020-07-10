@@ -38,7 +38,7 @@
 
   <h4 class="edit-title text-center">Edit Recipe</h4>
   
-<form method="POST" enctype="multipart/form-data" action="/recipes/edit/{{recip.id}}" class="form">
+<form method="POST" enctype="multipart/form-data" action="/recipe/edit/{{recip.id}}" class="form">
 <div id="form-group">
   <label for="level"></label>
   <input type="text" name="title" value="{{recip.title}}" placeholder="Recipe Name" class="form-control">
@@ -49,34 +49,34 @@
 </div>
 <div id="form-group">
   <label for="ingredients"></label>
- <textarea name="ingredients" value={{recip.ingredients}} id="" placeholder="Add Ingredients" 
+ <textarea name="ingredients" value={{recip.ingredients}}  placeholder="Add ingredients"
  cols="30" rows="10" class="form-control"></textarea>
  <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="cuisine" placeholder="Cuisine" value={{recip.cuisine}} class="form-control">
+  <input type="text" name="cuisine" placeholder={{recip.cuisine}} value={{recip.cuisine}} class="form-control">
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="dishType" placeholder="Dish Type" value={{recip.dishType}} class="form-control">
+  <input type="text" name="dishType" placeholder={{recip.dishType}} value={{recip.dishType}} class="form-control">
 </div>
         <div id="form-group">
         <label for="level"></label>
- <textarea name="directions" value={{recip.directions}} id="" placeholder="Add Directions..." 
+ <textarea name="directions"  value={{recip.directions}} 
  cols="30" rows="10" class="form-control"></textarea>
       </div>
 <div id="form-group" class="image">
         <input
-          type="file" name='image' id="addPic"
+          type="file" name='image' id="addPic" placeholder={{recip.image}}
           className="btn btn-warning addPic form-control" />
 
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="duration" placeholder="Duration"  value={{recip.duration}} class="form-control">
+  <input type="text" name="duration" placeholder={{recip.duration}}  value={{recip.duration}} class="form-control">
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="creator" placeholder="Chef Name"  value={{recip.creator}} class="form-control">
+  <input type="text" name="creator" placeholder={{recip.creator}}  value={{recip.creator}} class="form-control">
 </div>
 <div id="form-group">
   <label for="level"></label>

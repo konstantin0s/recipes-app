@@ -50,13 +50,14 @@ body {
 .star-icons i {
     color: yellow;
     font-size: 1.9em;
+    margin: 0.2em;
 }
 
 #progress {
     border-bottom: 6px solid blue;
     width: 0;
     position: fixed;
-    top: 67px;
+    top: 66px;
     left: 0;
     z-index: 1000;
 }
@@ -113,6 +114,56 @@ body {
     height: 400px;
 }
 
+.dish-type {
+    position: relative;
+    top: 60px;
+    height: 160px;
+    width: 98%;
+    padding: 5px;
+    background: wheat;
+    border: 1px solid #333;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.dish,
+.dinner,
+.italian,
+.lunch {
+    position: relative;
+    align-self: center;
+    text-align: center;
+}
+
+.dish-type h2 {
+    font-size: 1em;
+    color: #333;
+    position: relative;
+    top: 10px;
+    font-weight: 600;
+}
+
+.dish-type h2:hover {
+    color: orangered;
+    font-weight: bold;
+}
+
+.dish-type img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    border-radius: 50%;
+}
+
 #username {
     text-transform: capitalize;
     position: absolute;
@@ -128,7 +179,7 @@ body {
 
 /* hide message with a keyframe */
 
-@keyframes signup-response {
+@keyframes update-response {
     from {
         opacity: 1;
     }
@@ -137,7 +188,7 @@ body {
     }
 }
 
-@-webkit-keyframes signup-response {
+@-webkit-keyframes update-response {
     from {
         opacity: 1;
     }
@@ -148,24 +199,32 @@ body {
 
 .alert-success {
     position: relative;
-    top: 6px;
-    animation: signup-response 0.5s 1;
-    -webkit-animation: signup-response 0.5s 1;
+    top: -68px;
+    text-align: center;
+    left: 4em;
+    width: 100%;
+    align-self: center;
+    animation: update-response 0.5s 1;
+    -webkit-animation: update-response 0.5s 1;
     animation-fill-mode: forwards;
-    animation-delay: 8s;
-    -webkit-animation-delay: 8s;
+    animation-delay: 108s;
+    -webkit-animation-delay: 108s;
     /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
 }
 
 .alert-error {
     position: relative;
-    top: 6px;
-    animation: signup-response 0.5s 1;
-    -webkit-animation: signup-response 0.5s 1;
+    top: -68px;
+    text-align: center;
+    left: 4em;
+    width: 100%;
+    align-self: center;
+    animation: update-response 0.5s 1;
+    -webkit-animation: update-response 0.5s 1;
     animation-fill-mode: forwards;
-    animation-delay: 8s;
-    -webkit-animation-delay: 8s;
+    animation-delay: 108s;
+    -webkit-animation-delay: 108s;
     /* Safari and Chrome */
     -webkit-animation-fill-mode: forwards;
 }
@@ -238,7 +297,7 @@ body {
 .cardz h1 {
     position: relative;
     display: inline-block;
-    top: -72px;
+    top: -55px;
     left: 0em;
     font-size: 36px;
     color: #474747;
@@ -250,7 +309,7 @@ body {
     border-left: 3px solid #40ba37;
     padding: 15px;
     position: absolute;
-    top: 20px;
+    top: 60px;
 }
 
 .cards .duration h6 {
@@ -268,8 +327,23 @@ body {
     top: -105px;
 }
 
+.cards .recipe-details {
+    margin-top: 100px;
+    position: absolute;
+    width: 80%;
+    top: 183px;
+}
+
+.cards .recipe-details p {
+    color: #9b9b9b;
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 400;
+}
+
 .ingredients {
     position: relative;
+    top: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,6 +378,9 @@ body {
     justify-content: center;
     align-self: center;
     width: 100%;
+    position: relative;
+    top: 180px;
+    margin-bottom: 100px;
 }
 
 .cardz button {
@@ -429,9 +506,16 @@ body {
     .logout:hover {
         border-bottom: none;
     }
+    .cards .recipe-details {
+        top: -30px;
+        margin-bottom: 100px;
+    }
+    .buttons-container {
+        top: 4px;
+    }
     .ingredients {
         left: 0px;
-        top: 86px;
+        top: 130px;
         margin-bottom: 6em;
         width: 100%;
     }
@@ -540,9 +624,16 @@ body {
     .logout:hover {
         border-bottom: none;
     }
+    .cards .recipe-details {
+        top: -30px;
+        margin-bottom: 100px;
+    }
+    .buttons-container {
+        top: 4px;
+    }
     .ingredients {
         left: 0px;
-        top: 86px;
+        top: 130px;
         margin-bottom: 6em;
         width: 100%;
     }
@@ -647,9 +738,15 @@ body {
     .logout:hover {
         border-bottom: none;
     }
+    .cards .recipe-details {
+        margin-top: 100px;
+        position: relative;
+        width: 80%;
+        top: -50px;
+    }
     .ingredients {
         left: 0px;
-        top: 86px;
+        top: 130px;
         margin-bottom: 6em;
         width: 100%;
     }
@@ -665,9 +762,49 @@ body {
     }
 }
 
+@media (min-width: 600px) and (max-width: 766px) {
+    .cards .recipe-details {
+        margin-top: 100px;
+        position: absolute;
+        width: 80%;
+        top: 184px;
+    }
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+        width: 66%;
+        left: -75px;
+        top: 38px;
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 950px) {
+    .cards .recipe-details {
+        margin-top: 100px;
+        position: absolute;
+        width: 80%;
+        top: 184px;
+    }
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+        width: 66%;
+        left: -75px;
+        top: 38px;
+        margin-top: 100px;
+    }
+}
+
 @media (min-width: 608px) and (max-width: 950px) {
     .cards {
-        width: 80vw;
+        width: 90vw;
         align-self: center;
     }
     .cardz {
@@ -677,32 +814,92 @@ body {
         width: 90%;
         margin: 1em 0em;
     }
+    .cards .duration {
+        border-left: 3px solid #40ba37;
+        padding: 15px;
+        position: absolute;
+        top: 60px;
+    }
+    .cards .duration h6 {
+        color: #000000;
+        line-height: 1.3;
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .cards .date {
+        position: absolute;
+        color: #a4a4a4;
+        font-size: 1.2em;
+        top: -105px;
+    }
+    .ingredients {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 37%;
+        float: right;
+        left: 90%;
+    }
+    .ingredients h3 {
+        color: #474747;
+        margin-bottom: 30px;
+        color: #474747;
+        line-height: 1.3;
+        font-weight: 600;
+    }
+    .ingredients h5 {
+        position: relative;
+        margin: 1em;
+        word-spacing: 5px;
+        line-height: 2.2em;
+        word-break: break-word;
+        padding-top: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #2f2f2f;
+    }
+    /* .buttons-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+        position: relative;
+        width: 66%;
+        left: -75px;
+        top: -338px;
+    } */
 }
 
+
+}
 @media (min-width: 950px) and (max-width: 1200px) {
     #username {
         left: 60%;
     }
+    
     .logout {
         left: 80%;
     }
+    
     .logos img {
         left: 30px;
     }
 }
-
 @media (min-width: 768px) and (max-width: 949px) {
     .logos img {
         left: 30px;
     }
+    
     #username {
         left: 60%;
     }
+    
     .logout {
         left: 80%;
     }
 }
-
 @media screen and (min-width: 300px) and (max-width: 780px) {
     .title {
         position: absolute;

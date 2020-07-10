@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../stylesheets/recipe.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/javascript/loader.js"></script>
     <title>{{title}}</title>
 </head>
@@ -37,17 +38,52 @@
            <h1>Recipe</h1>
   </div>
 
+  <div class="dish-type">
+
+    <div class="dish">
+      <img src="https://images.pexels.com/photos/2161643/pexels-photo-2161643.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
+        <li class="nav-item"><a class="nav-link dessert" href="/desserts"><h2>Desserts</h2><a></li>
+    </div>
+    
+    <div class="dinner">
+      <img src="https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
+        <li class="nav-item"><a class="nav-link dessert" href="/dinner"><h2>Dinner</h2><a></li>
+    </div>
+    
+    <div class="italian">
+      <img src="https://images.pexels.com/photos/2295285/pexels-photo-2295285.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
+        <li class="nav-item"><a class="nav-link dessert" href="/italian"><h2>Italian food</h2><a></li>
+    </div>
+    
+    {{!-- //delete after  --}}
+    <div class="lunch">
+      <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="lunch">
+        <li class="nav-item"><a class="nav-link dessert" href="/lunch"><h2>Lunch</h2><a></li>
+    </div>
+    
+    <div class="dinner">
+      <img src="https://images.pexels.com/photos/1537635/pexels-photo-1537635.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
+        <li class="nav-item"><a class="nav-link dessert" href="/dinner"><h2>Dinner</h2><a></li>
+    </div>
+    
+    <div class="italian">
+      <img src="https://images.pexels.com/photos/2295285/pexels-photo-2295285.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-dessert" alt="dessert">
+        <li class="nav-item"><a class="nav-link dessert" href="/italian"><h2>Italian food</h2><a></li>
+    </div>
+    
+    </div>
+
       <div class="img-recipe">
                   <a data-fancybox="gallery" href={{recipe.image}}><img src={{recipe.image}}></a>
         </div>
 
         <div class="cards">
             <div class="star-icons">
-                <i class="glyphicon glyphicon-star"></i>
-                <i class="glyphicon glyphicon-star"></i>
-                <i class="glyphicon glyphicon-star"></i>
-                <i class="glyphicon glyphicon-star"></i>
-                <i class="glyphicon glyphicon-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
 
             </div>
             <div class="cardz">
@@ -74,11 +110,14 @@
                     <h6>Level: {{recipe.level}}</h6>
                 </div>
 
-                <h3>Cuisine: {{recipe.cuisine}}</h3>
-                <p>Chef: {{recipe.creator}}</p>
+                <div class="recipe-details">
+                    <p class="direct"> {{recipe.directions}}</p>
+                    <h4>Cuisine: {{recipe.cuisine}}</h4>
+                    <p>Dish Type: {{recipe.dishType}}</p>
+                    <p>Chef: {{recipe.creator}}</p>
 
-                <p>Dish Type: {{recipe.dishType}}</p>
-                <p>Directions: {{recipe.directions}}</p>
+
+                </div>
 
                 <div class="buttons-container">
                     <button class="btn btn-secondary">
