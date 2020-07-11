@@ -449,6 +449,12 @@ body {
         position: relative;
         width: 80% !important;
     }
+    #help {
+        top: -23px;
+    }
+    .already {
+        display: none;
+    }
     .page-footer {
         position: absolute;
         bottom: 0;

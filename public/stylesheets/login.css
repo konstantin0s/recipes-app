@@ -340,7 +340,7 @@ ul li {
 .error-message {
     position: relative;
     background: #f02b63;
-    top: 257px;
+    top: -67px;
     box-sizing: border-box;
     color: #fff;
     left: 0px;
@@ -454,6 +454,10 @@ ul li {
     .collapse.show {
         display: block;
         height: 100vh;
+    }
+    .alert-success,
+    .alert-error {
+        left: 0px;
     }
     .father-container {
         top: 10px;

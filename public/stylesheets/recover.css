@@ -134,7 +134,7 @@ body {
 
 /* style icon */
 
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -143,12 +143,8 @@ body {
 
 /* align icon */
 
-.left-addon .glyphicon {
+.left-addon .fa {
     left: 0px;
-}
-
-.right-addon .glyphicon {
-    right: 0px;
 }
 
 
@@ -315,30 +311,49 @@ ul li {
     }
     .fixed-top {
         padding: 2em;
+        background: rgb(33, 37, 41);
     }
-    .signup {
-        color: rgb(255, 115, 0) !important;
-        border-bottom: 2.5px solid #fff;
+    .nav-item {
+        left: 0;
     }
-    .signup:hover {
-        color: rgb(224, 124, 9) !important;
-        text-decoration: none;
-        border-bottom: 2.5px solid rgb(224, 124, 9);
+    .nav-item a {
+        position: absolute;
+        top: -29px;
+        font-size: 2.4em;
+        left: 0%;
+        margin-bottom: 12px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
     .nav-item .signup {
         position: relative;
-        top: 50px;
-        color: orange !important;
+        right: 100px;
+        top: 120px;
+        padding-bottom: 0.5em;
         border-bottom: 2.5px solid #fff;
-        font-size: 2.4em;
-        left: 25%;
-        text-align: center;
-        margin-bottom: 10px;
-        margin-top: 1em;
-        display: flex;
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+    .nav-item .signup:hover {
+        border-bottom: 2.5px solid yellow;
+    }
+    .check {
+        top: 22px;
         width: 50%;
-        flex-direction: column;
-        justify-content: center;
+        left: 40%;
+    }
+    #index-img {
+        top: 136px;
+    }
+    .collapse.show {
+        display: block;
+        height: 100vh;
+        background: rgb(33, 37, 41);
+    }
+    .extreme-help p {
+        color: #333;
+        font-size: 1.5em;
     }
     .logos {
         display: flex;
@@ -354,7 +369,7 @@ ul li {
         align-self: center;
         width: 250px;
         height: 250px;
-        top: -2em;
+        top: 6em;
         left: 0;
     }
     .father-container {
@@ -414,98 +429,14 @@ ul li {
         display: block;
         height: 100vh;
     }
-    /* .error-message {
-        top: -5em;
-        left: 63px;
-        width: 66%
-    } */
-    /*vertical bar line */
-    /* 
-    ul li {
-        list-style: none;
-    }
-
-    .bar-left {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 140px;
-        left: 40px;
-        z-index: 110;
-    }
-
-    .bar-left>li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-    }
-
-    .bar-left>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-left>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-left>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-left>li:last-of-type:after {
-        top: -50%;
-    }
-
-    .bar-right {
-        list-style: none;
-        height: 100vh;
-        position: absolute;
-        top: 140px;
-        left: 255px;
-        z-index: 110;
-    }
-
-    .bar-right>li {
-        position: relative;
-        top: -79px;
-        height: 19%;
-    }
-
-    .bar-right>li:before {
-        content: '\25CF';
-        margin-right: 10px;
-        font-size: 30px;
-    }
-
-    .bar-right>li:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-        border-left: 4px solid black;
-        margin-left: 8px;
-        height: 64%;
-    }
-
-    .bar-right>li:first-of-type:after {
-        top: 16%;
-    }
-
-    .bar-right>li:last-of-type:after {
-        top: -50%;
-    } */
     .page-footer {
         position: absolute;
         bottom: 0;
         z-index: 1;
+    }
+    .footer-copyright,
+    .footer-copyright a {
+        color: #333;
     }
 }
 
