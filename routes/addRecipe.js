@@ -22,6 +22,7 @@ router.post('/recipes/add', uploader.single('image'), function(
     res,
     next
 ) {
+
     let newRecipe = new Recipes({
         title: req.body.title,
         level: req.body.level,
@@ -34,6 +35,7 @@ router.post('/recipes/add', uploader.single('image'), function(
         creator: req.body.creator,
         date: dateFormat(req.body.date)
     });
+
 
     console.log('image', newRecipe.image);
 

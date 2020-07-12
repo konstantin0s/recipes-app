@@ -33,13 +33,16 @@
 
     <div class="wrapper">
         <div class="image">
-            <!--inject image with csss -->
+            <!--inject image with css -->
         </div>
 
 
         <div class="father-container">
 
             <div class="form-container">
+                    {{#if sendRecoverErrorMsg }}
+                    <div class="alert alert-error">{{ sendRecoverErrorMsg }}</div>
+                    {{/if}}
 
                 <form id="form" action="/recover" method="POST">
                     <div class="hint-message">

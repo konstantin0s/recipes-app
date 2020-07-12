@@ -8,19 +8,23 @@ router.use(bodyParser.json());
 
 //delete celebrity
 router.delete('/recipe/:id', async function(req, res, next) {
-    let query = { _id: req.params.id }
+    try {
+        let query = { _id: req.params.id }
 
-    await Recipes.deleteMany(query, function(err) {
-            if (err) {
-                console.log(err);
-                return;
-            } else {
-                res.sendStatus(200);
-            }
-        })
-        .catch(error => {
-            next(error);
-        })
+        await Recipes.deleteMany(query, function(err) {
+                if (err) {
+                    console.log(err);
+                    return;
+                } else {
+                    res.render('recipes', { sendDeleteSucccessMsg: req.flash('sendDeleteSucccessMsg') })
+                }
+            })
+            .catch(error => {
+                next(error);
+            });
+    } catch (error) {
+        console.log(error);
+    }
 })
 
 

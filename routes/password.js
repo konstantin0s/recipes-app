@@ -9,12 +9,9 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 router.get('/recover', async(req, res) => {
-    res.render('recover')
-})
+    res.render('recover', { sendRecoverErrorMsg: req.flash('sendRecoverErrorMsg') })
+});
 
-// router.get('/reset', async(req, res) => {
-//     res.render('reset')
-// })
 
 // @route POST /auth/recover
 // @desc Recover Password - Generates token and Sends password reset email
@@ -22,17 +19,14 @@ router.get('/recover', async(req, res) => {
 router.post("/recover", async(req, res, next) => {
     try {
         const email = req.body.email;
-
-        console.log('email log', email)
+        // console.log('email log', email)
 
         const user = await User.findOne({ "email": email })
-            // const user = await User.findOne({ email });
-
-        console.log('found user', user);
 
         if (!user) {
-            res.redirect('recover')
-            return res.status(401).json({ message: 'The email address ' + req.body.email + ' is not associated with any account. Double-check your email address and try again.' });
+            res.redirect('recover');
+            req.flash('sendRecoverErrorMsg', 'The email address ' + req.body.email + ' is not associated with any account.Double-check your email address and try again.');
+            return res.status(401);
         }
 
         //Generate and set password reset token
@@ -46,7 +40,6 @@ router.post("/recover", async(req, res, next) => {
         let to = user.email;
         let from = 'constantintofan85@gmail.com'
         let link = "https://cuisezone.herokuapp.com/reset/" + user.resetPasswordToken;
-        console.log(req.headers.host);
         let html = `<p>Hi ${user.username}</p>
                     <p>Please click on the following <a href="${link}">link</a> to reset your password.</p> 
                     <p>If you did not request this, please ignore this email and your password will remain unchanged.</p>`;
@@ -54,12 +47,8 @@ router.post("/recover", async(req, res, next) => {
         await sendEmail({ to, from, subject, html });
         req.flash('sendPasswordSuccessMsg', 'A reset email has been sent to ' + user.email);
         res.redirect("/login");
-        // res.status(200).json({ message: 'A reset email has been sent to ' + user.email + '.' });
     } catch (error) {
-        // console.log('de unde erroare?', error);
-        // console.log('log eerroor?', error.response.body.errors);
         req.flash('sendPasswordErrorMsg', "A reset email couldn't been sent to " + user.email);
-        // res.status(500).json({ message: error.message })
     }
 });
 
@@ -73,14 +62,13 @@ router.get("/reset/:token", async(req, res, next) => {
         const user = await User.findOne({ resetPasswordToken: token, resetPasswordExpires: { $gt: Date.now() } });
 
         if (!user) {
-            // res.redirect('login');
-            // return res.status(401).json({ message: 'Password reset token is invalid or has expired.' });
+            req.flash('sendUserErrorMsg', "There is no user registered on this website");
         }
 
         //Redirect user to form with the email address
         res.render('reset', { user, token });
     } catch (error) {
-        res.status(500).json({ message: error.message })
+        req.flash('sendTokenErrorMsg', "The token could not be verified. Please try again. ");
     }
 });
 
@@ -95,7 +83,6 @@ router.post("/reset/:token", async(req, res, next) => {
 
         if (!user) {
             return req.flash('sendPasswordErrorMsg', 'Password reset token is invalid or has expired.');
-            // res.status(401).json({ message: 'Password reset token is invalid or has expired.' });
         }
 
         //Set the new password
@@ -116,11 +103,8 @@ router.post("/reset/:token", async(req, res, next) => {
         await sendEmail({ to, from, subject, html });
         req.flash('updatePasswordSuccessMsg', 'Password updated successfully!');
         res.redirect("/login");
-        // res.status(200).json({ message: 'Your password has been updated.' });
-
     } catch (error) {
         return req.flash('sendPasswordErrorMsg', 'Password not updated, please try again.');
-        // res.status(500).json({ message: error.message })
     }
 });
 

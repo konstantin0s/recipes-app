@@ -154,20 +154,45 @@ body {
     padding-left: 30px;
 }
 
-.right-addon input {
-    padding-right: 30px;
+
+/* success or error message */
+
+
+/* hide message with a keyframe */
+
+@keyframes show-message {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
+@-webkit-keyframes show-message {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
-/* success password login */
-
-.alert-success {
+.alert-success,
+.alert-error {
     position: relative;
     top: -59px;
     left: -20px;
     width: 100%;
     margin-left: 0px;
     padding-left: 0px;
+    animation: show-messages 0.5s 1;
+    -webkit-animation: show-message 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+    -webkit-animation-delay: 12s;
+    /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
 }
 
 #form {
