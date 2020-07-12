@@ -241,8 +241,11 @@ body {
         border-bottom: 0;
         font-size: 1em;
     }
+    .container {
+        width: 90%;
+    }
     .cards {
-        width: 80vw;
+        width: 100%;
         align-self: center;
     }
     .cardz {
