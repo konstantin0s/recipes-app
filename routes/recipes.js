@@ -37,7 +37,7 @@ router.get('/desserts', async(req, res, next) => {
                     console.log(err);
                 } else {
                     if (sess.currentUser) {
-                        res.render('dessert', { dessert: dessert, user: sess.currentUser });
+                        res.render('dessert', { dessert: dessert, user: sess.currentUser, layout: false });
                         console.log(dessert);
                     }
                 }
@@ -62,7 +62,7 @@ router.get('/dinner', async(req, res, next) => {
                     console.log(err);
                 } else {
                     if (sess.currentUser) {
-                        res.render('dinner', { dinner: dinner, user: sess.currentUser });
+                        res.render('dinner', { dinner: dinner, user: sess.currentUser, layout: false });
                         console.log(dinner);
                     }
                 }
@@ -86,7 +86,7 @@ router.get('/lunch', async(req, res, next) => {
                     console.log(err);
                 } else {
                     if (sess.currentUser) {
-                        res.render('lunch', { lunch: lunch, user: sess.currentUser });
+                        res.render('lunch', { lunch: lunch, user: sess.currentUser, layout: false });
                         console.log(lunch);
                     }
                 }
@@ -109,7 +109,7 @@ router.get('/italian', async(req, res, next) => {
                     console.log(err);
                 } else {
                     if (sess.currentUser) {
-                        res.render('italian', { italian: italian, user: sess.currentUser });
+                        res.render('italian', { italian: italian, user: sess.currentUser, layout: false });
                         console.log(italian);
                     }
                 }

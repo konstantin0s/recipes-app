@@ -9,7 +9,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="stylesheet" href="../stylesheets/recipes.css">
+        <link rel="stylesheet" href="../stylesheets/progress.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <script src="/javascript/loader.js"></script>
     <title>Recipes</title>
 </head>
@@ -32,6 +35,7 @@
   </nav>
   
   <div class="container">
+      <div id="progress"></div>
 
  <div class="formless">
         <form>
@@ -100,7 +104,17 @@
         </div>
         </div>
 
+              <footer class="page-footer font-small blue">
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">
+                  <p>Copyright <i class="fa fa-copyright"></i> <a href="/"> CuiSZone </a>
+                    <script>document.write(new Date().getFullYear())</script>
+                  </p>
+                </div>
+              </footer>
 
+
+        <script src="../javascript/progress.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>

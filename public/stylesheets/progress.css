@@ -1,0 +1,19 @@
+#progress {
+    border-bottom: 6px solid blue;
+    width: 0;
+    position: fixed;
+    top: 66px;
+    left: 0;
+    z-index: 1000;
+}
+
+@media (min-width: 300px) and (max-width:767px) {
+    #progress {
+        border-bottom: 6px solid blue;
+        width: 0;
+        position: fixed;
+        top: 57px;
+        left: 0;
+        z-index: 1000;
+    }
+}

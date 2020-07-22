@@ -92,39 +92,41 @@ router.post('/recipe/edit/:id', uploader.single('image'), async function(
             }).catch((error) => {
                 next(error);
             });
+        } else {
+            //in case you update image, run this:
+            let recips = {};
+            recips.title = req.body.title;
+            recips.level = req.body.level;
+            recips.ingredients = req.body.ingredients;
+            recips.cuisine = req.body.cuisine;
+            recips.dishType = req.body.dishType;
+            recips.directions = req.body.directions;
+            recips.image = req.file.path;
+            recips.duration = req.body.duration;
+            recips.creator = req.body.creator;
+            recips.date = dateFormat(req.body.date);
+
+            let query = { _id: req.params.id };
+            // console.log(query);
+
+            await Recipes.updateMany(query, recips, function(err) {
+                if (err) {
+                    req.flash(
+                        'updateRecipeErrorMsg',
+                        'Something went wrong while updating recipe!'
+                    );
+                    return;
+                } else {
+                    console.log(recips);
+                    req.flash('updateRecipeSuccessMsg', 'Recipe updated successfully!');
+                    res.redirect(`/recipe/${query._id}`);
+                }
+            }).catch((error) => {
+                next(error);
+            });
         }
 
-        //in case you update image, run this:
-        let recips = {};
-        recips.title = req.body.title;
-        recips.level = req.body.level;
-        recips.ingredients = req.body.ingredients;
-        recips.cuisine = req.body.cuisine;
-        recips.dishType = req.body.dishType;
-        recips.directions = req.body.directions;
-        recips.image = req.file.path;
-        recips.duration = req.body.duration;
-        recips.creator = req.body.creator;
-        recips.date = dateFormat(req.body.date);
 
-        let query = { _id: req.params.id };
-        // console.log(query);
-
-        await Recipes.updateMany(query, recips, function(err) {
-            if (err) {
-                req.flash(
-                    'updateRecipeErrorMsg',
-                    'Something went wrong while updating recipe!'
-                );
-                return;
-            } else {
-                console.log(recips);
-                req.flash('updateRecipeSuccessMsg', 'Recipe updated successfully!');
-                res.redirect(`/recipe/${query._id}`);
-            }
-        }).catch((error) => {
-            next(error);
-        });
     } catch (error) {
         console.log(error);
     }

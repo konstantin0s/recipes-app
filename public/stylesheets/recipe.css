@@ -525,6 +525,9 @@ li {
     .logout:hover {
         border-bottom: none;
     }
+    #progress {
+        top: 65px;
+    }
     .buttons-container {
         top: 4px;
     }
@@ -649,6 +652,9 @@ li {
     .logout:hover {
         border-bottom: none;
     }
+    #progress {
+        top: 65px;
+    }
     .buttons-container {
         top: 4px;
     }
@@ -731,6 +737,9 @@ li {
     .navbar li a,
     h3 {
         color: #fff;
+    }
+    #progress {
+        top: 65px;
     }
     .check {
         position: relative;

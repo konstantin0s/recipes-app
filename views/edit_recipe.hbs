@@ -49,7 +49,7 @@
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="level" placeholder="Enter Level"  value={{recip.level}} class="form-control">
+  <input type="text" name="level" placeholder="ex. Easy (level)"  value={{recip.level}} class="form-control">
 </div>
 <div id="form-group">
   <label for="ingredients"></label>
@@ -57,15 +57,15 @@
  cols="30" rows="10" class="form-control"></textarea>
  <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="cuisine" placeholder={{recip.cuisine}} value={{recip.cuisine}} class="form-control">
+  <input type="text" name="cuisine" placeholder="ex. Chinese cuisine" value={{recip.cuisine}} class="form-control">
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="dishType" placeholder={{recip.dishType}} value={{recip.dishType}} class="form-control">
+  <input type="text" name="dishType" placeholder="ex. Dessert" value={{recip.dishType}} class="form-control">
 </div>
         <div id="form-group">
         <label for="level"></label>
- <textarea name="directions"  value={{recip.directions}} 
+ <textarea name="directions"  value={{recip.directions}} placeholder="Directions..."
  cols="30" rows="10" class="form-control"></textarea>
       </div>
   <div id="form-group" class="image inner-addon left-addon">
@@ -76,11 +76,11 @@
   </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="duration" placeholder={{recip.duration}}  value={{recip.duration}} class="form-control">
+  <input type="text" name="duration" placeholder="ex. 30 (min)"  value={{recip.duration}} class="form-control">
 </div>
 <div id="form-group">
   <label for="level"></label>
-  <input type="text" name="creator" placeholder={{recip.creator}}  value={{recip.creator}} class="form-control">
+  <input type="text" name="creator" placeholder="ex. Chef name"  value={{recip.creator}} class="form-control">
 </div>
     <div id="form-group">
       <label for="level"></label>
@@ -93,12 +93,15 @@
   </div>
 </div>
 
-<footer class="page-footer font-small blue">
-  <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="/"> CuiSZone </a>
+      <footer class="page-footer font-small blue">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+          <p>Copyright <i class="fa fa-copyright"></i> <a href="/"> CuiSZone </a>
+            <script>document.write(new Date().getFullYear())</script>
+          </p>
         </div>
-        </footer>
+      </footer>
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="/javascript/cal.js"></script>

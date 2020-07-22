@@ -24,7 +24,7 @@ body {
     border-bottom: 6px solid blue;
     width: 0;
     position: fixed;
-    top: 67px;
+    top: 66px;
     left: 0;
     z-index: 1000;
 }
@@ -191,6 +191,9 @@ body {
 }
 
 @media screen and (min-width: 300px) and (max-width: 780px) {
+    #progress {
+        top: 65px;
+    }
     .title {
         position: absolute;
         top: 79px;
