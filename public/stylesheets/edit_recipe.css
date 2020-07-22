@@ -75,6 +75,42 @@ body {
     border-bottom: 2.5px solid yellow;
 }
 
+
+/*Style of upload button */
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    left: 0%;
+}
+
+.upload {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.upload:hover,
+.upload-btn-wrapper input[type=file]:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
 .container {
     position: relative;
     display: flex;
