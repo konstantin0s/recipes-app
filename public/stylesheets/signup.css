@@ -149,9 +149,11 @@ body {
 }
 
 .signin:hover {
-    color: #0ca1c9 !important;
-    border-bottom: 2.5px solid rgb(215, 236, 26);
+    border-bottom: 2.5px solid rgba(38, 169, 234, .5);
     text-decoration: none;
+    transition: all .25s ease-in-out;
+    background-color: rgba(216, 215, 189, 0.5) !important;
+    color: rgba(38, 169, 234, .5) !important;
 }
 
 .link {

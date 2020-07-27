@@ -113,8 +113,11 @@ div.transbox p,
 }
 
 .nav-item a:hover {
-    color: yellow !important;
     border-bottom: 2.5px solid yellow;
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    background-color: rgba(175, 184, 189, 0.5) !important;
+    color: rgb(90, 88, 88) !important;
 }
 
 .nav-item .signin {

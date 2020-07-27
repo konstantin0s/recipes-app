@@ -102,9 +102,18 @@ body {
 }
 
 .signup:hover {
-    color: #0ca1c9 !important;
-    border-bottom: 2.5px solid rgb(215, 236, 26);
+    border-bottom: 2.5px solid rgba(38, 169, 234, .5);
     text-decoration: none;
+    transition: all .25s ease-in-out;
+    color: rgb(122, 117, 117) !important;
+}
+
+.nav-item a:hover {
+    border-bottom: 2.5px solid rgba(38, 169, 234, .5);
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+    background-color: rgba(243, 240, 88, 0.5) !important;
+    color: rgb(122, 117, 117) !important;
 }
 
 .link {
