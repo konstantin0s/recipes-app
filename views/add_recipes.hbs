@@ -33,13 +33,15 @@
   </nav>
 
 
-<div class="container">
+<div class="container-x">
       <div id="progress">
     </div>
 
+  <h3 class="add-title text-center">We Like Food Too!</h3>
+  <img class="food" src="/images/food.png" alt="food">
+
   <div class="cards">
 
-  <h3 class="add-title text-center">Add a new Recipe</h3>
   <form method="POST" enctype="multipart/form-data" action="/recipes/add" class="form">
     <div id="form-group">
       <label for="level"></label>
@@ -52,7 +54,7 @@
     </div>
     <div id="form-group">
       <label for="ingredients"></label>
-      <textarea name="ingredients" id="" cols="30" rows="10" placeholder="Ingredients" 
+      <textarea name="ingredients" id="textarea" cols="30" rows="10" placeholder="Ingredients" 
        class="form-control"></textarea>
       <div id="form-group">
         <label for="level"></label>
@@ -64,12 +66,12 @@
       </div>
             <div id="form-group">
         <label for="directions"></label>
- <textarea name="directions" id="" cols="30" rows="10" placeholder="Directions" 
+ <textarea name="directions" id="textarea" cols="30" rows="10" placeholder="Directions" 
        class="form-control"></textarea>
       </div>
     <div id="form-group" class="image inner-addon left-addon">
       <div class="upload-btn-wrapper">
-        <button class="upload">Upload a file</button>
+        <button class="upload btn btn-primary btn-white">Upload a file</button>
         <input type="file" name='image' id="addPic" className="btn btn-warning addPic form-control" />
       </div>
     </div>
@@ -85,7 +87,7 @@
         <label for="level"></label>
         <input type="text" placeholder="ex. 01/06/1985" id="cal" name="date" class="form-control">
       </div>
-      <input type="submit" class="btn btn-primary" value="Submit">
+      <input type="submit" class="btn btn-primary btn-white" value="Submit">
     </div>
   </form>
 
