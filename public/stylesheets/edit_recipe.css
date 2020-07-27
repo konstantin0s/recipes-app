@@ -5,7 +5,7 @@
 body {
     overflow-x: hidden;
     height: 100%;
-    background: url('https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+    background: #30bbdd;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -75,6 +75,30 @@ body {
     border-bottom: 2.5px solid yellow;
 }
 
+.add-title {
+    position: relative;
+    color: #fff;
+    top: 3em;
+    font-weight: bold;
+    font-family: slate, arial;
+    font-size: 76px;
+    line-height: 80px;
+    margin-bottom: 16px;
+    word-break: break-word;
+    width: 47%;
+    z-index: 121;
+    left: 1%;
+}
+
+.food {
+    position: relative;
+    top: 84px;
+    width: 21%;
+    height: 187px;
+    left: 42%;
+    z-index: 0;
+}
+
 
 /*Style of upload button */
 
@@ -85,21 +109,27 @@ body {
     left: 0%;
 }
 
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    left: 0%;
+}
+
 .upload {
     border: 2px solid gray;
-    color: gray;
-    background-color: white;
     padding: 8px 20px;
     border-radius: 8px;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    width: 100% !important;
 }
 
 .upload:hover,
 .upload-btn-wrapper input[type=file]:hover {
-    background-color: #333;
-    color: #fff;
+    background: #fff;
+    color: #2eaff0;
 }
 
 .upload-btn-wrapper input[type=file] {
@@ -111,12 +141,12 @@ body {
     opacity: 0;
 }
 
-.container {
+.container-x {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 100%;
 }
 
 .edit-title {
@@ -131,32 +161,95 @@ body {
     text-align: center;
     margin: 4.5em 0em;
     margin-bottom: 7em;
-    width: 100%;
-    border: 2px solid #333;
     padding: 4em 3em;
-    background: aliceblue;
+    width: 100%;
+    padding: 4em 3em;
+    background: #2eaff0;
     position: relative;
-    top: 2em;
+    top: 3em;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .cards form {
     position: relative;
-    top: -2em;
-    width: 100%;
+    top: 0em;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
     text-align: center;
     left: 0;
     margin-bottom: 6em;
 }
 
-.btn-primary
-/*button */
+input[type=email],
+input[type=text],
+input[type=url],
+input[type=file],
+textarea,
+#textarea,
+#addPic {
+    transition: all .25s ease-in-out;
+    background-color: rgba(38, 169, 234, .5) !important;
+    color: rgb(231, 224, 224) !important;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 2px;
+}
 
-{
+input::placeholder,
+textarea::placeholder {
+    color: rgb(231, 224, 224) !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(231, 224, 224) !important;
+    opacity: 1;
+}
+
+input::-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(231, 224, 224) !important;
+    opacity: 1;
+}
+
+input:focus,
+#textarea:focus {
+    background-color: rgba(14, 110, 158, 0.5) !important;
+    color: #fff !important;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: #fff !important;
+}
+
+.btn-white {
+    border-color: #fff;
+    color: rgba(255, 255, 255, .75);
+    background-color: transparent;
+}
+
+.btn-primary {
     margin-top: 1em;
     width: 35%;
+    background: #2eaff0;
+}
+
+.btn-primary:hover,
+.btn-white:hover {
+    background: #fff;
+    color: #2eaff0;
+    font-weight: bold;
+    border-color: #fff;
+    transition: all 0.5s ease-out;
 }
 
 .image {
@@ -291,6 +384,15 @@ body {
         width: 90%;
         margin: 1em 0em;
     }
+    .add-title {
+        width: 90%;
+        font-size: 50px;
+    }
+    .food {
+        width: 50%;
+        height: 187px;
+        left: 22%;
+    }
 }
 
 @media (min-width: 490px) and (max-width: 550px) {
@@ -383,8 +485,20 @@ body {
         border-bottom: none;
     }
     .cards {
-        width: 80vw;
+        width: 100%;
         align-self: center;
+    }
+    .cards form {
+        width: 95%;
+    }
+    .add-title {
+        width: 90%;
+        font-size: 50px;
+    }
+    .food {
+        width: 50%;
+        height: 187px;
+        left: 22%;
     }
 }
 
@@ -482,8 +596,16 @@ body {
         border-bottom: none;
     }
     .cards {
-        width: 80vw;
+        width: 100%;
         align-self: center;
+    }
+    .cards form {
+        width: 95%;
+    }
+    .food {
+        width: 40%;
+        height: 187px;
+        left: 52%;
     }
 }
 

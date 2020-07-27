@@ -33,9 +33,12 @@
   </nav>
 
 
-<div class="container">
+<div class="container-x">
 
   <div id="progress"></div>
+
+    <h3 class="add-title text-center">Let's Chop Some Food!</h3>
+    <img class="food" src="/images/food.png" alt="food">
 
   <div class="cards">
 
@@ -53,7 +56,7 @@
 </div>
 <div id="form-group">
   <label for="ingredients"></label>
- <textarea name="ingredients" value={{recip.ingredients}}  placeholder="Add ingredients"
+ <textarea  id="textarea" name="ingredients" value={{recip.ingredients}}  placeholder="Add ingredients"
  cols="30" rows="10" class="form-control"></textarea>
  <div id="form-group">
   <label for="level"></label>
@@ -65,12 +68,12 @@
 </div>
         <div id="form-group">
         <label for="level"></label>
- <textarea name="directions"  value={{recip.directions}} placeholder="Directions..."
+ <textarea id="textarea" name="directions"  value={{recip.directions}} placeholder="Directions..."
  cols="30" rows="10" class="form-control"></textarea>
       </div>
   <div id="form-group" class="image inner-addon left-addon">
     <div class="upload-btn-wrapper">
-      <button class="upload">Upload a file</button>
+      <button class="upload  btn btn-primary btn-white">Upload a file</button>
       <input type="file" name='image' id="addPic" className="btn btn-warning addPic form-control" />
     </div>
   </div>
@@ -86,7 +89,7 @@
       <label for="level"></label>
       <input type="text" placeholder="ex. 01/06/1985" id="cal" name="date" class="form-control">
     </div>
- <input type="submit" class="btn btn-primary" value="Update">
+ <input type="submit" class=" btn btn-primary btn-white" value="Update">
 </div>
 </form>
 
