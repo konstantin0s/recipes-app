@@ -73,43 +73,43 @@ router.post('/signup', async(req, res, next) => {
     }
 });
 
-router.post('/signup', async function(req, res, next) {
-    try {
-        if (
-            req.body['g-recaptcha-response'] === undefined ||
-            req.body['g-recaptcha-response'] === '' ||
-            req.body['g-recaptcha-response'] === null
-        ) {
-            return res.json({ responseError: 'Please select captcha first' });
-        }
-        const secretKey = process.env.CAPTCHA_KEY;
+// router.post('/signup', async function(req, res, next) {
+//     try {
+//         if (
+//             req.body['g-recaptcha-response'] === undefined ||
+//             req.body['g-recaptcha-response'] === '' ||
+//             req.body['g-recaptcha-response'] === null
+//         ) {
+//             return res.json({ responseError: 'Please select captcha first' });
+//         }
+//         const secretKey = process.env.CAPTCHA_KEY;
 
-        const verificationURL =
-            'https://www.google.com/recaptcha/api/siteverify?secret=' +
-            secretKey +
-            '&response=' +
-            req.body['g-recaptcha-response'] +
-            '&remoteip=' +
-            req.connection.remoteAddress;
+//         const verificationURL =
+//             'https://www.google.com/recaptcha/api/siteverify?secret=' +
+//             secretKey +
+//             '&response=' +
+//             req.body['g-recaptcha-response'] +
+//             '&remoteip=' +
+//             req.connection.remoteAddress;
 
-        await request(verificationURL, function(error, response, body) {
-            body = JSON.parse(body);
+//         await request(verificationURL, function(error, response, body) {
+//             body = JSON.parse(body);
 
-            if (body.success !== undefined && !body.success) {
-                res.render('auth/signup', {
-                    errorMessage: 'Failed captcha verification'
-                });
-                return;
-            }
-            // res.json({ "responseSuccess": "Success" });
-            res.redirect('/login');
-        }).catch((error) => {
-            next(error);
-        });
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
+//             if (body.success !== undefined && !body.success) {
+//                 res.render('auth/signup', {
+//                     errorMessage: 'Failed captcha verification'
+//                 });
+//                 return;
+//             }
+//             // res.json({ "responseSuccess": "Success" });
+//             res.redirect('/login');
+//         }).catch((error) => {
+//             next(error);
+//         });
+//     } catch (error) {
+//         res.status(500).json({ message: error.message });
+//     }
+// });
 
 router.get('/login', (req, res) => {
     try {
