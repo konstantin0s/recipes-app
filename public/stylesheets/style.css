@@ -87,7 +87,7 @@ img {
 
 #form button {
     background: rgb(25, 41, 70);
-    border: 1px solid rgb(25, 41, 70);
+    border: 1px solid rgb(191, 193, 197);
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
@@ -97,14 +97,15 @@ img {
     padding: 8px 16px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: 0.3s ease background;
-    width: 100%;
+    width: 35%;
+    transition: all 0.5s ease-out;
 }
 
 #form button:hover {
-    background: rgb(107, 56, 248);
+    background: #03448a;
     color: #fff;
-    transition: 0.3s ease background;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 @media (min-width: 300px) and (max-width:767px) {

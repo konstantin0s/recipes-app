@@ -85,10 +85,8 @@ app.locals.title = 'CuiSZone';
 
 const index = require('./routes/index');
 app.use('/', index);
-
 const password = require('./routes/password');
 app.use('/', password);
-
 const authRouter = require('./routes/auth');
 app.use('/', authRouter);
 
@@ -98,9 +96,10 @@ app.use((req, res, next) => {
         next(); // ==> go to the next route ---
         // let user = req.session.currentUser;
         // res.json(user);
-    } else { //    |
+    } else {
         res.redirect("/login"); //    |
-    } //    |
+    }
+
 });
 
 const recipes = require('./routes/recipes');

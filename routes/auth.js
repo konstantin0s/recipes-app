@@ -52,6 +52,9 @@ router.post('/signup', async(req, res, next) => {
 
                 const salt = bcrypt.genSaltSync(bcryptSalt);
                 const hashPass = bcrypt.hashSync(password, salt);
+                console.log('form pass', req.body.password)
+                console.log('hashpass', hashPass)
+
 
                 User.create({
                     username,
@@ -127,6 +130,7 @@ router.post('/login', async(req, res, next) => {
     try {
         const theUsername = req.body.username;
         const thePassword = req.body.password;
+        console.log(thePassword)
 
         if (theUsername === '' || thePassword === '') {
             res.render('auth/login', {
@@ -147,7 +151,7 @@ router.post('/login', async(req, res, next) => {
                     // Save the login in the session!
                     req.session.currentUser = user;
 
-                    // console.log(user);
+                    console.log(user);
                     // console.log(req.session.currentUser);
                     res.redirect('/recipes');
                 } else {

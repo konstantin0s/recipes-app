@@ -49,12 +49,10 @@
         <div class="alert alert-success">{{ sendPasswordSuccessMsg }}</div>
         {{/if}}
          {{#if sendPasswordErrorMsg }}
-        <div class="alert alert-error">{{ sendPasswordErrorMsg }}</div>
+        <div class="alert alert-error">{{ sendPasswordErrorMsg }}</div>error
         {{/if}}
-
+    <h2 class="log-title">Log in to your account</h2>
         <form action="/login" method="POST" id="form">
-
-            <h2 class="log-title">Log in to your account</h2>
             <div class="inner-addon left-addon">
                 <i class="fa fa-user"></i>
                 <input type="text" placeholder="Username" data-help="Enter your username" name="username">
@@ -65,14 +63,16 @@
                 <input type="password" data-help="Enter your password" placeholder="Password" name="password">
             </div>
 
+
             {{#if errorMessage }}
             <div class="error-message">{{ errorMessage }}</div>
             {{/if}}
 
-            <button class="btn btn-warning">Login</button>
+            <button class="btn btn-warning btn-sign">Login</button>
             <div class="acc-signup">
                 <h6> New to Cuisezone? <a class="signup link" href="/signup">Sign up</a></h6>
             </div>
+            <p id="help"></p>
         </form>
 
 
@@ -83,6 +83,7 @@
 </div>
 
 <script async src="../javascript/main.js"></script>
+<script src="../javascript/data-help.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </script>

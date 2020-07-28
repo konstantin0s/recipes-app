@@ -36,8 +36,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link signin on-right" href="/login"
-                            >Sign In</a
-                        >
+                            >Sign In</a>
                     </li>
                 </ul>
             </div>
@@ -47,9 +46,18 @@
             <!--inject image with csss -->
         </div>
         <div class="father-container">
-            <h5 class="already">Already having an account?</h5>
+            {{!-- <h5 class="already">Already having an account?</h5> --}}
             <div class="form-container">
+                <h1 class="register-title">Registration</h1>
                 <form id="form" action="/signup" method="POST">
+                        {{!-- <div class="inner-addon left-addon">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="inner-addon left-addon">
+                            <i class="fa fa-user"></i>
+                            <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                        </div> --}}
                     <div class="inner-addon left-addon">
                         <i class="fa fa-user"></i>
                         <input
@@ -86,7 +94,7 @@
                         ></div>
                     </div>
 
-                    <button type="submit">Create account</button>
+                    <button class="btn btn-primary btn-sign" type="submit">Create account</button>
                     <p class="account-message">
                         Having an account?
                         <a class="signin link" href="/login">Sign in</a>
@@ -102,6 +110,7 @@
         </div>
 
         <script async src="../javascript/main.js"></script>
+        <script src="../javascript/data-help.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
