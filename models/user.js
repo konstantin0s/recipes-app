@@ -6,18 +6,9 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 
 const userSchema = new Schema({
-    username: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
+    username: String,
+    email: String,
+    password: String,
     resetPasswordToken: {
         type: String,
         required: false
@@ -36,13 +27,13 @@ userSchema.pre('save', function(next) {
 
     if (!user.isModified('password')) return next();
 
-    bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.genSaltSync(10, function(err, salt) {
         if (err) return next(err);
 
-        bcrypt.hash(user.password, salt, function(err, hash) {
+        bcrypt.hashSync(user.password, salt, function(err, hashPass) {
             if (err) return next(err);
 
-            user.password = hash;
+            user.password = hashPass;
             next();
         });
     });
