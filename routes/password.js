@@ -26,9 +26,11 @@ router.post("/recover", async(req, res, next) => {
         const user = await User.findOne({ "email": email })
 
         if (!user) {
-            res.redirect('recover');
-            req.flash('sendRecoverErrorMsg', 'The email address ' + req.body.email + ' is not associated with any account.Double-check your email address and try again.');
-            return res.status(401);
+            res.render('recover', {
+                errorMessage: ' The email address: ' + req.body.email + ' is not associated with any account.Double - check your email address and try again.!'
+            });
+            return;
+
         }
 
         //Generate and set password reset token
