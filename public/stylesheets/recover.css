@@ -37,37 +37,8 @@ body {
     border-bottom: 3.5px solid rgb(25, 41, 70);
 }
 
-::-webkit-input-placeholder {
-    color: #333 !important;
-    padding: 0.3em 0.1.5em;
-}
-
 .email {
     padding-right: 30px;
-}
-
-
-/* Chrome/Opera/Safari */
-
-::-moz-placeholder {
-    color: #333 !important;
-    padding: 0.3em 0.1.5em;
-}
-
-
-/* firefox 19+ */
-
-:-ms-input-placeholder {
-    color: #333 !important;
-    padding: 0.3em 0.1.5em;
-}
-
-
-/* ie */
-
-:-moz-placeholder {
-    color: #333 !important;
-    padding: 0.3em 0.1.5em;
 }
 
 
@@ -91,6 +62,66 @@ body {
     font-size: 1em;
 }
 
+ ::-webkit-input-placeholder {
+    color: #333 !important;
+    padding: 0.3em 0.5em;
+}
+
+
+/* Chrome/Opera/Safari */
+
+ ::-moz-placeholder {
+    color: #333 !important;
+    padding: 0.3em 0.5em;
+}
+
+
+/* firefox 19+ */
+
+ :-ms-input-placeholder {
+    color: #333 !important;
+    padding: 0.3em 0.5em;
+}
+
+input[type=email],
+input[type=text],
+input[type=url],
+input[type=password] {
+    transition: all 0.5s ease-in-out;
+    background-color: #c7c7b9 !important;
+    color: #333 !important;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #333;
+    opacity: 1;
+    /* Firefox */
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #333;
+    opacity: 1;
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #333;
+    opacity: 1;
+}
+
+input:focus {
+    background-color: #70706b!important;
+    color: #000 !important;
+}
+
+input:focus::placeholder {
+    color: #fff !important;
+}
+
 .wrapper {
     position: absolute;
     width: 100%;
@@ -99,7 +130,6 @@ body {
 }
 
 .father-container {
-    background: url('https://images.pexels.com/photos/271681/pexels-photo-271681.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
     background-repeat: no-repeat;
     background-size: cover;
     width: 65%;
@@ -110,18 +140,18 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background: #f5f5ed;
 }
 
 .form-container {
-    position: absolute;
-    top: 183px;
-    left: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2em;
-    width: 55%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 2.5em 2em 2em;
+    border-radius: 10px;
+    width: 600px;
+    background: transparent;
 }
 
 
@@ -198,15 +228,12 @@ body {
 #form {
     margin: 0;
     position: relative;
-    top: -5em;
-    left: -1.5em;
-    background: rgb(221, 217, 217);
+    top: 40px;
+    left: 0;
     padding: 2.5em 2em 2em;
     border-radius: 10px;
-    width: 100%;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 600px;
+    background: transparent;
 }
 
 .col-md-4 .g-recaptcha {
@@ -288,24 +315,37 @@ ul li {
     -webkit-animation-fill-mode: forwards;
 }
 
+.hint-message {
+    position: relative;
+    top: 30px;
+    padding-left: 2em;
+}
+
 .hint-message p {
     position: relative;
-    top: -25px;
+    top: 5px;
+    font-size: 1.5em;
+    color: rgb(25, 41, 70);
+}
+
+.hint-message h2 {
+    color: rgb(25, 41, 70);
+    font-size: 3em;
 }
 
 .extreme-help {
     position: relative;
-    top: -51px;
+    top: 151px;
     width: 100%;
 }
 
 .extreme-help p {
-    color: #fff;
+    color: rgb(25, 41, 70);
 }
 
 .footer-copyright {
     font-weight: bold;
-    color: #fff;
+    color: rgb(25, 41, 70);
     font-size: 1.2em;
     padding: 5px;
     position: fixed;
@@ -316,7 +356,7 @@ ul li {
 }
 
 .footer-copyright a {
-    color: #fff;
+    color: rgb(25, 41, 70);
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -431,7 +471,7 @@ ul li {
         background: rgb(221, 217, 217);
         padding: 2.5em 2em 2em;
         border-radius: 10px;
-        width: 100%;
+        width: 65%;
         left: 0;
         display: inline-block;
     }

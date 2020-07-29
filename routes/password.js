@@ -2,10 +2,12 @@ const express = require('express');
 const User = require("../models/user");
 const { sendEmail } = require('../utils/index');
 const router = express.Router();
-
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// BCrypt to encrypt passwords
+const bcrypt = require('bcryptjs');
+const bcryptSalt = 10;
 
 
 router.get('/recover', async(req, res) => {
@@ -85,8 +87,12 @@ router.post("/reset/:token", async(req, res, next) => {
             return req.flash('sendPasswordErrorMsg', 'Password reset token is invalid or has expired.');
         }
 
-        //Set the new password
-        user.password = req.body.password;
+        //Set the new & encrypted  password exactly as when you sign up.
+        const newPass = req.body.password;
+        const salt = bcrypt.genSaltSync(bcryptSalt);
+        const hashPass = bcrypt.hashSync(newPass, salt);
+
+        user.password = hashPass;
         user.resetPasswordToken = undefined;
         user.resetPasswordExpires = undefined;
         user.isVerified = true;

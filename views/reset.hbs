@@ -11,7 +11,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="../stylesheets/reset.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/javascript/loader.js"></script>
     <title>Reset</title>
@@ -42,12 +42,13 @@
     <div class="father-container">
 
         <div class="form-container">
+            <div class="hint-message">
+                <h2> Reset Password</h2>
+                <p>Enter your new password below and we'll send you a confirmation email.</p>
+            </div>
 
             <form id="form" action="/reset/{{token}}" method="POST">
-                <div class="hint-message">
-                    <h2> Reset Password</h2>
-                    <p>Enter your new password below and we'll send you a confirmation email.</p>
-                </div>
+            
                 <div class="inner-addon left-addon">
                     <i class="fa fa-lock"></i>
                     <input type="password" name="password" placeholder="New Password" autofocus="true">
@@ -58,7 +59,7 @@
                     <input type="password" name="confirmPassword" placeholder="Confirm Password">
                 </div>
 
-                <button type="submit">Update Password</button>
+                <button type="submit">Update</button>
                 <p class="account-message">
                     Having an account? <a class="signin link" href="/login">Sign in</a>
                 </p>
@@ -72,7 +73,7 @@
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
         </script>
 </body>
 

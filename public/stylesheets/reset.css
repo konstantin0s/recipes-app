@@ -43,7 +43,7 @@ html {
     border-bottom: 3.5px solid rgb(25, 41, 70);
 }
 
-::-webkit-input-placeholder {
+ ::-webkit-input-placeholder {
     color: #333 !important;
     padding: 0.3em 0.5em;
 }
@@ -51,7 +51,7 @@ html {
 
 /* Chrome/Opera/Safari */
 
-::-moz-placeholder {
+ ::-moz-placeholder {
     color: #333 !important;
     padding: 0.3em 0.5em;
 }
@@ -59,17 +59,48 @@ html {
 
 /* firefox 19+ */
 
-:-ms-input-placeholder {
+ :-ms-input-placeholder {
     color: #333 !important;
     padding: 0.3em 0.5em;
 }
 
-
-/* ie */
-
-:-moz-placeholder {
+input[type=email],
+input[type=text],
+input[type=url],
+input[type=password] {
+    transition: all 0.5s ease-in-out;
+    background-color: #c7c7b9 !important;
     color: #333 !important;
-    padding: 0.3em 0.5em;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #333;
+    opacity: 1;
+    /* Firefox */
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #333;
+    opacity: 1;
+}
+
+input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #333;
+    opacity: 1;
+}
+
+input:focus {
+    background-color: #70706b!important;
+    color: #000 !important;
+}
+
+input:focus::placeholder {
+    color: #fff !important;
 }
 
 
@@ -94,7 +125,6 @@ html {
 }
 
 .father-container {
-    background: url('https://images.pexels.com/photos/2130134/pexels-photo-2130134.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
     background-repeat: no-repeat;
     background-size: cover;
     width: 65%;
@@ -105,18 +135,18 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background: #f5f5ed;
 }
 
 .form-container {
-    position: absolute;
-    top: 183px;
-    left: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2em;
-    width: 55%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 2.5em 2em 2em;
+    border-radius: 10px;
+    width: 600px;
+    background: transparent;
 }
 
 
@@ -134,15 +164,30 @@ html {
 #form {
     margin: 0;
     position: relative;
-    top: -5em;
-    left: -1.5em;
-    background: rgb(221, 217, 217);
+    top: 40px;
+    left: 0;
     padding: 2.5em 2em 2em;
     border-radius: 10px;
-    width: 100%;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 600px;
+    background: transparent;
+}
+
+.hint-message {
+    position: relative;
+    top: 30px;
+    padding-left: 2em;
+}
+
+.hint-message p {
+    position: relative;
+    top: 5px;
+    font-size: 1.5em;
+    color: rgb(25, 41, 70);
+}
+
+.hint-message h2 {
+    color: rgb(25, 41, 70);
+    font-size: 3em;
 }
 
 .col-md-4 .g-recaptcha {
@@ -254,11 +299,6 @@ ul li {
     padding-left: 30px;
 }
 
-.hint-message p {
-    position: relative;
-    top: -25px;
-}
-
 
 /* add padding  */
 
@@ -268,7 +308,7 @@ ul li {
 
 .footer-copyright {
     font-weight: bold;
-    color: #fff;
+    color: rgb(25, 41, 70);
     font-size: 1.2em;
     padding: 5px;
     position: fixed;
@@ -280,7 +320,7 @@ ul li {
 
 .footer-copyright a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(25, 41, 70);
     font-weight: bold;
 }
 
