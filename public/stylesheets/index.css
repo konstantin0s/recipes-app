@@ -23,6 +23,10 @@ body {
     width: 40%;
 }
 
+.check:hover {
+    transition: all 0.5s ease-out;
+}
+
 .title {
     position: absolute;
     top: 15px;
@@ -120,7 +124,7 @@ div.transbox p,
 .nav-item a:hover {
     border-bottom: 2.5px solid yellow;
     text-decoration: none;
-    transition: all .25s ease-in-out;
+    transition: all 0.5s ease-out;
     background-color: rgba(234, 242, 245, 0.5) !important;
     color: rgb(29, 27, 27) !important;
 }
@@ -321,6 +325,7 @@ div.transbox p,
     .nav-item .signin:hover,
     .nav-item .signup:hover {
         border-bottom: 2.5px solid yellow;
+        transition: all 0.5s ease-out;
     }
 }
 

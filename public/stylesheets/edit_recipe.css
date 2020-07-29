@@ -197,7 +197,7 @@ input[type=file],
 textarea,
 #textarea,
 #addPic {
-    transition: all .25s ease-in-out;
+    transition: all 0.5s ease-out;
     background-color: rgba(38, 169, 234, .5) !important;
     color: rgb(231, 224, 224) !important;
     border: none;
