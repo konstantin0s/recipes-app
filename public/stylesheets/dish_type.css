@@ -1,30 +1,43 @@
-       .formless {
-           position: relative;
-           margin: auto;
-           margin-bottom: 4em;
-           margin-top: 2em;
-           top: 365px;
-           left: 0;
-           right: 0;
-           bottom: 0;
-           width: 500px;
-           height: 100px;
-       }
-       
-       @media (min-width: 300px) and (max-width: 399px) {
-           .recipe-container {
-               top: 6em;
-           }
-       }
-       
-       @media (min-width: 400px) and (max-width: 550px) {
-           .recipe-container {
-               top: 6em;
-           }
-       }
-       
-       @media (min-width: 551px) and (max-width: 768px) {
-           .recipe-container {
-               top: 6em;
-           }
-       }
+.logos {
+    position: relative;
+}
+
+.logos img {
+    height: 60px;
+    width: 80px;
+    cursor: pointer;
+    top: 0px;
+    left: 25px;
+    border-radius: 50%;
+}
+
+.formless {
+    position: relative;
+    margin: auto;
+    margin-bottom: 4em;
+    margin-top: 2em;
+    top: 365px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 500px;
+    height: 100px;
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .recipe-container {
+        top: 6em;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 550px) {
+    .recipe-container {
+        top: 6em;
+    }
+}
+
+@media (min-width: 551px) and (max-width: 768px) {
+    .recipe-container {
+        top: 6em;
+    }
+}

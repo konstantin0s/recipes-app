@@ -6,12 +6,17 @@ body {
     overflow-x: hidden;
 }
 
+.logos {
+    position: relative;
+}
+
 .logos img {
-    height: 50px;
+    height: 60px;
     width: 80px;
     cursor: pointer;
-    left: 30px;
-    opacity: 1;
+    top: 0px;
+    left: 25px;
+    border-radius: 50%;
 }
 
 .check {

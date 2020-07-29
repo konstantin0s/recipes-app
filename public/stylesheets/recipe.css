@@ -248,12 +248,18 @@ li {
     color: #000 !important;
 }
 
+.logos {
+    position: relative;
+}
+
 .logos img {
-    top: 0px;
-    left: 50px;
-    height: 50px;
+    height: 60px;
     width: 80px;
     cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 25px;
+    border-radius: 50%;
 }
 
 .logout {
@@ -493,8 +499,8 @@ li {
         top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
-        background-color: #fff;
         text-align: center;
+        background-color: #515c68;
         color: #000;
         border-bottom: 2.5px solid #fff;
         opacity: 1;
@@ -511,7 +517,7 @@ li {
         left: 0;
         border-bottom: 0;
         font-size: 1em;
-        top: 5px;
+        top: 15px;
         color: #fff;
     }
     .logout {
@@ -560,6 +566,10 @@ li {
     }
     .cardz button {
         width: 50%;
+    }
+    .logos img {
+        left: 0;
+        top: 15px;
     }
 }
 
@@ -620,7 +630,7 @@ li {
         top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
-        background-color: #fff;
+        background-color: #515c68;
         text-align: center;
         color: #000;
         border-bottom: 2.5px solid #fff;
@@ -683,6 +693,10 @@ li {
     }
     .cardz button {
         width: 50%;
+    }
+    .logos img {
+        left: 0;
+        top: 15px;
     }
 }
 
@@ -746,8 +760,8 @@ li {
         top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
-        background-color: #fff;
         text-align: center;
+        background-color: #515c68;
         color: #000;
         border-bottom: 2.5px solid #fff;
         opacity: 1;
@@ -764,7 +778,7 @@ li {
         left: 0;
         border-bottom: 0;
         font-size: 1em;
-        top: 5px;
+        top: 15px;
         color: #fff;
     }
     .logout {
@@ -804,6 +818,10 @@ li {
     .cardz button {
         width: 50%;
     }
+    .logos img {
+        left: 0;
+        top: 15px;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 766px) {
@@ -823,6 +841,10 @@ li {
         left: -75px;
         top: 188px;
         margin-top: 100px;
+    }
+    .logos img {
+        left: 0;
+        top: 15px;
     }
 }
 
@@ -904,46 +926,32 @@ li {
         font-weight: 600;
         color: #2f2f2f;
     }
-    /* .buttons-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-self: center;
-        position: relative;
-        width: 66%;
-        left: -75px;
-        top: -338px;
-    } */
 }
 
-
-}
 @media (min-width: 950px) and (max-width: 1200px) {
     #username {
         left: 60%;
     }
-    
     .logout {
         left: 80%;
     }
-    
     .logos img {
         left: 30px;
     }
 }
+
 @media (min-width: 768px) and (max-width: 949px) {
     .logos img {
         left: 30px;
     }
-    
     #username {
         left: 60%;
     }
-    
     .logout {
         left: 80%;
     }
 }
+
 @media screen and (min-width: 300px) and (max-width: 780px) {
     .title {
         position: absolute;

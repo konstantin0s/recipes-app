@@ -231,12 +231,17 @@
         border-radius: 50%;
     }
     
+    .logos {
+        position: relative;
+    }
+    
     .logos img {
-        height: 50px;
+        height: 60px;
         width: 80px;
         cursor: pointer;
         top: 0px;
         left: 25px;
+        border-radius: 50%;
     }
     
     #username {
@@ -802,7 +807,6 @@
             top: 18px;
             padding: 0px 10px;
             font-size: 0.9em;
-            background-color: #fff;
             text-align: center;
             color: #fff;
             border-bottom: 2.5px solid #fff;
@@ -892,7 +896,6 @@
             top: 18px;
             padding: 0px 10px;
             font-size: 0.9em;
-            background-color: #fff;
             text-align: center;
             color: #fff;
             border-bottom: 2.5px solid #fff;
@@ -994,7 +997,6 @@
         }
         .check {
             position: relative;
-            top: 0;
             padding: 0px 10px;
             font-size: 0.9em;
             background-color: #515c68;
@@ -1167,12 +1169,12 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 0.5em;
-            left: -2.4em;
+            left: 0;
             margin-bottom: 3em;
             margin: 4.5em 0em;
             width: 100%;
-            top: 2em;
-            position: relative;
+            top: 6em;
+            position: relative
         }
         .container button {
             width: 150px;

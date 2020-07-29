@@ -12,12 +12,18 @@ body {
     background-size: cover;
 }
 
+.logos {
+    position: relative;
+}
+
 .logos img {
-    top: 0px;
-    left: 50px;
-    height: 50px;
+    height: 60px;
     width: 80px;
+    position: relative;
     cursor: pointer;
+    top: 0px;
+    left: 25px;
+    border-radius: 50%;
 }
 
 #progress {
@@ -455,7 +461,7 @@ textarea:focus::placeholder {
         top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
-        background-color: #fff;
+        background-color: #515c68;
         text-align: center;
         color: #000;
         border-bottom: 2.5px solid #fff;
@@ -566,7 +572,7 @@ textarea:focus::placeholder {
         top: 18px;
         padding: 0px 10px;
         font-size: 0.9em;
-        background-color: #fff;
+        background-color: #515c68;
         text-align: center;
         color: #000;
         border-bottom: 2.5px solid #fff;
