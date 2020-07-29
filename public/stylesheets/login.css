@@ -348,9 +348,10 @@ input:focus::placeholder {
     color: rgb(25, 41, 70);
 }
 
-#form .acc-recover a {
+.acc-recover a {
     font-size: 1em;
     color: rgb(25, 41, 70) !important;
+    margin-left: 2em;
 }
 
 ul li {
