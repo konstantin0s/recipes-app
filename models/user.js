@@ -6,9 +6,24 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 
 const userSchema = new Schema({
+    // googleId: {
+    //     type: String,
+    //     required: true
+    // },
+    // displayName: {
+    //     type: String,
+    //     required: true
+    // },
+    // image: {
+    //     type: String
+    // },
     username: String,
     email: String,
     password: String,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
     resetPasswordToken: {
         type: String,
         required: false
