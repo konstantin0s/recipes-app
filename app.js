@@ -99,15 +99,15 @@ const authRouter = require('./routes/auth');
 app.use('/', authRouter);
 
 
-// app.use((req, res, next) => {
-//     if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
-//         next(); // ==> go to the next route ---
-//         // let user = req.session.currentUser;
-//         // res.json(user);
-//     } else {
-//         res.redirect("/login"); //    |
-//     }
-// });
+app.use((req, res, next) => {
+    if (req.session.currentUser) { // <== if there's user in the session (user is logged in)
+        next(); // ==> go to the next route ---
+        // let user = req.session.currentUser;
+        // res.json(user);
+    } else {
+        res.redirect("/login"); //    |
+    }
+});
 
 const recipes = require('./routes/recipes');
 app.use('/', recipes);

@@ -112,18 +112,18 @@ router.post('/signup', async function(req, res, next) {
     }
 });
 
-// @desc    Auth with Google
-// @route   GET /auth/google
-router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
+// // @desc    Auth with Google
+// // @route   GET /auth/google
+// router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
 
-// @desc    Google auth callback
-// @route   GET /auth/google/callback
-router.get('/auth/google/callback',
-    passport.authenticate('google', { failureRedirect: '/' }),
-    (req, res) => {
-        res.redirect('/recipes');
-    }
-)
+// // @desc    Google auth callback
+// // @route   GET /auth/google/callback
+// router.get('/auth/google/callback',
+//     passport.authenticate('google', { failureRedirect: '/' }),
+//     (req, res) => {
+//         res.redirect('/recipes');
+//     }
+// )
 
 
 router.get('/login', (req, res) => {
