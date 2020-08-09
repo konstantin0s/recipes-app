@@ -96,6 +96,11 @@ div.transbox p,
     color: #fff;
 }
 
+.show .navbar-nav {
+    top: 120px;
+    position: relative;
+}
+
 .nav-item {
     display: flex;
     flex-direction: row;
@@ -192,8 +197,8 @@ div.transbox p,
         position: relative;
         justify-content: center;
         align-self: center;
-        width: 250px;
-        height: 250px;
+        width: 150px;
+        height: 150px;
         left: 0;
     }
     .nav-item {
@@ -254,6 +259,8 @@ div.transbox p,
     }
     div.transbox {
         width: 80%;
+        height: 390px;
+        top: 50px;
     }
 }
 
@@ -359,5 +366,8 @@ div.transbox p,
     .nav-item .signup {
         position: relative;
         right: 100px;
+    }
+    div.transbox {
+        top: 190px;
     }
 }
