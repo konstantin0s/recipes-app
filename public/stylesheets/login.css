@@ -576,9 +576,8 @@ ul li {
     #form .acc-signup {
         top: 20px;
     }
-    #form .log-title {
-        top: -51px;
-        width: 100%;
+    .log-title {
+        font-size: 1.8em;
     }
     #form .btn-sign {
         width: 90%;
@@ -604,6 +603,10 @@ ul li {
 }
 
 @media (min-width: 690px) and (max-width: 767px) {
+    .log-title {
+        font-size: 2em;
+        top: 2em;
+    }
     .collapse.show {
         display: block;
         height: 100vh;
@@ -616,6 +619,7 @@ ul li {
     }
     #form {
         width: 400px;
+        top: 3em;
     }
     .mr-auto .nav-item .nav-link:hover {
         color: yellow !important;
@@ -645,10 +649,18 @@ ul li {
         position: relative;
         justify-content: center;
         align-self: center;
-        width: 250px;
-        height: 250px;
-        top: -2em;
+        width: 150px;
+        height: 150px;
+        top: 1em;
         left: 0;
+    }
+    .acc-recover {
+        position: relative;
+        top: 20px;
+    }
+    #help {
+        left: -340px;
+        font-size: 1em;
     }
 }
 
@@ -656,11 +668,24 @@ ul li {
     .form-container {
         width: 70%;
     }
+    #help {
+        left: -340px;
+        top: 2em;
+        font-size: 1.4em;
+    }
+    .log-title {
+        font-size: 2.5em;
+    }
 }
 
 @media (min-width: 950px) and (max-width: 1200px) {
     .form-container {
         width: 70%;
+    }
+    #help {
+        left: -500px;
+        top: 2em;
+        font-size: 1.4em;
     }
 }
 

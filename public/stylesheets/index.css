@@ -1,373 +1,391 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-.logos {
-    position: relative;
-}
-
-.logos img {
-    height: 60px;
-    width: 80px;
-    cursor: pointer;
-    top: 0px;
-    left: 25px;
-    border-radius: 50%;
-}
-
-.check {
-    width: 40%;
-}
-
-.check:hover {
-    transition: all 0.5s ease-out;
-}
-
-.title {
-    position: absolute;
-    top: 15px;
-    left: 40px;
-    font-size: 15px;
-    color: #fff;
-    padding: 3px;
-    opacity: 0;
-    z-index: 100;
-    border: 1px solid #fff;
-    border-bottom: 2.5px solid #fff;
-}
-
-.index-img {
-    background: url('https://images.pexels.com/photos/4553118/pexels-photo-4553118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    top: 30px;
-    width: 100%;
-    height: 100%;
-}
-
-.container {
-    position: relative;
-    text-align: center;
-}
-
-
-/* transparent container*/
-
-div.transbox {
-    display: inline-block;
-    margin: 30px;
-    background-color: #333;
-    border: 1px solid black;
-    opacity: 0.6;
-    position: relative;
-    top: 110px;
-    width: 50%;
-    left: 10%;
-    border-left: 4px solid green;
-    height: auto;
-}
-
-div.transbox .box-title {
-    top: 20px;
-    left: 5%;
-    margin-bottom: 5px;
-}
-
-div.transbox .box-desc {
-    top: -45px;
-}
-
-div.transbox p {
-    top: -45px;
-}
-
-div.transbox p,
-.box-title,
-.box-desc {
-    position: relative;
-    margin: 5%;
-    font-weight: bold;
-    color: #fff;
-}
-
-.show .navbar-nav {
-    top: 120px;
-    position: relative;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    left: -100px;
-}
-
-.nav-item a {
-    position: relative;
-    left: 1000px;
-    color: rgb(25, 41, 70) !important;
-    /* color: #00008b !important; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 30px;
-    font-size: 2.2em;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 2.5px solid rgb(25, 41, 70);
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-}
-
-.nav-item a:hover {
-    border-bottom: 2.5px solid yellow;
-    text-decoration: none;
-    transition: all 0.5s ease-out;
-    background-color: rgba(234, 242, 245, 0.5) !important;
-    color: rgb(29, 27, 27) !important;
-}
-
-.nav-item .signin {
-    position: relative;
-    right: 30px;
-}
-
-.nav-item .signup {
-    position: relative;
-    right: 10px;
-}
-
-.footer-copyright {
-    font-weight: bold;
-    color: #00008b;
-    font-size: 1.4em;
-    padding: 5px;
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 1em;
-    width: 100vw;
-    left: 0;
-}
-
-.footer-copyright a {
-    text-decoration: none;
-    color: #00008b;
-    font-weight: bold;
-}
-
-.footer-copyright:hover,
-.footer-copyright a:hover {
-    color: #004080;
-}
-
-@media (max-width: 689px) {
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        height: 100%;
-    }
-    .title {
-        left: 74%;
-        top: 33px;
-        width: 20%;
-        text-align: center;
-        padding: 7px 10px;
-    }
-    .fixed-top {
-        padding: 0.8em;
-    }
-    .logos {
-        position: relative;
-        top: -3.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
-    }
-    .logos img {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        align-self: center;
-        width: 150px;
-        height: 150px;
-        left: 0;
-    }
-    .nav-item {
-        left: 0;
-    }
-    .nav-item a {
-        position: absolute;
-        top: -29px;
-        font-size: 2.4em;
-        left: 0%;
-        margin-bottom: 12px;
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    #nav .nav-item .signin {
-        position: relative;
-        display: inline-block;
-        width: 50%;
-        margin-bottom: 10px;
-        margin-top: 1em;
-        align-self: center;
-        border-bottom: 2.5px solid #fff;
-        color: rgba(255, 255, 255, 0.5) !important;
-    }
-    #nav .nav-item .signup {
-        position: relative;
-        display: inline-block;
-        width: 50%;
-        margin-bottom: 10px;
-        margin-top: 1em;
-        align-self: center;
-        border-bottom: 2.5px solid #fff;
-        color: rgba(255, 255, 255, 0.5) !important;
-    }
-    .nav-item .signin:hover,
-    .nav-item .signup:hover {
-        border-bottom: 2.5px solid yellow;
-    }
-    ul .nav-item {
-        list-style: none;
-        width: 100%;
-        display: block;
-        text-align: center;
-    }
-    .check {
-        top: 22px;
-        width: 50%;
-        left: 40%;
-    }
-    #index-img {
-        top: 136px;
-    }
-    .collapse.show {
-        display: block;
-        height: 100vh;
-    }
-    div.transbox {
-        width: 80%;
-        height: 390px;
-        top: 50px;
-    }
-}
-
-@media (min-width: 699px) and (max-width: 767px) {
-    .title {
-        left: 74%;
-        top: 33px;
-        width: 20%;
-        text-align: center;
-        padding: 7px 10px;
-    }
-    .fixed-top {
-        padding: 2em;
-    }
-    .logos {
-        position: relative;
-        top: -3.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center;
-    }
-    .logos img {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        justify-content: center;
-        align-self: center;
-        width: 250px;
-        height: 250px;
-        left: 0;
-    }
-    .nav-item {
-        left: 0;
-    }
-    .nav-item a {
-        position: absolute;
-        top: -29px;
-        font-size: 2.4em;
-        left: 0%;
-        margin-bottom: 12px;
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .collapse.show {
-        display: block;
-        height: 100vh;
-    }
-    #nav .signin,
-    #nav .signup {
-        color: #fff !important;
-    }
-    #nav .nav-item .signin {
-        position: relative;
-        right: 130px;
-        color: #fff;
-        top: 20px;
-        border-bottom: 2.5px solid #fff;
-    }
-    #nav .nav-item .signup {
-        position: relative;
-        right: 100px;
-        top: 120px;
-        color: #fff;
-        border-bottom: 2.5px solid #fff;
-    }
-    .nav-item .signin:hover,
-    .nav-item .signup:hover {
-        border-bottom: 2.5px solid yellow;
-        transition: all 0.5s ease-out;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1099px) {
-    /* body {
-        background: yellow;
-    } */
-    .nav-item a {
-        position: relative;
-        left: 400px;
-    }
-    .nav-item .signin {
-        position: relative;
-        right: 130px;
-    }
-    .nav-item .signup {
-        position: relative;
-        right: 100px;
-    }
-}
-
-@media (min-width: 1100px) and (max-width: 1300px) {
-    .nav-item a {
-        position: relative;
-        left: 730px;
-    }
-    .nav-item .signin {
-        position: relative;
-        right: 130px;
-    }
-    .nav-item .signup {
-        position: relative;
-        right: 100px;
-    }
-    div.transbox {
-        top: 190px;
-    }
-}
+                            * {
+                                box-sizing: border-box;
+                            }
+                            
+                            body {
+                                overflow-x: hidden;
+                            }
+                            
+                            .logos {
+                                position: relative;
+                            }
+                            
+                            .logos img {
+                                height: 60px;
+                                width: 80px;
+                                cursor: pointer;
+                                top: 0px;
+                                left: 25px;
+                                border-radius: 50%;
+                            }
+                            
+                            .check {
+                                width: 40%;
+                            }
+                            
+                            .check:hover {
+                                transition: all 0.5s ease-out;
+                            }
+                            
+                            .title {
+                                position: absolute;
+                                top: 15px;
+                                left: 40px;
+                                font-size: 15px;
+                                color: #fff;
+                                padding: 3px;
+                                opacity: 0;
+                                z-index: 100;
+                                border: 1px solid #fff;
+                                border-bottom: 2.5px solid #fff;
+                            }
+                            
+                            .index-img {
+                                background: url('https://images.pexels.com/photos/4553118/pexels-photo-4553118.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center fixed;
+                                background-size: cover;
+                                height: 100%;
+                                overflow: hidden;
+                                position: absolute;
+                                top: 30px;
+                                width: 100%;
+                                height: 100%;
+                            }
+                            
+                            .container {
+                                position: relative;
+                                text-align: center;
+                            }
+                            /* transparent container*/
+                            
+                            div.transbox {
+                                display: inline-block;
+                                margin: 30px;
+                                background-color: #333;
+                                border: 1px solid black;
+                                opacity: 0.6;
+                                position: relative;
+                                top: 110px;
+                                width: 50%;
+                                left: 10%;
+                                border-left: 4px solid green;
+                                height: auto;
+                            }
+                            
+                            div.transbox .box-title {
+                                top: 20px;
+                                left: 5%;
+                                margin-bottom: 5px;
+                            }
+                            
+                            div.transbox .box-desc {
+                                top: -45px;
+                            }
+                            
+                            div.transbox p {
+                                top: -45px;
+                            }
+                            
+                            div.transbox p,
+                            .box-title,
+                            .box-desc {
+                                position: relative;
+                                margin: 5%;
+                                font-weight: bold;
+                                color: #fff;
+                            }
+                            
+                            .show .navbar-nav {
+                                top: 120px;
+                                position: relative;
+                            }
+                            
+                            .nav-item {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                position: relative;
+                                left: -100px;
+                            }
+                            
+                            .nav-item a {
+                                position: relative;
+                                left: 1000px;
+                                color: rgb(25, 41, 70) !important;
+                                /* color: #00008b !important; */
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                margin: 0px 30px;
+                                font-size: 2.2em;
+                                font-weight: bold;
+                                cursor: pointer;
+                                border-bottom: 2.5px solid rgb(25, 41, 70);
+                                -webkit-box-orient: horizontal;
+                                -webkit-box-direction: normal;
+                            }
+                            
+                            .nav-item a:hover {
+                                border-bottom: 2.5px solid yellow;
+                                text-decoration: none;
+                                transition: all 0.5s ease-out;
+                                background-color: rgba(234, 242, 245, 0.5) !important;
+                                color: rgb(29, 27, 27) !important;
+                            }
+                            
+                            .nav-item .signin {
+                                position: relative;
+                                right: 30px;
+                            }
+                            
+                            .nav-item .signup {
+                                position: relative;
+                                right: 10px;
+                            }
+                            
+                            .footer-copyright {
+                                font-weight: bold;
+                                color: #00008b;
+                                font-size: 1.4em;
+                                padding: 5px;
+                                position: fixed;
+                                bottom: 0;
+                                padding-bottom: 1em;
+                                width: 100vw;
+                                left: 0;
+                            }
+                            
+                            .footer-copyright a {
+                                text-decoration: none;
+                                color: #00008b;
+                                font-weight: bold;
+                            }
+                            
+                            .footer-copyright:hover,
+                            .footer-copyright a:hover {
+                                color: #004080;
+                            }
+                            
+                            @media (max-width: 689px) {
+                                body {
+                                    overflow-x: hidden;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                .title {
+                                    left: 74%;
+                                    top: 33px;
+                                    width: 20%;
+                                    text-align: center;
+                                    padding: 7px 10px;
+                                }
+                                .fixed-top {
+                                    padding: 0.8em;
+                                }
+                                .logos {
+                                    position: relative;
+                                    top: -3.5em;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-self: center;
+                                }
+                                .logos img {
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: relative;
+                                    justify-content: center;
+                                    align-self: center;
+                                    width: 150px;
+                                    height: 150px;
+                                    left: 0;
+                                }
+                                .nav-item {
+                                    left: 0;
+                                }
+                                .nav-item a {
+                                    position: absolute;
+                                    top: -29px;
+                                    font-size: 2.4em;
+                                    left: 0%;
+                                    margin-bottom: 12px;
+                                    display: flex;
+                                    width: 100%;
+                                    flex-direction: row;
+                                    justify-content: space-evenly;
+                                }
+                                #nav .nav-item .signin {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 50%;
+                                    margin-bottom: 10px;
+                                    margin-top: 1em;
+                                    align-self: center;
+                                    border-bottom: 2.5px solid #fff;
+                                    color: rgba(255, 255, 255, 0.5) !important;
+                                }
+                                #nav .nav-item .signup {
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 50%;
+                                    margin-bottom: 10px;
+                                    margin-top: 1em;
+                                    align-self: center;
+                                    border-bottom: 2.5px solid #fff;
+                                    color: rgba(255, 255, 255, 0.5) !important;
+                                }
+                                .nav-item .signin:hover,
+                                .nav-item .signup:hover {
+                                    border-bottom: 2.5px solid yellow;
+                                }
+                                ul .nav-item {
+                                    list-style: none;
+                                    width: 100%;
+                                    display: block;
+                                    text-align: center;
+                                }
+                                .transbox .check {
+                                    top: 10px;
+                                    width: 50%;
+                                    left: 40%;
+                                }
+                                #index-img {
+                                    top: 136px;
+                                }
+                                .collapse.show {
+                                    display: block;
+                                    height: 100vh;
+                                }
+                                div.transbox {
+                                    width: 80%;
+                                    height: 390px;
+                                    top: 50px;
+                                }
+                                div.transbox .box-title {
+                                    font-size: 2.5em;
+                                }
+                            }
+                            
+                            @media (min-width: 699px) and (max-width: 767px) {
+                                .title {
+                                    left: 74%;
+                                    top: 33px;
+                                    width: 20%;
+                                    text-align: center;
+                                    padding: 7px 10px;
+                                }
+                                .fixed-top {
+                                    padding: 2em;
+                                }
+                                .logos {
+                                    position: relative;
+                                    top: -3.5em;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-self: center;
+                                }
+                                .logos img {
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: relative;
+                                    justify-content: center;
+                                    align-self: center;
+                                    width: 150px;
+                                    height: 150px;
+                                    top: -2em;
+                                    left: 0;
+                                }
+                                .nav-item {
+                                    left: 0;
+                                    align-self: center;
+                                    width: 100%;
+                                    text-align: center;
+                                    display: inline-block;
+                                }
+                                .nav-item a {
+                                    position: absolute;
+                                    top: -29px;
+                                    font-size: 2.4em;
+                                    left: 0%;
+                                    margin-bottom: 12px;
+                                    display: flex;
+                                    width: 100%;
+                                    flex-direction: row;
+                                    justify-content: space-evenly;
+                                }
+                                .collapse.show {
+                                    display: block;
+                                    height: 100vh;
+                                }
+                                .show .navbar-nav {
+                                    text-align: center;
+                                }
+                                #nav .nav-item .signin {
+                                    position: relative;
+                                    display: inline-block;
+                                    text-align: center;
+                                    width: 50%;
+                                    margin-bottom: 10px;
+                                    margin-top: 1em;
+                                    align-self: center;
+                                    border-bottom: 2.5px solid #fff;
+                                    color: rgba(255, 255, 255, 0.5) !important;
+                                }
+                                #nav .nav-item .signup {
+                                    position: relative;
+                                    text-align: center;
+                                    display: inline-block;
+                                    width: 50%;
+                                    margin-bottom: 10px;
+                                    margin-top: 1em;
+                                    align-self: center;
+                                    border-bottom: 2.5px solid #fff;
+                                    color: rgba(255, 255, 255, 0.5) !important;
+                                }
+                                .nav-item .signin:hover,
+                                .nav-item .signup:hover {
+                                    border-bottom: 2.5px solid yellow;
+                                    transition: all 0.5s ease-out;
+                                }
+                                .check {
+                                    width: 50%;
+                                }
+                                div.transbox {
+                                    width: 80%;
+                                    height: 390px;
+                                    top: 50px;
+                                }
+                            }
+                            
+                            @media (min-width: 768px) and (max-width: 1099px) {
+                                .nav-item a {
+                                    position: relative;
+                                    left: 400px;
+                                }
+                                .nav-item .signin {
+                                    position: relative;
+                                    right: 130px;
+                                }
+                                .nav-item .signup {
+                                    position: relative;
+                                    right: 100px;
+                                }
+                            }
+                            
+                            @media (min-width: 1100px) and (max-width: 1300px) {
+                                .nav-item a {
+                                    position: relative;
+                                    left: 730px;
+                                }
+                                .nav-item .signin {
+                                    position: relative;
+                                    right: 130px;
+                                }
+                                .nav-item .signup {
+                                    position: relative;
+                                    right: 100px;
+                                }
+                                div.transbox {
+                                    top: 190px;
+                                }
+                            }

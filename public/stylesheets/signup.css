@@ -450,6 +450,7 @@
             padding: 2.5em 2em 2em;
             border-radius: 10px;
             width: 100%;
+            top: -2em;
         }
         #form .btn-sign {
             width: 90%;
@@ -503,6 +504,10 @@
         .footer-copyright {
             left: 0;
         }
+        .register-title {
+            font-size: 1.8em;
+            top: 1.5em;
+        }
     }
     
     @media (min-width: 550px) and (max-width: 699px) {
@@ -532,8 +537,12 @@
             justify-content: center;
             align-self: center;
         }
+        .register-title {
+            top: 1em;
+        }
         #form {
             width: 300px;
+            top: 0.5em;
         }
         ul li {
             list-style: none;
@@ -560,9 +569,9 @@
             position: relative;
             justify-content: center;
             align-self: center;
-            width: 250px;
-            height: 250px;
-            top: -2em;
+            width: 150px;
+            height: 150px;
+            top: 1em;
             left: 0;
         }
         #form .btn-sign {
