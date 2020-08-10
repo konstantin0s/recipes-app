@@ -121,7 +121,10 @@ app.use('/', edit);
 const deleteRecipe = require('./routes/delete');
 app.use('/', deleteRecipe);
 
-;
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res) {
+    res.status(404).render('404.hbs');
+});
 
 app.listen(process.env.PORT || 5000, function() {
     console.log("Server started on port 5000 :)");
